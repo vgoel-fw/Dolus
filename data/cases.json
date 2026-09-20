@@ -330,6 +330,17 @@
       "coverage": "excerpts_only",
       "retrieved_on": "2026-09-19",
       "method": "Selected public-domain judicial opinion passages read at linked mirror; whitespace normalized. Full opinion, pinpoints, later treatment and tags require human verification."
+    },
+    "clearinghouse": {
+      "id": "104095",
+      "source_url": "https://securities.stanford.edu/filings-case.html?id=104095",
+      "retrieved_on": "2026-09-20",
+      "case_status": "DISMISSED",
+      "filing_date": "2008-09-09",
+      "lead_docket": "C08-4260",
+      "join_status": "needs_review",
+      "join_basis": "Matching company, product-defect allegations, filing year and district proceedings. Attorney confirmation required.",
+      "notice": "Case-level status only; not a motion-level scienter label."
     }
   },
   {
