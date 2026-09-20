@@ -111,6 +111,22 @@
       "retrieved_on": "2026-09-19",
       "method": "Selected judicial opinion PDF passages checked; line-wrap hyphenation and whitespace normalized. Excerpts only; full source, tags and later treatment await human legal review.",
       "primary_pdf_url": "https://cases.justia.com/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.pdf"
+    },
+    "courtlistener": {
+      "cluster_id": 3064395,
+      "source_url": "https://www.courtlistener.com/opinion/3064395/zucco-partners-llc-v-digimarc-corp/",
+      "provider": "Free Law Project / CourtListener",
+      "retrieved_on": "2026-09-20",
+      "document_date": "2009-02-10",
+      "docket_number": "06-35758",
+      "document_type": "order_amending_opinion_and_amended_opinion",
+      "capture_method": "public_browser_rendered_text",
+      "coverage": "selected_excerpt_only",
+      "locator": "Amended slip opinion page 1473",
+      "excerpt": "The district court determined that, pursuant to Daou, the\nplaintiffs\u2019 complaint failed to allege scienter with the requisite\nparticularity to survive dismissal under the PSLRA\u2019s height-\nened pleading standard. Because we hold that the Court\u2019s\ndecision in Tellabs does not materially alter the particularity\nrequirements for scienter claims established in our previous\ndecisions, but instead only adds an additional \u201cholistic\u201d com-\nponent to those requirements, we affirm the district court\u2019s\ndismissal of the complaint with prejudice and hold that Zucco\nhas failed to adequately plead a strong inference of scienter.1",
+      "excerpt_sha256": "b3e6d8b43f6ebd3d3e14f5bfac998cdbe7e21257be088230ea1a1656459bdac9",
+      "review_status": "needs_review",
+      "notice": "Supplemental amended opinion source. Does not add a second case to cohort counts or approve the original factor annotations."
     }
   },
   {
