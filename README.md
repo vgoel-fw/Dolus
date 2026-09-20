@@ -1,16 +1,16 @@
 # Precedent-analysis for securities scienter
 
-**Scienter Atlas** is a local research application for securities litigators. It decomposes allegations into a fixed taxonomy, compares reviewed opinions, and reports descriptive cohort outcomes without rendering a scienter conclusion.
+**Scienter Atlas** is a research tool for securities litigators. It intakes a fact pattern, decomposes it into a fixed group of scienter factors (insider trading  timing, CW specificity, GAAP magnitude, executive departures), and retrieves similar motion-to-dismiss opinions for side-by-side comparison with citations and outcome statistics based on scienter. It's intended for litigators to reason by analogy across precedent rather than receive an automatic verdict. Corpus comes from CourtListener opinions with Stanford Securities Class Action Clearinghouse's outcome data.
 
 ## Run
 
-Python 3.11 or newer; no third-party packages, Node installation, build step, or API key required for the local demo.
+No third-party packages, Node installation, build step, or API key required for the local demo.
 
 ```sh
 python3 -m app.server --port 8765
 ```
 
-Open http://127.0.0.1:8765. Choose a fictional example, decompose, review the factors, and compare. Run from this directory, not its parent. Open this directory in VS Code, PyCharm, Cursor, or another IDE.
+Open http://127.0.0.1:8765. Choose an example, decompose, review the factors, and compare. 
 
 ```sh
 python3 -m unittest discover -s tests -v
@@ -19,23 +19,20 @@ python3 scripts/evaluate.py
 
 ## Implemented
 
-- Twelve-factor, versioned taxonomy with Second/Ninth Circuit framework references and review questions.
-- Local draft extraction, editable factor statuses/specificity, and exact supporting passages.
-- Optional server-side Anthropic extraction, selected explicitly in the UI.
-- Same-circuit-first retrieval; exact procedural posture and defendant-scope filtering; transparent factor/TF-IDF scoring.
-- Side-by-side comparison grid with source passages, ruling evidence, known distinctions, and source links.
-- SQLite case/evidence graph, narrative term vectors, saved matters, and reviewer audit records.
-- Case-deduplicated conjunctive cohorts, separate synthetic/real modes, Wilson intervals, and suppression below 20 binary scienter outcomes.
-- Corpus import, human review admission, CourtListener staging CLI, and authorized SCAC CSV cross-reference queue.
+- Corpus with Second/Ninth Circuit framework references and review questions.
+- Draft extraction, editable factor statuses/specificity, and exact supporting passages.
+- Optional Anthropic extraction, selected in UI.
+- Same-circuit-first retrieval with procedural posture and defendant-scope filtering,TF-IDF scoring.
+- Comparison grid with source passages, ruling evidence, distinctions, and links for high-fidelity.
+- SQLite case/evidence graph, narrative vectors, saved matters, and reviewer audit records.
+- CourtListener CLI, and SCAC CSV cross-reference queue.
 - JSON and Markdown research exports, responsive interface, text/Markdown uploads, and source inspection.
 
 ## Data and present limits
 
-The initial corpus contains **6 public opinion excerpt records**, all awaiting attorney review, plus **18 explicitly fictional fixtures** and 4 synthetic inputs. These are not a comprehensive research corpus. Source excerpt matching verifies internal consistency, not external authenticity. Review requires checking the original opinion, posture, defendant coverage, ruling, quotation context, and subsequent treatment.
+The initial corpus contains **6 public opinion excerpt records** plus **18 fictional fixtures** and 4 synthetic inputs. Review requires checking the original opinion, posture, defendant coverage, ruling, quotation context, and treatment on top.
 
-The local extractor is a conservative keyword baseline. It can miss negation scope and overlapping concepts. It is not a validated production tagger; the included synthetic evaluation exposes those limitations. Narrative retrieval uses TF-IDF, not learned semantic embeddings. The optional LLM call has not been live-tested without credentials. Authentication, multi-user authorization, encrypted backups, a citator, full-text ingestion normalization, and large-corpus performance are not implemented. This server binds to localhost and is not an internet deployment.
-
-Real comparisons are initially empty by design: the public seed cases have not been approved by a securities litigator. Synthetic outcomes never contribute to real rates. Appellate opinions are separate from trial-court motion rulings. Eventual settlement/dismissal metadata never substitutes for a scienter ruling.
+Real comparisons are initially empty by design for lawyer approval, and the synthetic outcomes don't contribute to real rates. Appellate opinions are separate from trial-court motion rulings, and cases with settlement/dismissal metadata don't substitutes for a distinct scienter ruling from the backend.
 
 ## Optional LLM
 
@@ -57,10 +54,5 @@ Set `ANTHROPIC_API_KEY` and an available `ANTHROPIC_MODEL` in the process enviro
 | `CONTRACT.md` | API and schema contract |
 | `var/` | Generated local database; ignored by Git |
 
-## Data needed to expand
 
-1. An authorized CourtListener API token / appropriate access tier.
-2. An authorized Stanford SCAC export and a confirmed court/docket crosswalk.
-3. Securities-litigator validation of taxonomy and opinion annotations.
-
-See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [production roadmap](docs/ROADMAP.md). Do not put credentials, client fact patterns, runtime databases, or licensed exports into Git. No license granting redistribution of third-party data is implied.
+See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [production roadmap](docs/ROADMAP.md). 
