@@ -1,0 +1,182 @@
+{
+  "method": "deterministic_draft",
+  "taxonomy_version": "0.1.0-draft",
+  "engine_sha256": "9a9e2ed93eb103938fed347ecd06514de7bf9dba35a7a09b695ed8b645756b78",
+  "fixtures": 18,
+  "exact_profile_matches": 13,
+  "micro": {
+    "total": 216,
+    "correct": 208,
+    "tp": 132,
+    "fp": 8,
+    "fn": 0,
+    "precision": 0.9429,
+    "recall": 1.0
+  },
+  "per_factor": {
+    "insider_trading": {
+      "total": 18,
+      "correct": 18,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "cw_reliability": {
+      "total": 18,
+      "correct": 18,
+      "tp": 16,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "accounting": {
+      "total": 18,
+      "correct": 15,
+      "tp": 15,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.8333,
+      "recall": 1.0
+    },
+    "executive_departures": {
+      "total": 18,
+      "correct": 18,
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "core_operations": {
+      "total": 18,
+      "correct": 18,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "regulatory_action": {
+      "total": 18,
+      "correct": 18,
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "contemporaneous_knowledge": {
+      "total": 18,
+      "correct": 18,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "motive_opportunity": {
+      "total": 18,
+      "correct": 18,
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "temporal_proximity": {
+      "total": 18,
+      "correct": 18,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "magnitude_duration": {
+      "total": 18,
+      "correct": 16,
+      "tp": 16,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.8889,
+      "recall": 1.0
+    },
+    "individual_attribution": {
+      "total": 18,
+      "correct": 15,
+      "tp": 9,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.75,
+      "recall": 1.0
+    },
+    "opposing_inferences": {
+      "total": 18,
+      "correct": 18,
+      "tp": 14,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "errors": [
+    {
+      "fixture": "demo-03",
+      "factor": "accounting",
+      "expected": "unknown",
+      "actual": "present"
+    },
+    {
+      "fixture": "demo-03",
+      "factor": "individual_attribution",
+      "expected": "unknown",
+      "actual": "present"
+    },
+    {
+      "fixture": "demo-08",
+      "factor": "magnitude_duration",
+      "expected": "unknown",
+      "actual": "present"
+    },
+    {
+      "fixture": "demo-11",
+      "factor": "accounting",
+      "expected": "unknown",
+      "actual": "present"
+    },
+    {
+      "fixture": "demo-11",
+      "factor": "individual_attribution",
+      "expected": "unknown",
+      "actual": "present"
+    },
+    {
+      "fixture": "demo-12",
+      "factor": "magnitude_duration",
+      "expected": "unknown",
+      "actual": "present"
+    },
+    {
+      "fixture": "demo-15",
+      "factor": "accounting",
+      "expected": "unknown",
+      "actual": "present"
+    },
+    {
+      "fixture": "demo-15",
+      "factor": "individual_attribution",
+      "expected": "unknown",
+      "actual": "present"
+    }
+  ],
+  "limitations": [
+    "Authored, repetitive synthetic fixtures share vocabulary with the taxonomy; not an independent real-world benchmark.",
+    "No absent-factor ground truth, legal conclusions, quote-attribution accuracy, retrieval relevance or empirical calibration evaluated.",
+    "Unknown is not counted as present; conservative abstention therefore lowers recall.",
+    "Stipulated factors describe the generating recipe; some sentences imply other factors and require independent relabeling."
+  ]
+}

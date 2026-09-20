@@ -1,0 +1,344 @@
+[
+  {
+    "id": "demo-01",
+    "text": "Fictional training scenario: Aster Grid. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "unknown",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "survived"
+  },
+  {
+    "id": "demo-02",
+    "text": "Fictional training scenario: Juniper Cloud. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "present",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "present",
+      "magnitude_duration": "present",
+      "individual_attribution": "present",
+      "opposing_inferences": "unknown"
+    },
+    "outcome": "dismissed"
+  },
+  {
+    "id": "demo-03",
+    "text": "Fictional training scenario: Cobalt Systems. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "present",
+      "accounting": "unknown",
+      "executive_departures": "present",
+      "core_operations": "present",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "present",
+      "temporal_proximity": "present",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "mixed"
+  },
+  {
+    "id": "demo-04",
+    "text": "Fictional training scenario: Meridian Devices. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "unknown",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "dismissed"
+  },
+  {
+    "id": "demo-05",
+    "text": "Fictional training scenario: Cedar Analytics. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "present",
+      "core_operations": "unknown",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "present",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "present",
+      "opposing_inferences": "present"
+    },
+    "outcome": "survived"
+  },
+  {
+    "id": "demo-06",
+    "text": "Fictional training scenario: Harbor Robotics. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "present",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "present",
+      "magnitude_duration": "present",
+      "individual_attribution": "present",
+      "opposing_inferences": "unknown"
+    },
+    "outcome": "unresolved"
+  },
+  {
+    "id": "demo-07",
+    "text": "Fictional training scenario: Lumen Freight. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "unknown",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "survived"
+  },
+  {
+    "id": "demo-08",
+    "text": "Fictional training scenario: Kestrel Data. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "unknown",
+      "accounting": "present",
+      "executive_departures": "present",
+      "core_operations": "present",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "present",
+      "temporal_proximity": "present",
+      "magnitude_duration": "unknown",
+      "individual_attribution": "present",
+      "opposing_inferences": "present"
+    },
+    "outcome": "dismissed"
+  },
+  {
+    "id": "demo-09",
+    "text": "Fictional training scenario: Orchid Software. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "present",
+      "core_operations": "unknown",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "present",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "present",
+      "opposing_inferences": "present"
+    },
+    "outcome": "mixed"
+  },
+  {
+    "id": "demo-10",
+    "text": "Fictional training scenario: Pinecrest Networks. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "unknown",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "dismissed"
+  },
+  {
+    "id": "demo-11",
+    "text": "Fictional training scenario: Quartz Health. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "present",
+      "accounting": "unknown",
+      "executive_departures": "present",
+      "core_operations": "present",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "present",
+      "temporal_proximity": "present",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "survived"
+  },
+  {
+    "id": "demo-12",
+    "text": "Fictional training scenario: Redwood Sensors. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "unknown",
+      "accounting": "present",
+      "executive_departures": "present",
+      "core_operations": "present",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "present",
+      "temporal_proximity": "present",
+      "magnitude_duration": "unknown",
+      "individual_attribution": "present",
+      "opposing_inferences": "present"
+    },
+    "outcome": "unresolved"
+  },
+  {
+    "id": "demo-13",
+    "text": "Fictional training scenario: Silverline Energy. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "unknown",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "survived"
+  },
+  {
+    "id": "demo-14",
+    "text": "Fictional training scenario: Tern Logistics. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "present",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "present",
+      "magnitude_duration": "present",
+      "individual_attribution": "present",
+      "opposing_inferences": "unknown"
+    },
+    "outcome": "dismissed"
+  },
+  {
+    "id": "demo-15",
+    "text": "Fictional training scenario: Umber Labs. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "present",
+      "accounting": "unknown",
+      "executive_departures": "present",
+      "core_operations": "present",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "present",
+      "temporal_proximity": "present",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "mixed"
+  },
+  {
+    "id": "demo-16",
+    "text": "Fictional training scenario: Vale Platforms. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "unknown",
+      "regulatory_action": "unknown",
+      "contemporaneous_knowledge": "unknown",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "unknown",
+      "opposing_inferences": "present"
+    },
+    "outcome": "dismissed"
+  },
+  {
+    "id": "demo-17",
+    "text": "Fictional training scenario: Willow Memory. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "factors": {
+      "insider_trading": "unknown",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "present",
+      "core_operations": "unknown",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "present",
+      "temporal_proximity": "unknown",
+      "magnitude_duration": "present",
+      "individual_attribution": "present",
+      "opposing_inferences": "present"
+    },
+    "outcome": "survived"
+  },
+  {
+    "id": "demo-18",
+    "text": "Fictional training scenario: Zenith Storage. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "factors": {
+      "insider_trading": "present",
+      "cw_reliability": "present",
+      "accounting": "present",
+      "executive_departures": "unknown",
+      "core_operations": "present",
+      "regulatory_action": "present",
+      "contemporaneous_knowledge": "present",
+      "motive_opportunity": "unknown",
+      "temporal_proximity": "present",
+      "magnitude_duration": "present",
+      "individual_attribution": "present",
+      "opposing_inferences": "unknown"
+    },
+    "outcome": "unresolved"
+  }
+]

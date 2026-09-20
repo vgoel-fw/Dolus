@@ -1,0 +1,3209 @@
+[
+  {
+    "id": "zucco-2009",
+    "name": "Zucco Partners, LLC v. Digimarc Corp.",
+    "citation": "552 F.3d 981 (9th Cir. 2009)",
+    "circuit": "9",
+    "court": "U.S. Court of Appeals for the Ninth Circuit",
+    "date": "2009-01-12",
+    "posture": "appeal_of_dismissal",
+    "case_id": "zucco-2009",
+    "defendant_scope": "both",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "https://law.justia.com/cases/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.html",
+    "opinion_text": "On September 13, 2004, Digimarc publicly announced that it had erroneously accounted for internal software expenditures and that due to these accounting errors it had likely overestimated earnings for the previous six quarters.\n\nFinally, several confidential witnesses report only conclusory assertions about the defendants\u2019 scienter.\n\nCW2 states that in early 2003, he was personally instructed by Val Ford, who reported to Ranjit, to \u201creprogram the time and expense software to eliminate the required supervisor or manager approval of time\u201d and to give administrative assistants in the finance department authority to enter time for software engineers.\n\nwe affirm the district court\u2019s dismissal of the complaint with prejudice and hold that Zucco has failed to adequately plead a strong inference of scienter.",
+    "summary": "Capitalized software costs, restatement, confidential witnesses and departures; dismissal affirmed for deficient scienter. Excerpt-only record; all tags await legal review.",
+    "synthetic": false,
+    "review_status": "needs_review",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "mixed",
+        "evidence": [
+          {
+            "quote": "Finally, several confidential witnesses report only conclusory assertions about the defendants\u2019 scienter.",
+            "locator": "Slip op. p. 337",
+            "source_url": "https://cases.justia.com/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.pdf",
+            "characterization": "Court criticizes the inferential content of some CW accounts; source reliability is a separate question."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "On September 13, 2004, Digimarc publicly announced that it had erroneously accounted for internal software expenditures and that due to these accounting errors it had likely overestimated earnings for the previous six quarters.",
+            "locator": "Slip op. p. 319",
+            "source_url": "https://cases.justia.com/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.pdf",
+            "characterization": "Court describes the announced accounting errors; this is not a finding of intentional fraud."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "CW2 states that in early 2003, he was personally instructed by Val Ford, who reported to Ranjit, to \u201creprogram the time and expense software to eliminate the required supervisor or manager approval of time\u201d and to give administrative assistants in the finance department authority to enter time for software engineers.",
+            "locator": "Slip op. p. 327",
+            "source_url": "https://cases.justia.com/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.pdf",
+            "characterization": "Alleged instruction is attributed through a reporting relationship; court rejected overall scienter sufficiency."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "we affirm the district court\u2019s dismissal of the complaint with prejudice and hold that Zucco has failed to adequately plead a strong inference of scienter.",
+      "locator": "Slip op. p. 317",
+      "source_url": "https://cases.justia.com/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.pdf",
+      "characterization": "Opinion-stage ruling only; ultimate case disposition not researched."
+    },
+    "source_provenance": {
+      "coverage": "excerpts_only",
+      "retrieved_on": "2026-09-19",
+      "method": "Selected judicial opinion PDF passages checked; line-wrap hyphenation and whitespace normalized. Excerpts only; full source, tags and later treatment await human legal review.",
+      "primary_pdf_url": "https://cases.justia.com/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.pdf"
+    }
+  },
+  {
+    "id": "daou-2005",
+    "name": "In re Daou Systems, Inc. Securities Litigation",
+    "citation": "411 F.3d 1006 (9th Cir. 2005)",
+    "circuit": "9",
+    "court": "U.S. Court of Appeals for the Ninth Circuit",
+    "date": "2005-06-21",
+    "posture": "appeal_of_dismissal",
+    "case_id": "daou-2005",
+    "defendant_scope": "both",
+    "outcome": "mixed",
+    "outcome_basis": "scienter",
+    "source_url": "https://law.justia.com/cases/federal/appellate-courts/F3/411/1006/497079/",
+    "opinion_text": "These specific allegations of direct involvement in the production of false accounting statements and reports are even more probative of scienter than the allegations involved in Nursing Home\n\nThe complaint's main allegations to establish scienter against defendant Moragne are suspicious stock sales, and those allegations, as pled in plaintiffs' complaint, do not rise to the level of a strong inference.\n\nImportantly, there is nothing to suggest Moragne was involved in the day-to-day operations of Daou, much less heavily involved in the details and personally directing the accounting irregularities.\n\nHowever, we affirm the district court's dismissal of defendant Moragne as relates to the section 10(b) and Rule 10b-5 claims.\n\nAFFIRMED in part; REVERSED in part and REMANDED.",
+    "summary": "Accounting-fraud allegations supported scienter for some defendants; dismissal affirmed as to Moragne. Mixed outcome and pre-Tellabs vintage preserved.",
+    "synthetic": false,
+    "review_status": "needs_review",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint's main allegations to establish scienter against defendant Moragne are suspicious stock sales, and those allegations, as pled in plaintiffs' complaint, do not rise to the level of a strong inference.",
+            "locator": "Discussion, scienter analysis, paragraph beginning \u201cHowever, we affirm the district court\u2019s dismissal of defendant Moragne\u201d",
+            "source_url": "https://law.justia.com/cases/federal/appellate-courts/F3/411/1006/497079/",
+            "characterization": "Stock-sale allegations did not suffice as to Moragne."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "These specific allegations of direct involvement in the production of false accounting statements and reports are even more probative of scienter than the allegations involved in Nursing Home",
+            "locator": "Discussion, scienter analysis, paragraph beginning \u201cThese specific allegations of direct involvement\u201d (411 F.3d at 1023)",
+            "source_url": "https://law.justia.com/cases/federal/appellate-courts/F3/411/1006/497079/",
+            "characterization": "Court considered alleged direct involvement in accounting reports."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "Importantly, there is nothing to suggest Moragne was involved in the day-to-day operations of Daou, much less heavily involved in the details and personally directing the accounting irregularities.",
+            "locator": "Discussion, scienter analysis, paragraph beginning \u201cHowever, we affirm the district court\u2019s dismissal of defendant Moragne\u201d",
+            "source_url": "https://law.justia.com/cases/federal/appellate-courts/F3/411/1006/497079/",
+            "characterization": "Defendant-specific contrast."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "AFFIRMED in part; REVERSED in part and REMANDED.",
+      "locator": "Conclusion, final disposition (\u201cAFFIRMED in part; REVERSED in part and REMANDED.\u201d)",
+      "source_url": "https://law.justia.com/cases/federal/appellate-courts/F3/411/1006/497079/",
+      "characterization": "Mixed appellate disposition. Scienter accepted for some defendants; Moragne dismissed. Ultimate case disposition not researched."
+    },
+    "source_provenance": {
+      "coverage": "excerpts_only",
+      "retrieved_on": "2026-09-19",
+      "method": "Selected public-domain judicial opinion passages read at linked mirror; whitespace normalized. Full opinion, pinpoints, later treatment and tags require human verification."
+    }
+  },
+  {
+    "id": "nvidia-2014",
+    "name": "In re NVIDIA Corp. Securities Litigation",
+    "citation": "768 F.3d 1046 (9th Cir. 2014)",
+    "circuit": "9",
+    "court": "U.S. Court of Appeals for the Ninth Circuit",
+    "date": "2014-10-02",
+    "posture": "appeal_of_dismissal",
+    "case_id": "nvidia-2014",
+    "defendant_scope": "both",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "https://law.justia.com/cases/federal/appellate-courts/ca9/11-17708/11-17708-2014-10-02.html",
+    "opinion_text": "Plaintiffs also contend that their complaint raises a strong inference of scienter under the core operations doctrine.\n\nEvaluating the allegations together, we find that they do not create a strong inference of scienter collectively.\n\nFor the reasons discussed below, we affirm.",
+    "summary": "Product-defect disclosure allegations; scienter dismissal affirmed. Historical scienter record, not the later cryptocurrency NVIDIA litigation or a current statement of Item 303 law.",
+    "synthetic": false,
+    "review_status": "needs_review",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "accounting": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "Plaintiffs also contend that their complaint raises a strong inference of scienter under the core operations doctrine.",
+            "locator": "Slip op. p. 36",
+            "source_url": "https://law.justia.com/cases/federal/appellate-courts/ca9/11-17708/11-17708-2014-10-02.html",
+            "characterization": "The theory was raised but did not independently suffice."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "mixed",
+        "evidence": [
+          {
+            "quote": "Evaluating the allegations together, we find that they do not create a strong inference of scienter collectively.",
+            "locator": "Slip op. p. 38",
+            "source_url": "https://law.justia.com/cases/federal/appellate-courts/ca9/11-17708/11-17708-2014-10-02.html",
+            "characterization": "Holistic evaluation remained insufficient."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "For the reasons discussed below, we affirm.",
+      "locator": "Slip op. p. 5",
+      "source_url": "https://law.justia.com/cases/federal/appellate-courts/ca9/11-17708/11-17708-2014-10-02.html",
+      "characterization": "Opinion-stage ruling only; ultimate case disposition not researched."
+    },
+    "source_provenance": {
+      "coverage": "excerpts_only",
+      "retrieved_on": "2026-09-19",
+      "method": "Selected public-domain judicial opinion passages read at linked mirror; whitespace normalized. Full opinion, pinpoints, later treatment and tags require human verification."
+    }
+  },
+  {
+    "id": "novak-2000",
+    "name": "Novak v. Kasaks",
+    "citation": "216 F.3d 300 (2d Cir. 2000)",
+    "circuit": "2",
+    "court": "U.S. Court of Appeals for the Second Circuit",
+    "date": "2000-06-21",
+    "posture": "appeal_of_dismissal",
+    "case_id": "novak-2000",
+    "defendant_scope": "both",
+    "outcome": "survived",
+    "outcome_basis": "scienter",
+    "source_url": "https://caselaw.findlaw.com/court/us-2nd-circuit/1436176.html",
+    "opinion_text": "According to the plaintiffs, the defendants knowingly and intentionally issued financial statements that overstated AnnTaylor's financial condition by accounting for inventory that they knew to be obsolete and nearly worthless at inflated values and by deliberately failing to adhere to the Company's publicly stated markdown policy.\n\nthe levels of such inventory grew significantly during the Class Period, from about 10% to about 34% of total inventory.\n\nthe plaintiffs here pleaded sufficient facts to establish a strong inference of fraudulent intent on the part of the AnnTaylor defendants.",
+    "summary": "Box-and-hold inventory allegations adequately pleaded scienter. Judgment vacated, with particularity to be reconsidered on remand; survived refers only to scienter. Pre-Tellabs opinion.",
+    "synthetic": false,
+    "review_status": "needs_review",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "According to the plaintiffs, the defendants knowingly and intentionally issued financial statements that overstated AnnTaylor's financial condition by accounting for inventory that they knew to be obsolete and nearly worthless at inflated values and by deliberately failing to adhere to the Company's publicly stated markdown policy.",
+            "locator": "216 F.3d at 304",
+            "source_url": "https://caselaw.findlaw.com/court/us-2nd-circuit/1436176.html",
+            "characterization": "Allegations accepted at pleading stage, not adjudicated facts."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "the levels of such inventory grew significantly during the Class Period, from about 10% to about 34% of total inventory.",
+            "locator": "216 F.3d at 304",
+            "source_url": "https://caselaw.findlaw.com/court/us-2nd-circuit/1436176.html",
+            "characterization": "Inventory metric with denominator; not a percentage of total revenue."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "the plaintiffs here pleaded sufficient facts to establish a strong inference of fraudulent intent on the part of the AnnTaylor defendants.",
+      "locator": "216 F.3d at 315",
+      "source_url": "https://caselaw.findlaw.com/court/us-2nd-circuit/1436176.html",
+      "characterization": "Opinion-stage ruling only; ultimate case disposition not researched."
+    },
+    "source_provenance": {
+      "coverage": "excerpts_only",
+      "retrieved_on": "2026-09-19",
+      "method": "Selected public-domain judicial opinion passages read at linked mirror; whitespace normalized. Full opinion, pinpoints, later treatment and tags require human verification."
+    }
+  },
+  {
+    "id": "atsi-2007",
+    "name": "ATSI Communications, Inc. v. Shaar Fund, Ltd.",
+    "citation": "493 F.3d 87 (2d Cir. 2007)",
+    "circuit": "2",
+    "court": "U.S. Court of Appeals for the Second Circuit",
+    "date": "2007-07-11",
+    "posture": "appeal_of_dismissal",
+    "case_id": "atsi-2007",
+    "defendant_scope": "both",
+    "outcome": "dismissed",
+    "outcome_basis": "mixed",
+    "source_url": "https://openjurist.org/493/f3d/87",
+    "opinion_text": "A strong inference of scienter is not raised by alleging that a legitimate investment vehicle, such as the convertible preferred stock at issue here, creates an opportunity for profit through manipulation.\n\nATSI and the defendants simply entered into mutually beneficial financing transactions.\n\nFor similar reasons, none of these allegations, nor anything else in the complaint, meets the PSLRA\u2019s requirements for pleading scienter.",
+    "summary": "Market-manipulation financing allegations failed; also addresses misrepresentation defects beyond scienter. Context differs from ordinary issuer class actions.",
+    "synthetic": false,
+    "review_status": "needs_review",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "accounting": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A strong inference of scienter is not raised by alleging that a legitimate investment vehicle, such as the convertible preferred stock at issue here, creates an opportunity for profit through manipulation.",
+            "locator": "493 F.3d at 104",
+            "source_url": "https://openjurist.org/493/f3d/87",
+            "characterization": "Court rejected generic profit opportunity as sufficient."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "mixed",
+        "evidence": [
+          {
+            "quote": "ATSI and the defendants simply entered into mutually beneficial financing transactions.",
+            "locator": "493 F.3d at 104",
+            "source_url": "https://openjurist.org/493/f3d/87",
+            "characterization": "Court identified a nonculpable account."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "For similar reasons, none of these allegations, nor anything else in the complaint, meets the PSLRA\u2019s requirements for pleading scienter.",
+      "locator": "493 F.3d at 104",
+      "source_url": "https://openjurist.org/493/f3d/87",
+      "characterization": "Opinion-stage ruling only; ultimate case disposition not researched."
+    },
+    "source_provenance": {
+      "coverage": "excerpts_only",
+      "retrieved_on": "2026-09-19",
+      "method": "Selected public-domain judicial opinion passages read at linked mirror; whitespace normalized. Full opinion, pinpoints, later treatment and tags require human verification."
+    }
+  },
+  {
+    "id": "dynex-2008",
+    "name": "Teamsters Local 445 Freight Division Pension Fund v. Dynex Capital Inc.",
+    "citation": "531 F.3d 190 (2d Cir. 2008)",
+    "circuit": "2",
+    "court": "U.S. Court of Appeals for the Second Circuit",
+    "date": "2008-06-26",
+    "posture": "interlocutory_appeal",
+    "case_id": "dynex-2008",
+    "defendant_scope": "corporate",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "https://law.justia.com/cases/federal/appellate-courts/ca2/06-2902/06-2902-cv_opn-2011-03-27.html",
+    "opinion_text": "Although there are circumstances in which a plaintiff may plead the requisite scienter against a corporate defendant without successfully pleading scienter against a specifically named individual defendant, the plaintiff here has failed to do so.\n\nwith instructions to dismiss Teamsters\u2019 complaint but allow them an opportunity to replead.",
+    "summary": "Interlocutory review of partial denial. Corporate scienter was not foreclosed merely because no named individual was sufficiently pleaded, but this complaint was deficient; remand allowed repleading.",
+    "synthetic": false,
+    "review_status": "needs_review",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "accounting": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "Although there are circumstances in which a plaintiff may plead the requisite scienter against a corporate defendant without successfully pleading scienter against a specifically named individual defendant, the plaintiff here has failed to do so.",
+            "locator": "Slip op. p. 3, lines 22\u201326",
+            "source_url": "https://cases.justia.com/federal/appellate-courts/ca2/06-2902/06-2902-cv_opn-2011-03-27.pdf",
+            "characterization": "Corporate attribution is distinct from successful pleading against a specifically named individual."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "with instructions to dismiss Teamsters\u2019 complaint but allow them an opportunity to replead.",
+      "locator": "Slip op. p. 3, lines 27\u201328",
+      "source_url": "https://cases.justia.com/federal/appellate-courts/ca2/06-2902/06-2902-cv_opn-2011-03-27.pdf",
+      "characterization": "Opinion-stage ruling only; ultimate case disposition not researched."
+    },
+    "source_provenance": {
+      "coverage": "excerpts_only",
+      "retrieved_on": "2026-09-19",
+      "method": "Selected public-domain judicial opinion passages read at linked mirror; whitespace normalized. Full opinion, pinpoints, later treatment and tags require human verification.",
+      "primary_pdf_url": "https://cases.justia.com/federal/appellate-courts/ca2/06-2902/06-2902-cv_opn-2011-03-27.pdf"
+    }
+  },
+  {
+    "id": "demo-01",
+    "name": "Aster Grid \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-01-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-01",
+    "defendant_scope": "both",
+    "outcome": "survived",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Aster Grid. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Aster Grid. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "general",
+        "evidence": [
+          {
+            "quote": "A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-02",
+    "name": "Juniper Cloud \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-02-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-02",
+    "defendant_scope": "individual",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Juniper Cloud. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.\n\nFictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Juniper Cloud. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-03",
+    "name": "Cobalt Systems \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-03-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-03",
+    "defendant_scope": "corporate",
+    "outcome": "mixed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Cobalt Systems. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: mixed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Cobalt Systems. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: mixed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-04",
+    "name": "Meridian Devices \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-04-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-04",
+    "defendant_scope": "both",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Meridian Devices. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Meridian Devices. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "general",
+        "evidence": [
+          {
+            "quote": "A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-05",
+    "name": "Cedar Analytics \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-05-15",
+    "posture": "appeal_of_dismissal",
+    "case_id": "demo-case-05",
+    "defendant_scope": "individual",
+    "outcome": "survived",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Cedar Analytics. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Cedar Analytics. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-06",
+    "name": "Harbor Robotics \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-06-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-06",
+    "defendant_scope": "corporate",
+    "outcome": "unresolved",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Harbor Robotics. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.\n\nFictional stipulated disposition: unresolved. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Harbor Robotics. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: unresolved. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-07",
+    "name": "Lumen Freight \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-07-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-07",
+    "defendant_scope": "both",
+    "outcome": "survived",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Lumen Freight. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Lumen Freight. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "general",
+        "evidence": [
+          {
+            "quote": "A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-08",
+    "name": "Kestrel Data \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-08-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-08",
+    "defendant_scope": "individual",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Kestrel Data. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Kestrel Data. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-09",
+    "name": "Orchid Software \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-09-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-09",
+    "defendant_scope": "corporate",
+    "outcome": "mixed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Orchid Software. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: mixed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Orchid Software. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: mixed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-10",
+    "name": "Pinecrest Networks \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-10-15",
+    "posture": "appeal_of_dismissal",
+    "case_id": "demo-case-10",
+    "defendant_scope": "both",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Pinecrest Networks. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Pinecrest Networks. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "general",
+        "evidence": [
+          {
+            "quote": "A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-11",
+    "name": "Quartz Health \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-11-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-11",
+    "defendant_scope": "individual",
+    "outcome": "survived",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Quartz Health. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Quartz Health. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-12",
+    "name": "Redwood Sensors \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-12-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-12",
+    "defendant_scope": "corporate",
+    "outcome": "unresolved",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Redwood Sensors. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: unresolved. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Redwood Sensors. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: unresolved. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-13",
+    "name": "Silverline Energy \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-01-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-13",
+    "defendant_scope": "both",
+    "outcome": "survived",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Silverline Energy. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Silverline Energy. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "general",
+        "evidence": [
+          {
+            "quote": "A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-14",
+    "name": "Tern Logistics \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-02-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-14",
+    "defendant_scope": "individual",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Tern Logistics. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.\n\nFictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Tern Logistics. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-15",
+    "name": "Umber Labs \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-03-15",
+    "posture": "appeal_of_dismissal",
+    "case_id": "demo-case-15",
+    "defendant_scope": "corporate",
+    "outcome": "mixed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Umber Labs. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: mixed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Umber Labs. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: mixed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-16",
+    "name": "Vale Platforms \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-04-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-16",
+    "defendant_scope": "both",
+    "outcome": "dismissed",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Vale Platforms. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Vale Platforms. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "general",
+        "evidence": [
+          {
+            "quote": "A former employee described as a confidential witness heard office rumors; the pleading gives no job title, tenure, or firsthand basis for the account.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "contemporaneous_knowledge": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: dismissed. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-17",
+    "name": "Willow Memory \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "2",
+    "court": "Fictional training court",
+    "date": "2024-05-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-17",
+    "defendant_scope": "individual",
+    "outcome": "survived",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Willow Memory. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.\n\nFictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Willow Memory. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report. The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The chief financial officer resigned days after the audit committee began its review; the complaint supplies no admission of misconduct.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "core_operations": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO received a bonus tied to a particular revenue threshold allegedly reached by the disputed transactions.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "temporal_proximity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The defense offers an innocent explanation: a migration error changed the contract-status field without executive awareness.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: survived. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  },
+  {
+    "id": "demo-18",
+    "name": "Zenith Storage \u2014 FICTIONAL",
+    "citation": "SYNTHETIC \u2014 no legal citation",
+    "circuit": "9",
+    "court": "Fictional training court",
+    "date": "2024-06-15",
+    "posture": "motion_to_dismiss",
+    "case_id": "demo-case-18",
+    "defendant_scope": "corporate",
+    "outcome": "unresolved",
+    "outcome_basis": "scienter",
+    "source_url": "",
+    "opinion_text": "Fictional training scenario: Zenith Storage. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.\n\nFictional stipulated disposition: unresolved. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+    "summary": "Fictional training data. Fictional training scenario: Zenith Storage. The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year. A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings. A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters. The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews. An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced. A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue. The corrective disclosure occurred two weeks later than the challenged earnings call. The alleged overstatement was 18 percent of reported revenue and continued for six quarters. The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+    "synthetic": true,
+    "review_status": "reviewed",
+    "factors": {
+      "insider_trading": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The CFO sold shares equal to 28 percent of her holdings three weeks before disclosure, compared with no stock sales in the prior year.",
+            "locator": "Synthetic scenario paragraph 1",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "cw_reliability": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A confidential witness was the revenue controller from 2021 through 2024, reported to the CFO, and describes personal knowledge from weekly close meetings.",
+            "locator": "Synthetic scenario paragraph 2",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "accounting": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A GAAP restatement reversed $42 million in revenue recognition from unsigned contracts over six quarters.",
+            "locator": "Synthetic scenario paragraph 3",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "executive_departures": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "core_operations": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The flagship product accounted for 80 percent of sales and was discussed at weekly operating reviews.",
+            "locator": "Synthetic scenario paragraph 4",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "regulatory_action": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "An SEC investigation into the same accounting periods was disclosed; no charge or finding was announced.",
+            "locator": "Synthetic scenario paragraph 5",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "contemporaneous_knowledge": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "A dated internal report emailed to the CFO before the earnings call identified unsigned contracts booked as revenue.",
+            "locator": "Synthetic scenario paragraph 6",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "motive_opportunity": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      },
+      "temporal_proximity": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The corrective disclosure occurred two weeks later than the challenged earnings call.",
+            "locator": "Synthetic scenario paragraph 7",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "magnitude_duration": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The alleged overstatement was 18 percent of reported revenue and continued for six quarters.",
+            "locator": "Synthetic scenario paragraph 8",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "individual_attribution": {
+        "status": "present",
+        "strength": "specific",
+        "evidence": [
+          {
+            "quote": "The complaint names the CFO as the speaker and identifies the date she received the contradictory report.",
+            "locator": "Synthetic scenario paragraph 9",
+            "source_url": "",
+            "characterization": "Fictional stipulated allegation; no real court finding."
+          }
+        ]
+      },
+      "opposing_inferences": {
+        "status": "unknown",
+        "strength": "unknown",
+        "evidence": []
+      }
+    },
+    "case_outcome": "unknown",
+    "outcome_evidence": {
+      "quote": "Fictional stipulated disposition: unresolved. This assigned label is a software fixture, not a prediction or a real judicial decision.",
+      "locator": "Synthetic disposition",
+      "source_url": "",
+      "characterization": "Assigned test label, unrelated to legal merits."
+    },
+    "source_provenance": {
+      "coverage": "synthetic_fixture",
+      "method": "Deterministic authored fixture; outcomes not sampled from real litigation."
+    }
+  }
+]

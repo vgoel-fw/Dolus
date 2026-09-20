@@ -1,0 +1,268 @@
+{
+  "version": "0.1.0-draft",
+  "factors": [
+    {
+      "id": "insider_trading",
+      "label": "Insider trading",
+      "group": "Trading & incentives",
+      "description": "Timing, percentage of holdings, baseline trading and trading-plan context; sales alone are not dispositive.",
+      "weight": 2,
+      "keywords": [
+        "insider trading",
+        "stock sales",
+        "sold shares",
+        "trading plan"
+      ],
+      "questions": [
+        "Which defendant sold, when, and how much of available holdings?",
+        "What was the prior trading baseline and any plan adoption or amendment date?"
+      ]
+    },
+    {
+      "id": "cw_reliability",
+      "label": "Confidential witnesses",
+      "group": "Sources & knowledge",
+      "description": "Separate source reliability from whether the reported facts actually concern scienter.",
+      "weight": 3,
+      "keywords": [
+        "confidential witness",
+        "CW",
+        "former employee",
+        "personal knowledge"
+      ],
+      "questions": [
+        "What job title, duties, reporting line and tenure are alleged?",
+        "Does tenure overlap the alleged events?",
+        "Is knowledge firsthand or hearsay, and who is the underlying source?",
+        "What dated facts and corroborating documents connect the account to a defendant?"
+      ]
+    },
+    {
+      "id": "accounting",
+      "label": "Accounting & restatement",
+      "group": "Financial reporting",
+      "description": "Identify the accounting rule, transactions, amount and alleged contemporaneous knowledge; a restatement is not itself fraud.",
+      "weight": 2,
+      "keywords": [
+        "GAAP",
+        "restatement",
+        "revenue recognition",
+        "accounting",
+        "inventory"
+      ],
+      "questions": [
+        "Which accounting treatment or GAAP rule was allegedly violated?",
+        "What period and financial line items changed?",
+        "Are the allegations about falsity distinguished from scienter?"
+      ]
+    },
+    {
+      "id": "executive_departures",
+      "label": "Executive departures",
+      "group": "Context",
+      "description": "Timing and circumstances of departures, with causal connection to the alleged misconduct kept explicit.",
+      "weight": 1,
+      "keywords": [
+        "resigned",
+        "resignation",
+        "executive departure",
+        "terminated"
+      ],
+      "questions": [
+        "Who departed, when and for what stated reason?",
+        "What sourced allegation links the departure to misconduct?"
+      ]
+    },
+    {
+      "id": "core_operations",
+      "label": "Core operations",
+      "group": "Sources & knowledge",
+      "description": "Importance of operations plus specific exposure to relevant information; position alone does not establish knowledge.",
+      "weight": 2,
+      "keywords": [
+        "core operations",
+        "flagship product",
+        "key business",
+        "core business"
+      ],
+      "questions": [
+        "How central was the operation and how unusual was the event?",
+        "What specifically connects senior management to the relevant information?"
+      ]
+    },
+    {
+      "id": "regulatory_action",
+      "label": "Parallel regulatory action",
+      "group": "Context",
+      "description": "Track allegations, investigations, charges and findings separately; an inquiry is not a finding of scienter.",
+      "weight": 1,
+      "keywords": [
+        "SEC investigation",
+        "DOJ",
+        "regulatory action",
+        "subpoena",
+        "SEC enforcement"
+      ],
+      "questions": [
+        "Which agency, action and date?",
+        "Was there an inquiry, charge, settlement without admission, or adjudicated finding?",
+        "Does it concern the same conduct and individuals?"
+      ]
+    },
+    {
+      "id": "contemporaneous_knowledge",
+      "label": "Contemporaneous knowledge",
+      "group": "Sources & knowledge",
+      "description": "Reports, meetings and communications linking contradictory information to a defendant at the statement date.",
+      "weight": 3,
+      "keywords": [
+        "internal report",
+        "email",
+        "dashboard",
+        "weekly reports",
+        "warning",
+        "meeting"
+      ],
+      "questions": [
+        "What information contradicted which public statement?",
+        "Who received it, on what date, and how is receipt supported?"
+      ]
+    },
+    {
+      "id": "motive_opportunity",
+      "label": "Motive & opportunity",
+      "group": "Trading & incentives",
+      "description": "Concrete personal benefit and means, distinguished from incentives common to ordinary corporate officers.",
+      "weight": 2,
+      "keywords": [
+        "bonus",
+        "motive",
+        "compensation",
+        "financing",
+        "acquisition"
+      ],
+      "questions": [
+        "What concrete personal benefit is alleged?",
+        "Is the incentive particularized or generally shared by corporate officers?"
+      ]
+    },
+    {
+      "id": "temporal_proximity",
+      "label": "Timing of events",
+      "group": "Timing & scale",
+      "description": "Record chronology without treating proximity or hindsight as proof of earlier knowledge.",
+      "weight": 1,
+      "keywords": [
+        "days later",
+        "weeks later",
+        "shortly after",
+        "before disclosure"
+      ],
+      "questions": [
+        "When were statement, warning, trade and correction made?",
+        "Does the source support earlier knowledge rather than hindsight?"
+      ]
+    },
+    {
+      "id": "magnitude_duration",
+      "label": "Magnitude & duration",
+      "group": "Timing & scale",
+      "description": "Record denominators, affected periods and duration; do not substitute magnitude for knowledge.",
+      "weight": 1,
+      "keywords": [
+        "million",
+        "billion",
+        "quarters",
+        "class period",
+        "multi-year",
+        "percent"
+      ],
+      "questions": [
+        "What amount and percentage of the relevant financial metric were affected?",
+        "What are the statement and class periods, and how long did the conduct persist?"
+      ]
+    },
+    {
+      "id": "individual_attribution",
+      "label": "Defendant attribution",
+      "group": "Sources & knowledge",
+      "description": "Separate each individual\u2019s alleged state of mind from corporate attribution; corporate pleading can differ.",
+      "weight": 3,
+      "keywords": [
+        "CFO",
+        "CEO",
+        "chief financial",
+        "chief executive",
+        "individual defendant"
+      ],
+      "questions": [
+        "Which statement and alleged knowledge belong to each defendant?",
+        "Whose intent is alleged to be imputable to the corporation and why?"
+      ]
+    },
+    {
+      "id": "opposing_inferences",
+      "label": "Opposing inferences",
+      "group": "Holistic assessment",
+      "description": "Preserve supported nonculpable explanations and the court\u2019s collective evaluation; never total factors into a scienter verdict.",
+      "weight": 2,
+      "keywords": [
+        "innocent explanation",
+        "nonculpable",
+        "opposing inference",
+        "business judgment",
+        "error"
+      ],
+      "questions": [
+        "What plausible competing explanations does the opinion identify?",
+        "How does the court assess all allegations together?"
+      ]
+    }
+  ],
+  "doctrine": {
+    "2": {
+      "title": "Second Circuit \u00b7 PSLRA strong inference",
+      "summary": "Tellabs requires a holistic comparison against plausible nonculpable inferences. Second Circuit decisions describe motive and opportunity or strong circumstantial evidence of conscious misbehavior or recklessness; generalized corporate motives are insufficient. Corporate attribution is distinct from naming an individual defendant. Research orientation only: this draft is not an exhaustive current-law treatment or citator check.",
+      "citations": [
+        {
+          "label": "Tellabs, 551 U.S. 308, 323\u201326 (2007)",
+          "url": "https://www.govinfo.gov/app/details/USREPORTS-551/USREPORTS-551-308"
+        },
+        {
+          "label": "ATSI, 493 F.3d 87, 99, 104 (2007)",
+          "url": "https://openjurist.org/493/f3d/87"
+        },
+        {
+          "label": "Novak, 216 F.3d 300, 311\u201314 (2000; pre-Tellabs)",
+          "url": "https://caselaw.findlaw.com/court/us-2nd-circuit/1436176.html"
+        },
+        {
+          "label": "Dynex, 531 F.3d 190, 195\u201397 (2008)",
+          "url": "https://law.justia.com/cases/federal/appellate-courts/ca2/06-2902/06-2902-cv_opn-2011-03-27.html"
+        }
+      ]
+    },
+    "9": {
+      "title": "Ninth Circuit \u00b7 intentional conduct or deliberate recklessness",
+      "summary": "Apply Tellabs holistically alongside the Ninth Circuit\u2019s particularity requirements for intentional conduct or deliberate recklessness. Zucco distinguishes CW reliability and personal knowledge from whether the statements indicate scienter. Core-operations allegations require context. Research orientation only: this draft is not an exhaustive current-law treatment or citator check.",
+      "citations": [
+        {
+          "label": "Tellabs, 551 U.S. 308, 323\u201326 (2007)",
+          "url": "https://www.govinfo.gov/app/details/USREPORTS-551/USREPORTS-551-308"
+        },
+        {
+          "label": "Zucco, 552 F.3d 981, 991\u201395 (2009)",
+          "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/06-35758/0635758-2011-02-25.html"
+        },
+        {
+          "label": "Daou, 411 F.3d 1006, 1022\u201323 (2005; pre-Tellabs)",
+          "url": "https://law.justia.com/cases/federal/appellate-courts/F3/411/1006/497079/"
+        },
+        {
+          "label": "NVIDIA, 768 F.3d 1046 (2014; historical scienter discussion)",
+          "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/11-17708/11-17708-2014-10-02.html"
+        }
+      ]
+    }
+  }
+}
