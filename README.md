@@ -24,6 +24,7 @@ python3 scripts/evaluate.py
 - Optional Anthropic extraction, selected in UI.
 - Same-circuit-first retrieval with procedural posture and defendant-scope filtering,TF-IDF scoring.
 - Comparison grid with source passages, ruling evidence, distinctions, and links for high-fidelity.
+- Posture filtering and case-deduplicated outcome metrics.
 - SQLite case/evidence graph, narrative vectors, saved matters, and reviewer audit records.
 - CourtListener CLI, and SCAC CSV cross-reference queue.
 - JSON and Markdown research exports, responsive interface, text/Markdown uploads, and source inspection.
@@ -54,5 +55,8 @@ Set `ANTHROPIC_API_KEY` and an available `ANTHROPIC_MODEL` in the process enviro
 | `CONTRACT.md` | API and schema contract |
 | `var/` | Generated local database; ignored by Git |
 
+## Next steps
+
+More lawyer review, full Stanford Clearinghouse & CourtListener data
 
 See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [production roadmap](docs/ROADMAP.md). 
