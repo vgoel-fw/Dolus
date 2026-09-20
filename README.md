@@ -1,6 +1,6 @@
 # Scienter Atlas — Precedent-analysis indexed for securities scienter
 
-**Scienter Atlas** is a research tool for securities litigators. It intakes a fact pattern, decomposes it into a fixed group of scienter factors (insider trading  timing, CW specificity, GAAP magnitude, executive departures), and retrieves similar motion-to-dismiss opinions for side-by-side comparison with citations and outcome statistics based on scienter. It's intended for litigators to reason by analogy across precedent rather than receive an automatic verdict. Corpus comes from CourtListener opinions with Stanford Securities Class Action Clearinghouse's outcome data.
+**Scienter Atlas** is a research tool for securities litigators. It intakes a fact pattern, decomposes it into a fixed group of scienter factors (insider trading  timing, CW specificity, GAAP magnitude, executive departures), and retrieves similar court-issued opinions for comparisons with citations and outcome statistics based on scienter. It's intended for litigators to reason by analogy across precedent rather than receive an automatic verdict. Corpus comes from CourtListener opinions with Stanford Securities Class Action Clearinghouse's outcome data.
 
 ## Run
 
