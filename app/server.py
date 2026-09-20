@@ -16,7 +16,7 @@ def allowed_host(host,port):return host in {f'127.0.0.1:{port}',f'localhost:{por
 def allowed_origin(origin,port):return origin is None or origin in {f'http://127.0.0.1:{port}',f'http://localhost:{port}',f'http://[::1]:{port}'}
 
 class Handler(BaseHTTPRequestHandler):
-    server_version='ScienterLab/1.0'
+    server_version='Dolus/1.0'
     def setup(self):
         super().setup()
         self.connection.settimeout(30)
@@ -98,7 +98,7 @@ def create_server(port=8765,db_path=None):
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--port',type=int,default=8765);parser.add_argument('--db',default=None);args=parser.parse_args()
-    server=create_server(args.port,args.db);print(f'Scienter Lab: http://127.0.0.1:{server.server_port}',flush=True)
+    server=create_server(args.port,args.db);print(f'Dolus: http://127.0.0.1:{server.server_port}',flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass
     finally:server.server_close()
