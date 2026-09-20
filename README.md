@@ -26,7 +26,7 @@ python3 scripts/evaluate.py
 - Comparison grid with source passages, ruling evidence, distinctions, and links for high-fidelity.
 - Posture filtering and case-deduplicated outcome metrics.
 - SQLite case/evidence graph, narrative vectors, saved matters, and reviewer audit records.
-- CourtListener CLI, and SCAC CSV cross-reference queue.
+- CourtListener CLI, and Stanford Clearinghouse CSV cross-reference queue.
 - JSON and Markdown research exports, responsive interface, text/Markdown uploads, and source inspection.
 
 ## Data and present limits
