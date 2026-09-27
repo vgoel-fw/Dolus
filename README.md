@@ -60,3 +60,7 @@ Set `ANTHROPIC_API_KEY` and an available `ANTHROPIC_MODEL` in the process enviro
 More lawyer review, full Stanford Clearinghouse & CourtListener data
 
 See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [production roadmap](docs/ROADMAP.md). 
+
+## CourtListener passage update
+
+Dolus now includes a sample of **5 CourtListener opinions** and **409 source-linked passages** for litigators to search and compare. The Similar passages workspace shows exact quotations, surrounding source text, shared scienter factors, and structural differences. **40 tests pass**, covering quote integrity, source links, retrieval behavior, and separation from outcome statistics. These checks do not establish legal citation accuracy or subsequent treatment; structural tags remain pending attorney review.
