@@ -9,6 +9,7 @@ from urllib.parse import urlsplit, parse_qs, unquote
 from .engine import analyze
 from .storage import Store
 from .llm import extract
+from .source_catalog import SourceCatalog
 ROOT=Path(__file__).resolve().parent.parent
 MAX_BODY=8*1024*1024
 
@@ -45,6 +46,10 @@ class Handler(BaseHTTPRequestHandler):
                 if length<=0 or length>MAX_BODY:return self.send_json({'error':'Request body must be 1 byte to 8 MiB.'},413)
                 p=json.loads(self.rfile.read(length))
                 if not isinstance(p,dict):raise ValueError('JSON request must be an object.')
+            if path=='/api/passages/search' and method=='POST':
+                return self.send_json(self.server.source_catalog.search(p))
+            if path=='/api/passages/context' and method=='GET':
+                return self.send_json(self.server.source_catalog.context(parse_qs(parsed.query).get('id',[''])[0]))
             if path=='/api/health' and method=='GET':return self.send_json({'status':'ok','storage':'sqlite','network_default':'off'})
             if method=='GET' and path=='/api/graph':return self.send_json(store.graph())
             if method=='GET' and path=='/api/bootstrap':
@@ -94,6 +99,7 @@ def create_server(port=8765,db_path=None):
     examples_path=ROOT/'data/examples.json'; examples=json.loads(examples_path.read_text()) if examples_path.exists() else []
     state=ROOT/'var';state.mkdir(exist_ok=True)
     server=ThreadingHTTPServer(('127.0.0.1',port),Handler);server.taxonomy=taxonomy;server.examples=examples;server.store=Store(db_path or state/'scienter.sqlite3',taxonomy,cases)
+    server.source_catalog=SourceCatalog(ROOT/'data/flp_opinions.json',taxonomy)
     return server
 
 def main():

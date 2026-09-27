@@ -102,12 +102,12 @@ def analyze(payload, cases, taxonomy):
         if field in payload and type(payload[field]) is not bool:raise ValueError(field+' must be a boolean.')
     text=payload.get('text','')
     if not isinstance(text,str) or not text.strip() or len(text)>100000: raise ValueError('Supply a fact pattern of 1–100,000 characters.')
-    for key, choices, default in [('circuit',{'2','9'},'9'),('mode',{'real','demo'},'demo'),('posture',{'motion_to_dismiss','appeal_of_dismissal','interlocutory_appeal'},'motion_to_dismiss'),('defendant_scope',{'individual','corporate','both'},'both')]:
+    for key, choices, default in [('circuit',{'2','9'},'9'),('mode',{'real','demo','preview'},'demo'),('posture',{'motion_to_dismiss','appeal_of_dismissal','interlocutory_appeal'},'motion_to_dismiss'),('defendant_scope',{'individual','corporate','both'},'both')]:
         if not isinstance(payload.get(key,default),str) or payload.get(key,default) not in choices: raise ValueError('Invalid '+key)
     circuit=payload.get('circuit','9'); mode=payload.get('mode','demo'); scope=payload.get('defendant_scope','both'); posture=payload.get('posture','motion_to_dismiss')
     profile=validate_profile(payload['profile'],text,taxonomy) if 'profile' in payload else draft(text,taxonomy)
-    eligible=[c for c in cases if c['synthetic']==(mode=='demo') and c['review_status']=='reviewed' and c['posture']==posture and c['defendant_scope']==scope]
-    cohort=[c for c in eligible if c['circuit']==circuit]
+    eligible=[c for c in cases if c['synthetic']==(mode=='demo') and (c['review_status']=='reviewed' or mode=='preview') and c['posture']==posture and c['defendant_scope']==scope]
+    cohort=[c for c in eligible if c['circuit']==circuit and c['review_status']=='reviewed']
     candidates=[c for c in eligible if payload.get('cross_circuit',False) or c['circuit']==circuit]
     present={fid for fid,f in profile['factors'].items() if f['status']=='present'}
     known={fid:f['status'] for fid,f in profile['factors'].items() if f['status']!='unknown'}
@@ -119,4 +119,4 @@ def analyze(payload, cases, taxonomy):
         overlap=sum(weights[fid] for fid in matches)/(sum(weights[fid] for fid in known) or 1)
         results.append({'case':c,'score':round(100*(.8*overlap+.2*similarity),1),'matched_factors':matches,'differences':differences,'same_circuit':c['circuit']==circuit})
     results.sort(key=lambda r:(not r['same_circuit'],-r['score'],r['case']['id']))
-    return {'profile':profile,'results':results[:12],'stats':calibrate(cohort,present,mode),'doctrine':taxonomy.get('doctrine',{}).get(circuit,{}),'warnings':(['DEMONSTRATION: all cases and statistics in this mode are fictional.'] if mode=='demo' else []) + ['Similarity scores measure profile overlap and narrative similarity, not likelihood of scienter.']}
+    return {'profile':profile,'results':results[:12],'stats':calibrate(cohort,present,mode),'doctrine':taxonomy.get('doctrine',{}).get(circuit,{}),'warnings':(['DEMONSTRATION: all cases and statistics in this mode are fictional.'] if mode=='demo' else ['Preview: real opinion annotations await review and are excluded from statistics.'] if mode=='preview' else []) + ['Similarity scores measure profile overlap and narrative similarity, not likelihood of scienter.']}
