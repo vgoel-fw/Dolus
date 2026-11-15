@@ -75,6 +75,7 @@ def narrative_similarity(text, docs):
     return [sum(q.get(t,0)*n for t,n in v.items())/(qnorm*math.sqrt(sum(x*x for x in v.values())) or 1) for v in vectors[1:]]
 
 def wilson(success, n):
+    if n<=0:return None  # fix: callers outside calibrate() could divide by zero
     z = 1.959963984540054; p = success/n; d=1+z*z/n
     center=(p+z*z/(2*n))/d; delta=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/d
     return [100*(center-delta),100*(center+delta)]

@@ -12,8 +12,14 @@ from .llm import extract
 from .source_catalog import SourceCatalog
 ROOT=Path(__file__).resolve().parent.parent
 MAX_BODY=8*1024*1024
+# fix: mimetypes reads the os registry, on some windows setups .js comes back text/plain
+# and with nosniff the browser refuses to run the module, so the page stays blank
+STATIC_TYPES={'.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.html':'text/html; charset=utf-8','.svg':'image/svg+xml','.json':'application/json'}
 
-def allowed_host(host,port):return host in {f'127.0.0.1:{port}',f'localhost:{port}',f'[::1]:{port}'}
+# fix: browsers drop the port from Host on port 80, which used to 403 every request
+def allowed_host(host,port):
+    names={'127.0.0.1','localhost','[::1]'}
+    return host in {f'{n}:{port}' for n in names} or (port==80 and host in names)
 def allowed_origin(origin,port):return origin is None or origin in {f'http://127.0.0.1:{port}',f'http://localhost:{port}',f'http://[::1]:{port}'}
 
 class Handler(BaseHTTPRequestHandler):
@@ -42,7 +48,8 @@ class Handler(BaseHTTPRequestHandler):
             if method=='POST':
                 if self.headers.get('Transfer-Encoding'):return self.send_json({'error':'Transfer-Encoding is unsupported; supply Content-Length.'},400)
                 if self.headers.get_content_type()!='application/json':return self.send_json({'error':'Content-Type application/json is required.'},415)
-                length=int(self.headers.get('Content-Length','0'))
+                try:length=int(self.headers.get('Content-Length','0'))
+                except ValueError:return self.send_json({'error':'Content-Length must be an integer.'},400)
                 if length<=0 or length>MAX_BODY:return self.send_json({'error':'Request body must be 1 byte to 8 MiB.'},413)
                 p=json.loads(self.rfile.read(length))
                 if not isinstance(p,dict):raise ValueError('JSON request must be an object.')
@@ -88,7 +95,7 @@ class Handler(BaseHTTPRequestHandler):
             if method=='GET' and not path.startswith('/api/'):
                 web=(ROOT/'web').resolve(); target=(web/('index.html' if path=='/' else path.lstrip('/'))).resolve()
                 if not target.is_relative_to(web) or not target.is_file():raise KeyError('File not found.')
-                self.send_response(200);self.send_header('Content-Type',mimetypes.guess_type(str(target))[0] or 'application/octet-stream');self.end_headers();self.wfile.write(target.read_bytes());return
+                self.send_response(200);self.send_header('Content-Type',STATIC_TYPES.get(target.suffix) or mimetypes.guess_type(str(target))[0] or 'application/octet-stream');self.end_headers();self.wfile.write(target.read_bytes());return
             raise KeyError('Endpoint not found.')
         except (ValueError,TypeError) as exc:self.send_json({'error':str(exc)},400)
         except KeyError as exc:self.send_json({'error':str(exc).strip("'")},404)

@@ -35,12 +35,16 @@ class Store:
             CREATE TABLE IF NOT EXISTS narrative_vectors(case_id TEXT PRIMARY KEY, term_counts TEXT);
             CREATE TABLE IF NOT EXISTS matters(id TEXT PRIMARY KEY, document TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS reviews(id INTEGER PRIMARY KEY, case_id TEXT, reviewer TEXT, note TEXT, reviewed_at TEXT);''')
+        # fix: seeds were only inserted once, so after a pull the db kept serving old case text.
+        # refresh any seed that changed unless someone already signed off on it locally
         for c in seeds:
             validate_case(c,taxonomy)
-            if not self.case(c['id']): self.put_case(c)
+            stored=self.case(c['id'])
+            if not stored or (stored!=c and 'review_attestation' not in stored): self.put_case(c)
     @contextmanager
     def connect(self):
-        db = sqlite3.connect(self.path)
+        # fix: threaded server + default 5s lock wait gave random 'database is locked' 500s
+        db = sqlite3.connect(self.path, timeout=15)
         try:
             with db:
                 yield db
@@ -96,7 +100,8 @@ class Store:
         with self.connect() as db:db.execute('INSERT INTO matters VALUES (?,?)',(m['id'],json.dumps(m)))
         return m
     def delete_matter(self,id):
-        with self.connect() as db:db.execute('DELETE FROM matters WHERE id=?',(id,))
+        with self.connect() as db:n=db.execute('DELETE FROM matters WHERE id=?',(id,)).rowcount
+        if not n:raise KeyError('Matter not found.')
         return {'deleted':id}
 
     def graph(self):

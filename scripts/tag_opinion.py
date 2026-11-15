@@ -16,6 +16,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def tag(text,metadata,taxonomy,use_llm=False):
     if not isinstance(text,str) or not text.strip() or len(text)>100000:
         raise ValueError('Opinion text must contain 1–100,000 characters; use a documented relevant excerpt if longer.')
+    if not isinstance(metadata,dict):raise ValueError('Metadata JSON must be an object.')
     if metadata.get('synthetic') is not False:
         raise ValueError('Opinion tagging requires explicit synthetic:false metadata; fictional fixtures use the separate generator.')
     profile=extract(text,taxonomy) if use_llm else draft(text,taxonomy)
