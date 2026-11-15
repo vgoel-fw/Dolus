@@ -69,13 +69,15 @@ def analyze_intent(text, statute='10b', circuit='9', encoder=None, rs=None):
     sym, events = symbolic(text, rs, sents)
     counters = counter_signals(text, rs, sents)
     sem = semantic_scores(sents, encoder, rs)
+    # sentences a rule already explains don't get to propose extra semantic-only signals
+    explained = {b['start'] for h in sym.values() for b in h['bindings'].values()}
     out = []
     for sig in rs['signals']:
         hit = sym.get(sig['id'])
         neural, best, is_top = sem[sig['id']]
         if hit:
             status = hit['status']
-        elif neural >= encoder.threshold and best and is_top:
+        elif neural >= encoder.threshold and best and is_top and best['start'] not in explained:
             status = 'semantic_only'
             hit = {'status': status, 'coverage': 0.0, 'covered_roles': [], 'missing_roles': sig['rule']['all'],
                    'bindings': {}, 'intervals': [], 'generic_only': False}

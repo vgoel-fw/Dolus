@@ -16,7 +16,8 @@
      "warn(?:ed|ing|ings)",
      "red flags?",
      "raised (?:concerns?|questions?|issues?)",
-     "complain(?:ed|ts?)",
+     "complained",
+     "(?:customer|employee|internal|whistleblower|written) complaints?",
      "whistle-?blower",
      "alerted",
      "flagged",
@@ -43,7 +44,10 @@
      "deliberately (?:avoided|ignored|refrained)",
      "conscious(?:ly)? avoid(?:ed|ance)?",
      "willful(?:ly)? blind(?:ness)?",
-     "deliberate ignorance"
+     "deliberate ignorance",
+     "(?:stay|stayed|staying|remain|remained) (?:\\S+ ){0,2}uninformed",
+     "(?:arranged|asked) to be (?:left|taken|kept) (?:off|out of) (?:the )?(?:distribution|list|emails?|loop|meetings?)",
+     "made a point of not (?:asking|knowing|reading|learning)"
     ]
    },
    "rule": {
@@ -89,7 +93,8 @@
      "warn(?:ed|ing|ings)",
      "red flags?",
      "raised (?:concerns?|questions?|issues?)",
-     "complain(?:ed|ts?)",
+     "complained",
+     "(?:customer|employee|internal|whistleblower|written) complaints?",
      "whistle-?blower",
      "alerted",
      "flagged",
@@ -102,7 +107,7 @@
     "disregard": [
      "ignored",
      "disregarded",
-     "dismissed (?:the )?(?:concerns?|warnings?|complaints?|findings?)",
+     "dismissed (?:the |their |her |his )?(?:concerns?|warnings?|findings?)",
      "failed to (?:investigate|follow up|act|respond|correct|remediate|look into|escalate)",
      "took no (?:action|steps|corrective action)",
      "brushed (?:off|aside)",
@@ -178,9 +183,7 @@
      "statement"
     ],
     "scope": 2,
-    "partial": [
-     "internal"
-    ]
+    "partial": []
    },
    "prototypes": [
     "Weekly sales reports sent to the CEO showed demand collapsing while he told analysts demand was strong.",
@@ -379,10 +382,7 @@
      "proximity"
     ],
     "scope": 1,
-    "partial": [
-     "plan",
-     "change"
-    ],
+    "partial": [],
     "temporal": {
      "from": "change",
      "to": "trade",
@@ -723,7 +723,8 @@
      "warn(?:ed|ing|ings)",
      "red flags?",
      "raised (?:concerns?|questions?|issues?)",
-     "complain(?:ed|ts?)",
+     "complained",
+     "(?:customer|employee|internal|whistleblower|written) complaints?",
      "whistle-?blower",
      "alerted",
      "flagged",

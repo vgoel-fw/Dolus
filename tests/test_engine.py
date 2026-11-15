@@ -107,6 +107,10 @@ class AnalysisTests(unittest.TestCase):
         self.assertEqual(self.request_without_socket('/api/health')[0],404)
         self.assertEqual(self.request_without_socket('/api/analyze',payload={'text':TEXT,'use_llm':'true'})[0],400)
         self.assertEqual(self.request_without_socket('/api/matters',origin='https://evil.example')[0],403)
+    def test_signals_endpoint(self):
+        status,data=self.request_without_socket('/api/signals','POST',payload={'text':'The CEO was warned about the defect and said he did not want to know.','statute':'10b'})
+        self.assertEqual(status,200);self.assertEqual(data['signals'][0]['id'],'conscious_avoidance')
+        self.assertEqual(self.request_without_socket('/api/signals','POST',payload={'text':'x','statute':'zz'})[0],400)
     def test_local_security_policy(self):
         self.assertTrue(allowed_host('127.0.0.1:8765',8765));self.assertFalse(allowed_host('evil.test:8765',8765))
         self.assertFalse(allowed_origin('https://evil.test',8765));self.assertFalse(allowed_origin('null',8765))

@@ -1,0 +1,147 @@
+{
+ "notice": "fictional, hand written snippets for measuring the signal layer. not real cases and not a legal benchmark.",
+ "items": [
+  {
+   "id": "ostrich-1",
+   "text": "After the head of internal audit flagged the inventory gaps, the CEO told her he did not want to know and stopped attending the monthly reviews.",
+   "expected": [
+    "conscious_avoidance"
+   ]
+  },
+  {
+   "id": "ostrich-2",
+   "text": "The compliance officer warned the CFO about channel partners. The CFO instructed his staff not to forward any more of her emails.",
+   "expected": [
+    "conscious_avoidance"
+   ]
+  },
+  {
+   "id": "ostrich-3",
+   "text": "There is no allegation that the CEO declined to review any report or was told of any problem.",
+   "expected": []
+  },
+  {
+   "id": "ostrich-para",
+   "text": "The chief executive made a point of staying uninformed about the irregularities his staff kept raising and arranged to be left off the distribution.",
+   "expected": [
+    "conscious_avoidance"
+   ]
+  },
+  {
+   "id": "redflag-1",
+   "text": "Customers complained repeatedly about failed units and the warnings reached the COO, who took no action.",
+   "expected": [
+    "red_flags_disregarded"
+   ]
+  },
+  {
+   "id": "redflag-2",
+   "text": "Plaintiffs fail to allege that any defendant received a warning about the reserve.",
+   "expected": []
+  },
+  {
+   "id": "internal-1",
+   "text": "Weekly pipeline reports sent to the CEO showed bookings down 30 percent while he reaffirmed guidance on the earnings call.",
+   "expected": [
+    "contrary_internal_information"
+   ]
+  },
+  {
+   "id": "after-1",
+   "text": "Even after receiving the engineers' memo, the CEO continued to assure investors that the recall was isolated.",
+   "expected": [
+    "statements_despite_warnings"
+   ]
+  },
+  {
+   "id": "trade-1",
+   "text": "On May 2, 2022 the CFO sold 64% of his shares. On June 10, 2022 the company announced the restatement and the stock fell 38%.",
+   "expected": [
+    "suspicious_trading_timing"
+   ]
+  },
+  {
+   "id": "trade-2",
+   "text": "The CEO sold stock three weeks before the corrective disclosure, far more than in any prior year.",
+   "expected": [
+    "suspicious_trading_timing"
+   ]
+  },
+  {
+   "id": "trade-3",
+   "text": "The CFO sold shares pursuant to a pre-existing 10b5-1 plan adopted before the class period, consistent with his prior trading.",
+   "expected": []
+  },
+  {
+   "id": "plan-1",
+   "text": "The CEO adopted a 10b5-1 plan two weeks before the guidance cut and began selling under it.",
+   "expected": [
+    "trading_plan_timing"
+   ]
+  },
+  {
+   "id": "depart-1",
+   "text": "The CFO abruptly resigned ten days before the company disclosed the accounting review.",
+   "expected": [
+    "departure_timing"
+   ]
+  },
+  {
+   "id": "gate-1",
+   "text": "The outside auditor resigned and withdrew its opinion on the 2021 financial statements.",
+   "expected": [
+    "gatekeeper_exit"
+   ]
+  },
+  {
+   "id": "hide-1",
+   "text": "The controller deleted the emails about the side agreements after the subpoena arrived.",
+   "expected": [
+    "concealment"
+   ]
+  },
+  {
+   "id": "hide-2",
+   "text": "Sales managers used side letters granting return rights and kept them from the auditors.",
+   "expected": [
+    "concealment"
+   ]
+  },
+  {
+   "id": "motive-1",
+   "text": "The CEO's bonus was tied to meeting the revenue target he announced to the market.",
+   "expected": [
+    "concrete_personal_motive"
+   ]
+  },
+  {
+   "id": "motive-2",
+   "text": "Defendants were motivated to maintain a high stock price.",
+   "expected": []
+  },
+  {
+   "id": "qe-1",
+   "text": "In the last week of each quarter the team shipped product early with extended payment terms to hit guidance.",
+   "expected": [
+    "quarter_end_manipulation"
+   ]
+  },
+  {
+   "id": "cert-1",
+   "text": "The CFO signed SOX certifications in March 2021 weeks after the controller warned him about the reserve releases.",
+   "expected": [
+    "certification_with_red_flags"
+   ]
+  },
+  {
+   "id": "none-1",
+   "text": "The company designs industrial sensors and sells them through distributors in Europe and Asia.",
+   "expected": []
+  },
+  {
+   "id": "none-2",
+   "text": "The district court dismissed the complaint with leave to amend.",
+   "expected": []
+  }
+ ]
+}
