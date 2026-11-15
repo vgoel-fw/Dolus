@@ -120,4 +120,8 @@ def analyze(payload, cases, taxonomy):
         overlap=sum(weights[fid] for fid in matches)/(sum(weights[fid] for fid in known) or 1)
         results.append({'case':c,'score':round(100*(.8*overlap+.2*similarity),1),'matched_factors':matches,'differences':differences,'same_circuit':c['circuit']==circuit})
     results.sort(key=lambda r:(not r['same_circuit'],-r['score'],r['case']['id']))
-    return {'profile':profile,'results':results[:12],'stats':calibrate(cohort,present,mode),'doctrine':taxonomy.get('doctrine',{}).get(circuit,{}),'warnings':(['DEMONSTRATION: all cases and statistics in this mode are fictional.'] if mode=='demo' else ['Preview: real opinion annotations await review and are excluded from statistics.'] if mode=='preview' else []) + ['Similarity scores measure profile overlap and narrative similarity, not likelihood of scienter.']}
+    statute=payload.get('statute','10b')
+    if not isinstance(statute,str):raise ValueError('statute must be text.')
+    from .fusion import analyze_intent
+    intent=analyze_intent(text,statute,circuit)
+    return {'profile':profile,'intent':intent,'results':results[:12],'stats':calibrate(cohort,present,mode),'doctrine':taxonomy.get('doctrine',{}).get(circuit,{}),'warnings':(['DEMONSTRATION: all cases and statistics in this mode are fictional.'] if mode=='demo' else ['Preview: real opinion annotations await review and are excluded from statistics.'] if mode=='preview' else []) + ['Similarity scores measure profile overlap and narrative similarity, not likelihood of scienter.']}

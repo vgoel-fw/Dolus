@@ -6,6 +6,7 @@ only to the exact stored source text, never to numbered judicial paragraphs.
 import math
 import re
 from collections import Counter
+from .encoder import get_encoder
 
 _TOKEN = re.compile(r"[a-z0-9]+", re.I)
 _STOP = set("a an the and or of to in for on at by with from as is are was were be been that this it its they their not no but which who has have had would could should may must can we our court plaintiffs defendants plaintiff defendant".split())
@@ -50,7 +51,16 @@ def _structure(text, taxonomy):
     for dimension, labels in _RULES.items():
         result[dimension] = [label for label, patterns in labels.items() if any(_has(text, p) for p in patterns)]
     result["polarity"] = "negation_present" if _NEGATION.search(text) else "no_negation_detected"
+    result["intent_signals"] = _intent_tags(text)
     return result
+
+
+def _intent_tags(text):
+    # symbolic only here, it runs on every stored passage at startup
+    from .fusion import rules
+    from .signals import symbolic, sentences
+    hits, _ = symbolic(text, rules(), sentences(text))
+    return sorted(hits)
 
 
 def _spans(text, max_chars=1800):
@@ -105,14 +115,19 @@ def build_passages(documents, taxonomy):
                 "review_status": doc.get("review_status", "needs_review"),
                 "data_kind": doc.get("data_kind", "unknown"),
                 "structure": structure,
+                "_vec": get_encoder().encode_one(excerpt),
                 # Search can derive query factor tags without hidden global state.
                 "factor_keywords": {f["id"]: f.get("keywords", []) for f in (taxonomy.get("factors", []) if isinstance(taxonomy, dict) else taxonomy)},
             })
     return records
 
 
+def public(p):
+    return {k: v for k, v in p.items() if k not in ("factor_keywords", "_vec")}
+
+
 def search_passages(query, passages, circuit=None, limit=12):
-    """Rank exact passages by 70% structural overlap + 30% lexical cosine.
+    """Rank exact passages by 60% structural overlap + 25% semantic + 15% lexical cosine.
 
     Circuit is an exact optional filter. Results include scores, matching reasons,
     and explicit structural distinctions. Scores measure text similarity only;
@@ -130,7 +145,9 @@ def search_passages(query, passages, circuit=None, limit=12):
         keyword_map.update(p.get("factor_keywords", {}))
     query_structure = _structure(query, [{"id": key, "keywords": value} for key, value in keyword_map.items()])
     qcounts = Counter(_tokens(query))
-    dimensions = {"factor_ids": 4, "legal_roles": 2, "actor_roles": 1.5, "evidence_bases": 2}
+    dimensions = {"factor_ids": 4, "intent_signals": 3, "legal_roles": 2, "actor_roles": 1.5, "evidence_bases": 2}
+    encoder = get_encoder()
+    qvec = encoder.encode_one(query)
     results = []
     for p in candidates:
         structure = p["structure"]
@@ -151,14 +168,18 @@ def search_passages(query, passages, circuit=None, limit=12):
         counts = Counter(_tokens(p["text"]))
         divisor = math.sqrt(sum(v*v for v in qcounts.values()) * sum(v*v for v in counts.values()))
         lexical = sum(v * counts[k] for k, v in qcounts.items()) / divisor if divisor else 0.0
-        if not numerator and not lexical:
+        vec = p.get("_vec")
+        semantic = encoder.cosine(qvec, vec) if vec is not None else 0.0
+        if semantic < 0.08:
+            semantic = 0.0  # hash collisions, not meaning
+        if not numerator and not lexical and not semantic:
             continue
         if query_structure["polarity"] != structure["polarity"]:
             distinctions.append("Negation language differs; check which proposition is negated in context.")
         if lexical:
             reasons.append("Shared wording: " + ", ".join(sorted(set(qcounts) & set(counts))[:12]))
-        result = {k: v for k, v in p.items() if k != "factor_keywords"}
-        result.update(score=round(.7 * structural + .3 * lexical, 4), structural_score=round(structural, 4), lexical_score=round(lexical, 4), reasons=reasons, distinctions=distinctions, query_structure=query_structure,
-                      method="Deterministic keyword tags and token cosine; similarity is not legal equivalence.")
+        result = public(p)
+        result.update(score=round(.6 * structural + .25 * semantic + .15 * lexical, 4), structural_score=round(structural, 4), semantic_score=round(semantic, 4), lexical_score=round(lexical, 4), reasons=reasons, distinctions=distinctions, query_structure=query_structure,
+                      method=f"Structural tags incl. intent signals (60%), {encoder.name} similarity (25%), token cosine (15%); similarity is not legal equivalence.")
         results.append(result)
     return sorted(results, key=lambda p: (-p["score"], str(p["document_id"]), p["start"]))[:limit]

@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 NEGATORS = {'no', 'not', 'never', 'without', 'neither', 'nor', 'denied', 'denies', 'lacked', 'lacks', "didn't", 'absent', 'nothing'}
-_BOUNDARY = re.compile(r'(?<=[.!?])["\'’”)]*\s+(?=[A-Z0-9"“(\[])|\n\s*')
+_BOUNDARY = re.compile(r'(?<=[.!?])["\'’”)]*\s+(?=[A-Z0-9"“(\[])|\n\s*\n\s*')
 _ABBREV = re.compile(r'(?:\b(?:v|vs|inc|corp|co|ltd|no|nos|mr|ms|mrs|dr|sec|cir|st|jr|sr|e\.g|i\.e|u\.s|f|supp|cal|n\.y)\.|\b[A-Z]\.)$', re.I)
 
 
@@ -56,7 +56,7 @@ def sentences(text):
     spans, start = [], 0
     for m in _BOUNDARY.finditer(text):
         piece = text[start:m.start()]
-        if '\n' not in m.group(0) and _ABBREV.search(piece.rstrip()):
+        if '\n\n' not in re.sub(r'[ \t]', '', m.group(0)) and _ABBREV.search(piece.rstrip()):
             continue  # "v." "Inc." etc, not a real sentence end
         spans.append((start, m.start())); start = m.end()
     spans.append((start, len(text)))
@@ -76,8 +76,13 @@ def _negated(sentence, start):
     return any(w in NEGATORS for w in re.findall(r"[a-z']+", before.lower())[-6:])
 
 
+def flat(text):
+    # undo pdf line wraps for matching only, quotes stay verbatim
+    return re.sub(r'\s+', ' ', re.sub(r'(?<=\w)-\s*\n\s*(?=\w)', '', text))
+
+
 def _role_hits(signal, sent):
-    text = sent['text']
+    text = flat(sent['text'])
     if any(x.search(text) for x in signal['_exclude']):
         return {}
     hits = {}
@@ -134,11 +139,12 @@ def timeline(text, sents, rules):
     by_id = {s['id']: s for s in rules['signals']}
     events = []
     for sent in sents:
-        dates = parse_dates(sent['text'])
-        rel = relative_offsets(sent['text'])
+        ft = flat(sent['text'])
+        dates = parse_dates(ft)
+        rel = relative_offsets(ft)
         for role, sid in EVENT_ROLES.items():
             pats = by_id[sid]['_roles'].get(role, [])
-            m = next((x for p in pats for x in [p.search(sent['text'])] if x and not _negated(sent['text'], x.start())), None)
+            m = next((x for p in pats for x in [p.search(ft)] if x and not _negated(ft, x.start())), None)
             if not m:
                 continue
             events.append({'type': role, 'quote': sent['text'], 'start': sent['start'], 'end': sent['end'],
@@ -225,7 +231,7 @@ def counter_signals(text, rules, sents=None):
     out = []
     for c in rules['counter_signals']:
         for sent in sents:
-            m = next((x for p in c['_patterns'] for x in [p.search(sent['text'])] if x), None)
+            m = next((x for p in c['_patterns'] for x in [p.search(flat(sent['text']))] if x), None)
             if m:
                 out.append({'id': c['id'], 'label': c['label'], 'counters': c['counters'], 'quote': sent['text'], 'start': sent['start'], 'end': sent['end']})
                 break

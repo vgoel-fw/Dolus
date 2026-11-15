@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 from urllib.parse import urlsplit
-from .passages import build_passages, search_passages
+from .passages import build_passages, search_passages, public
 
 class SourceCatalog:
     def __init__(self, path, taxonomy):
@@ -46,7 +46,7 @@ class SourceCatalog:
         if passage is None:
             raise KeyError('Passage not found.')
         doc=self.by_document[passage['document_id']]
-        return {'passage':{k:v for k,v in passage.items() if k!='factor_keywords'},
+        return {'passage':public(passage),
                 'before':doc['text'][max(0,passage['start']-900):passage['start']],
                 'after':doc['text'][passage['end']:passage['end']+900],
                 'citation':doc.get('citation',''),'date':doc.get('date',''),

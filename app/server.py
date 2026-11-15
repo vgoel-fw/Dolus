@@ -10,6 +10,12 @@ from .engine import analyze
 from .storage import Store
 from .llm import extract
 from .source_catalog import SourceCatalog
+from .fusion import analyze_intent, rules as signal_rules
+
+def signal_catalog():
+    r=signal_rules()
+    return {'statutes':[{'id':s['id'],'label':s['label'],'scienter':s['scienter']} for s in r['statutes']],
+            'signals':[{'id':s['id'],'label':s['label'],'family':s['family'],'description':s['description']} for s in r['signals']],'notice':r['notice']}
 ROOT=Path(__file__).resolve().parent.parent
 MAX_BODY=8*1024*1024
 # fix: mimetypes reads the os registry, on some windows setups .js comes back text/plain
@@ -57,11 +63,13 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(self.server.source_catalog.search(p))
             if path=='/api/passages/context' and method=='GET':
                 return self.send_json(self.server.source_catalog.context(parse_qs(parsed.query).get('id',[''])[0]))
+            if path=='/api/signals' and method=='POST':
+                return self.send_json(analyze_intent(p.get('text'),p.get('statute','10b'),p.get('circuit','9') if p.get('circuit') in ('2','9') else '9'))
             if path=='/api/health' and method=='GET':return self.send_json({'status':'ok','storage':'sqlite','network_default':'off'})
             if method=='GET' and path=='/api/graph':return self.send_json(store.graph())
             if method=='GET' and path=='/api/bootstrap':
                 cases=store.cases()
-                return self.send_json({'taxonomy':taxonomy,'cases':cases,'examples':self.server.examples,'matters':store.matters(),'config':{'llm_enabled':bool(os.getenv('ANTHROPIC_API_KEY')),'corpus_mode':'separate_demo_and_real'},'corpus':{'real':sum(not c['synthetic'] for c in cases),'synthetic':sum(c['synthetic'] for c in cases),'reviewed':sum(c['review_status']=='reviewed' for c in cases)}})
+                return self.send_json({'taxonomy':taxonomy,'cases':cases,'examples':self.server.examples,'matters':store.matters(),'config':{'llm_enabled':bool(os.getenv('ANTHROPIC_API_KEY')),'corpus_mode':'separate_demo_and_real'},'signals':signal_catalog(),'corpus':{'real':sum(not c['synthetic'] for c in cases),'synthetic':sum(c['synthetic'] for c in cases),'reviewed':sum(c['review_status']=='reviewed' for c in cases)}})
             if method=='POST' and path in {'/api/analyze','/api/compare'}:
                 if 'use_llm' in p and type(p['use_llm']) is not bool:raise ValueError('use_llm must be a boolean.')
                 if p.get('use_llm'):
