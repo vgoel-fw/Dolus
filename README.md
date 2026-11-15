@@ -67,22 +67,76 @@ More lawyer review, full Stanford Clearinghouse & CourtListener data
 
 See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [production roadmap](docs/ROADMAP.md). 
 
-## CourtListener passage update
+## CourtListener cases
 
-Dolus now includes **9 CourtListener opinions** and their source-linked passages for litigators to search and compare. The Similar passages workspace shows exact quotations, surrounding source text, shared scienter factors and intent signals, and structural differences. **67 tests pass**, covering quote integrity, source links, retrieval behavior, and separation from outcome statistics. These checks do not establish legal citation accuracy or subsequent treatment; structural tags remain pending attorney review.
+All fictional cases, examples and the demo mode are gone. Every record is a real opinion, and the validator rejects `synthetic: true`.
 
-## Intent signals (neuro-symbolic)
+| Opinion | Circuit | How it got here |
+| --- | --- | --- |
+| Zucco Partners v. Digimarc, In re Daou Systems, Nguyen v. Endologix, Prodanova v. H.C. Wainwright | 9th | captured earlier |
+| Novak v. Kasaks | 2d | captured earlier |
+| South Ferry LP #2 v. Killinger, 542 F.3d 776 | 9th | CourtListener API v4 |
+| In re Silicon Graphics Sec. Litig., 183 F.3d 970 | 9th | CourtListener API v4 |
+| Metzler Inv. GmbH v. Corinthian Colleges, 534 F.3d 1068 | 9th | CourtListener API v4 |
+| Kalnit v. Eichler, 264 F.3d 131 | 2d | CourtListener API v4 |
 
-The semantic similarity harness now does more than compare wording. It looks for signs of intent that show up in case law and explains each one.
+That is 9 full opinions and 825 searchable passages. Each opinion stores its source URL, retrieval date and a sha256 of the text, and the app refuses to load an opinion whose text no longer matches. `scripts/acquire.py` pulls more opinions with a `COURTLISTENER_TOKEN`. Note the API limit of 5 requests a minute.
 
-- **Perception.** Each sentence is encoded and compared to example phrasings of every signal. The default encoder is local and dependency-free (hashed stems + a legal concept lexicon). It fills the neural slot but isn't a neural net. Set `DOLUS_ENCODER=sbert:<model>` to plug in a real sentence-transformers model.
-- **Reasoning.** A rule engine checks that the required pieces are present and close together. For example, conscious avoidance needs a warning *and* an act of avoidance. It also checks that they are not negated and are not pleading boilerplate ("plaintiffs fail to allege..."). For timing signals it builds a dated timeline and computes the gap in days (trade → disclosure, plan change → trade, departure ↔ disclosure).
-- **Fusion.** Rules decide the status (`supported`, `partial`). The encoder ranks results and can only propose a `semantic_only` signal for sentences no rule explains, always marked for review. Counter-signals (pre-planned 10b5-1 sales, consistent prior trading, kept shares, self-reporting, disclosed risk) sit next to the signal instead of being netted out, since courts weigh competing inferences holistically.
-- **Claim-specific.** Picking a claim changes the read: criminal and insider trading weight avoidance, concealment and timing up; for §§ 11, 12(a)(2), 14(a), 16(b) and SOX 304 every signal is marked "scienter not an element".
+## Neuro-symbolic intent signals
 
-- **Evaluated on real opinions.** 110 checksummed sentences from CourtListener opinions, split by opinion into dev and held-out test. On the held-out opinions F1 went from 0.43 to 0.83 and false alarms from 22% to 4%. The hand-written synthetic set had scored near-perfect throughout, which is why it's no longer the headline number.
+The similarity harness used to compare wording. It now looks for the patterns courts cite when they infer state of mind, and it ties each one to exact sentences.
 
-Details, the rule table and limits are in [docs/SIGNALS.md](docs/SIGNALS.md). Signals are research prompts, not findings.
+```
+sentence ──► encoder ──► "sounds like" score per signal ─┐
+         └─► rule engine: roles, negation, dates ────────┴─► fusion ──► signal + quotes + gaps + counter-evidence
+```
+
+- **Encoder (neural slot).** `app/encoder.py` turns each sentence into a vector and compares it with example phrasings of every signal. The default runs offline with no dependencies: hashed word stems plus a legal concept lexicon, so "unloaded" sits near "sold" and "overlooked" near "ignored". It is a stand-in, not a trained network. Set `DOLUS_ENCODER=sbert:all-MiniLM-L6-v2` to use a real sentence-transformers model. If that model can't load, Dolus falls back to the local encoder.
+- **Rules (symbolic).** `data/scienter_signals.json` defines 12 signals as named roles. Ostrich behavior, for example, needs a *warning* and an *act of avoidance* within two sentences. Each role is checked for negation, and sentences that state law, describe other cases or reject a theory are filtered out. Timing signals get a dated timeline and a gap in days.
+- **Fusion.** Rules decide whether a signal is present. The encoder only ranks, or flags a "semantic match" for a sentence no rule explains, and those always need review. Counter-evidence (a pre-existing 10b5-1 plan, sales consistent with prior trading, kept shares, self-reporting) is listed next to the signal rather than subtracted, since courts weigh competing inferences together.
+- **By claim.** 11 claim profiles adjust the read. Criminal and insider-trading claims rank avoidance, concealment and timing higher. For §§ 11, 12(a)(2), 14(a), 16(b) and SOX 304, each signal is marked "scienter is not an element".
+
+### Example
+
+Fact pattern:
+
+> In January 2021 the controller warned the CFO that reserve releases were inflating earnings. The CFO told her he did not want to know and stopped attending the monthly close meetings. On March 3, 2021 the CFO sold 70% of his holdings. The company announced the restatement on April 1, 2021 and the stock fell 40%. Some of the sales were made pursuant to a pre-existing 10b5-1 plan.
+
+What Dolus returns under § 10(b), Ninth Circuit:
+
+| Signal | Status | Why | Score |
+| --- | --- | --- | --- |
+| Deliberate ignorance (ostrich) | rule satisfied | *warning*: "the controller warned the CFO..." + *avoidance*: "he did not want to know and stopped attending..." within 2 sentences | 88 (rule 100, encoder 66) |
+| Suspicious trading timing | rule satisfied | *trade*: "sold 70% of his holdings" on 2021-03-03 → *disclosure*: restatement on 2021-04-01, a **29 day** gap from the parsed dates | 79 (rule 100, encoder 41) |
+
+The trading signal also shows **cuts the other way: pre-planned trading**, quoting the 10b5-1 sentence. Switching the claim to criminal doubles the ostrich signal's rank, matching the conscious-avoidance (Global-Tech) standard. Switching to § 11 keeps both signals but marks scienter as not an element. Rewriting the second sentence as "there is no allegation the CFO declined to review anything" removes the ostrich signal. The warning sentence then only shows up as a low-confidence semantic match (SOX certification), marked for review.
+
+Run it yourself:
+
+```bash
+python3 scripts/signals.py facts.txt --statute 10b --circuit 9
+```
+
+## Eval set
+
+`data/signal_eval_real.json` holds 190 real sentences from the 9 CourtListener opinions, labeled by signal. A sentence counts as positive only when it states a fact about the parties. Legal standards, other cases and "the complaint does not plead..." count as negative, and those make up most of the hard cases. Each item stores its offsets and the opinion's sha256, so the eval won't run if the source text changes.
+
+It is split by opinion. Zucco, Daou and Novak are **dev**, which the rules may be tuned on. The other six opinions are the **held-out test**, never used for tuning.
+
+| | n / positives | Precision | Recall | F1 | False alarms on negatives |
+| --- | --- | --- | --- | --- | --- |
+| dev | 81 / 9 | 0.83 | 1.00 | 0.91 | 3% |
+| held-out test | 109 / 17 | 0.38 | 0.44 | 0.41 | 14% |
+
+**Why this matters:** the hand-written synthetic set used to score near-perfect. Real opinions showed what it hid. Tuning on dev lifted the first two held-out opinions from F1 0.43 to 0.83. The four opinions added from the API then dropped held-out F1 to 0.41. Silicon Graphics and Metzler describe sales as "sold a vast quantity" or "sold large blocks", and cite other cases in parentheticals. The dev-tuned rules hadn't seen either. The eval measures how well the rules generalize, and right now they don't generalize well. CI keeps this baseline as a regression floor, and the next round of rule work should move opinions into dev rather than tune on the test set.
+
+```bash
+python3 scripts/evaluate_signals.py
+```
+
+Limits: one labeler, not an attorney review. Labels are per sentence, so patterns spread across sentences are undercounted. 17 held-out positives is still small, so read the counts and not just the ratios.
+
+**66 tests pass**, covering quote integrity, source checksums, retrieval, signal rules and separation from outcome statistics. None of this establishes that scienter is or isn't adequately pleaded.
 
 ## Bug fixes
 

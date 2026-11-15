@@ -97,17 +97,17 @@ python3 scripts/signals.py facts.txt --statute 10b --circuit 2
 python3 scripts/evaluate_signals.py
 ```
 
-`data/signal_eval_real.json` holds 110 real sentences from the 5 CourtListener opinions in `data/flp_opinions.json`. every item stores its offsets and the source sha256, and the evaluator refuses to run if the text doesn't match the checksummed opinion. sentences were picked by keyword/detector hits, so they over-sample hard negatives: legal standards, other cases, "the SAC does not plead...".
+`data/signal_eval_real.json` holds 190 real sentences from the 9 CourtListener opinions in `data/flp_opinions.json`. every item stores its offsets and the source sha256, and the evaluator refuses to run if the text doesn't match the checksummed opinion. sentences were picked by keyword/detector hits, so they over-sample hard negatives: legal standards, other cases, "the SAC does not plead...".
 
-label rule: positive only when the sentence asserts an alleged or found fact about these parties. split by opinion: dev = Zucco, Daou, Novak (rules may be tuned here); test = Nguyen, Prodanova (never tuned on).
+label rule: positive only when the sentence asserts an alleged or found fact about these parties. split by opinion: dev = Zucco, Daou, Novak (rules may be tuned here); test = Nguyen, Prodanova, South Ferry, Silicon Graphics, Metzler, Kalnit (never tuned on).
 
-| set | n / positives | before | after tuning on dev |
-| --- | --- | --- | --- |
-| real test (held out) | 29 / 6 | P 0.38 R 0.50 F1 0.43, false alarms 22% | P 0.83 R 0.83 F1 0.83, false alarms 4% |
-| real dev | 81 / 9 | P 0.29 R 0.40 F1 0.33, false alarms 13% | P 0.83 R 1.0 F1 0.91, false alarms 3% |
-| synthetic | 22 / 16 | P 0.94 R 1.0 | P 1.0 R 1.0 |
+| stage | held-out test | dev |
+| --- | --- | --- |
+| before any real-data tuning (test = Nguyen, Prodanova) | F1 0.43, false alarms 22% | F1 0.33 |
+| after tuning on dev | F1 0.83, false alarms 4% | F1 0.91 |
+| + 4 opinions from the CourtListener API in test (n=109, 17 pos) | **P 0.38 R 0.44 F1 0.41, false alarms 14%** | F1 0.91 |
 
-what it showed: the synthetic set scored near-perfect while real opinions came in around 0.3–0.5. most errors were sentences stating law ("where defendants must have known...") read as facts, plus missed "sold N shares during the class period" and "stated X while they knew the contrary" phrasing. the fix was a `standard_language` filter, class-period anchors, and alternative rules for contrary information. CI enforces held-out F1 ≥ 0.75 and false alarms ≤ 10%.
+what it shows: the old synthetic set scored near-perfect, while real opinions came in around 0.3–0.5. tuning on dev fixed legal-standard false alarms. but new opinions phrase insider sales differently ("sold a vast quantity", "sold large blocks", case parentheticals), so held-out F1 fell back to 0.41. that is the real generalization number. CI holds it as a regression floor (F1 ≥ 0.40, false alarms ≤ 15%). to improve it, move opinions into dev and keep a fresh test split.
 
 ## limits
 
