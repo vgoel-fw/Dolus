@@ -1,0 +1,1009 @@
+{
+ "version": "0.1.0-draft",
+ "notice": "framework pointers for research. verify every authority and its current treatment before citing.",
+ "signals": [
+  {
+   "id": "conscious_avoidance",
+   "label": "Deliberate ignorance (ostrich)",
+   "family": "willful blindness",
+   "description": "Someone saw a high probability of a problem and took deliberate steps not to confirm it. Global-Tech: (1) subjective belief of high probability, (2) deliberate action to avoid learning.",
+   "related_factors": [
+    "contemporaneous_knowledge",
+    "individual_attribution"
+   ],
+   "roles": {
+    "red_flag": [
+     "warn(?:ed|ing|ings)",
+     "red flags?",
+     "raised (?:concerns?|questions?|issues?)",
+     "complain(?:ed|ts?)",
+     "whistle-?blower",
+     "alerted",
+     "flagged",
+     "internal audit (?:finding|report|memo)s?",
+     "audit committee (?:was|were) (?:told|informed)",
+     "escalated",
+     "(?:was|were) (?:told|informed|notified) (?:that|of|about)",
+     "concerns? (?:about|regarding)"
+    ],
+    "avoidance": [
+     "did(?:n't| not) want to (?:know|hear|see|be told|look)",
+     "(?:declined|refused|chose not|decided not|elected not) to (?:review|read|look|investigate|ask|inquire|open|follow up|examine|receive|attend)",
+     "(?:instructed|told|directed|asked) (?:\\S+ ){0,6}not to (?:send|copy|cc|report|email|put|document|write|investigate|escalate|tell|share|forward)",
+     "(?:stopped|ceased|cancell?ed) (?:receiving|attending|reviewing|the) (?:\\S+ )?(?:reports?|meetings?|briefings?|updates?|calls?)",
+     "never (?:asked|inquired|followed up|looked into|opened|read)",
+     "avoided (?:learning|reviewing|asking|meeting|reading|the)",
+     "turned a blind eye",
+     "look(?:ed|ing)? the other way",
+     "buried (?:his|her|their) heads?",
+     "don'?t (?:tell|show) me",
+     "plausible deniability",
+     "kept (?:himself|herself|themselves) (?:in the dark|uninformed|out of the loop)",
+     "(?:removed|took) (?:himself|herself|themselves) (?:off|from) (?:the )?(?:distribution|email|thread|list|meeting|committee)",
+     "deliberately (?:avoided|ignored|refrained)",
+     "conscious(?:ly)? avoid(?:ed|ance)?",
+     "willful(?:ly)? blind(?:ness)?",
+     "deliberate ignorance"
+    ]
+   },
+   "rule": {
+    "all": [
+     "avoidance",
+     "red_flag"
+    ],
+    "scope": 2,
+    "partial": [
+     "avoidance"
+    ]
+   },
+   "prototypes": [
+    "The CEO told staff he did not want to know about the audit findings.",
+    "After the whistleblower complaint the CFO stopped attending the meetings where the problems were discussed.",
+    "She instructed her team not to put the concerns in writing so she would not be told.",
+    "He deliberately avoided reading the internal reports that warned of the defects.",
+    "The executives turned a blind eye to red flags and never asked any follow-up questions.",
+    "Defendants consciously avoided confirming what they strongly suspected was true."
+   ],
+   "questions": [
+    "Who held the suspicion, and what made the probability high?",
+    "What specific act shows avoidance rather than mere inattention?",
+    "Is there a date tying the avoidance to the warning?"
+   ],
+   "authorities": [
+    {
+     "label": "Global-Tech Appliances, Inc. v. SEB S.A., 563 U.S. 754 (2011)",
+     "point": "two-part willful blindness test"
+    }
+   ]
+  },
+  {
+   "id": "red_flags_disregarded",
+   "label": "Red flags ignored",
+   "family": "recklessness",
+   "description": "Warnings reached the defendant and nothing was done. Recklessness via ignoring reasonably available information or failing to check information there was a duty to monitor.",
+   "related_factors": [
+    "contemporaneous_knowledge"
+   ],
+   "roles": {
+    "red_flag": [
+     "warn(?:ed|ing|ings)",
+     "red flags?",
+     "raised (?:concerns?|questions?|issues?)",
+     "complain(?:ed|ts?)",
+     "whistle-?blower",
+     "alerted",
+     "flagged",
+     "internal audit (?:finding|report|memo)s?",
+     "audit committee (?:was|were) (?:told|informed)",
+     "escalated",
+     "(?:was|were) (?:told|informed|notified) (?:that|of|about)",
+     "concerns? (?:about|regarding)"
+    ],
+    "disregard": [
+     "ignored",
+     "disregarded",
+     "dismissed (?:the )?(?:concerns?|warnings?|complaints?|findings?)",
+     "failed to (?:investigate|follow up|act|respond|correct|remediate|look into|escalate)",
+     "took no (?:action|steps|corrective action)",
+     "brushed (?:off|aside)",
+     "did nothing",
+     "no follow-?up",
+     "sat on (?:the )?(?:report|warning|complaint)s?",
+     "overrode (?:the )?(?:controls?|concerns?|objections?)"
+    ]
+   },
+   "exclude": [
+    "(?:plaintiffs?|complaint|they|it) (?:has |have )?fail(?:s|ed)? to (?:allege|plead|state|show|identify|establish|explain)"
+   ],
+   "rule": {
+    "all": [
+     "disregard",
+     "red_flag"
+    ],
+    "scope": 2,
+    "partial": [
+     "disregard"
+    ]
+   },
+   "prototypes": [
+    "The audit committee was warned about the revenue practices and took no action.",
+    "Management ignored repeated complaints from customers about the defective product.",
+    "Despite the internal audit finding, the CFO failed to investigate the discrepancy.",
+    "Executives dismissed the engineers' concerns and kept shipping."
+   ],
+   "questions": [
+    "What exactly was the warning and who received it?",
+    "When did it arrive relative to the challenged statement?",
+    "What would a reasonable follow-up have revealed?"
+   ],
+   "authorities": [
+    {
+     "label": "Novak v. Kasaks, 216 F.3d 300 (2d Cir. 2000)",
+     "point": "recklessness through ignoring reasonably available data"
+    },
+    {
+     "label": "In re Silicon Graphics Inc. Sec. Litig., 183 F.3d 970 (9th Cir. 1999)",
+     "point": "deliberate recklessness standard"
+    }
+   ]
+  },
+  {
+   "id": "contrary_internal_information",
+   "label": "Contrary internal information",
+   "family": "knowledge",
+   "description": "Internal reports, data or meetings showed the opposite of what was said publicly at the time it was said.",
+   "related_factors": [
+    "contemporaneous_knowledge",
+    "core_operations"
+   ],
+   "roles": {
+    "internal": [
+     "internal (?:reports?|memos?|memoranda|emails?|dashboards?|data|forecasts?|projections?|presentations?|analys[ie]s)",
+     "(?:weekly|monthly|daily|quarterly) (?:reports?|meetings?|calls?|updates?|reviews?)",
+     "board (?:minutes|presentations?|materials|decks?)",
+     "(?:sales|pipeline|inventory|backlog) (?:reports?|data|dashboards?)",
+     "(?:received|reviewed|was sent|were sent|had access to) (?:\\S+ ){0,4}(?:reports?|data|emails?|memos?)"
+    ],
+    "statement": [
+     "(?:publicly )?(?:stated|assured|represented|reaffirmed|reiterated|touted|told (?:investors|analysts|the market))",
+     "earnings calls?",
+     "press releases?",
+     "(?:10-k|10-q|8-k|sec filings?|registration statement|prospectus)",
+     "(?:raised|maintained|reaffirmed|issued) (?:its )?guidance"
+    ]
+   },
+   "rule": {
+    "all": [
+     "internal",
+     "statement"
+    ],
+    "scope": 2,
+    "partial": [
+     "internal"
+    ]
+   },
+   "prototypes": [
+    "Weekly sales reports sent to the CEO showed demand collapsing while he told analysts demand was strong.",
+    "Internal dashboards reflected the backlog decline at the time the company reaffirmed guidance.",
+    "Board materials showed the defect rate rising even as the press release touted product quality."
+   ],
+   "questions": [
+    "Which document, what date, who received it?",
+    "Does the document contradict the specific statement or just the general topic?"
+   ],
+   "authorities": [
+    {
+     "label": "Novak v. Kasaks, 216 F.3d 300 (2d Cir. 2000)",
+     "point": "access to contrary information"
+    },
+    {
+     "label": "Tellabs, Inc. v. Makor Issues & Rights, Ltd., 551 U.S. 308 (2007)",
+     "point": "holistic strong-inference review"
+    }
+   ]
+  },
+  {
+   "id": "statements_despite_warnings",
+   "label": "Reassurance after warning",
+   "family": "knowledge",
+   "description": "Public reassurance that came after the speaker had been warned. Ordering matters: the warning has to come first.",
+   "related_factors": [
+    "contemporaneous_knowledge",
+    "temporal_proximity"
+   ],
+   "roles": {
+    "after": [
+     "(?:continued|went on) to (?:assure|tell|state|represent|tout|reassure|deny)",
+     "even after (?:being|receiving|learning|the)",
+     "despite (?:being told|being warned|the warnings?|knowing|receiving|internal)",
+     "nonetheless (?:told|assured|reaffirmed|stated|represented)",
+     "(?:days|weeks) after (?:receiving|being (?:told|warned)|the (?:warning|complaint|report))"
+    ]
+   },
+   "rule": {
+    "all": [
+     "after"
+    ],
+    "scope": 1,
+    "partial": []
+   },
+   "prototypes": [
+    "Even after receiving the auditor's warning, the CFO continued to assure investors the numbers were sound.",
+    "Despite being told about the safety defect, the CEO nonetheless told analysts there were no quality issues."
+   ],
+   "questions": [
+    "Can the warning and the statement both be dated?",
+    "Was the statement about the same subject the warning covered?"
+   ],
+   "authorities": [
+    {
+     "label": "Novak v. Kasaks, 216 F.3d 300 (2d Cir. 2000)",
+     "point": "statements made despite knowledge of contrary facts"
+    }
+   ]
+  },
+  {
+   "id": "suspicious_trading_timing",
+   "label": "Suspicious trading timing",
+   "family": "timing",
+   "description": "Insider sales close in time to undisclosed bad news. Courts look at amount, percentage of holdings, timing, and consistency with prior trading.",
+   "related_factors": [
+    "insider_trading",
+    "temporal_proximity",
+    "motive_opportunity"
+   ],
+   "roles": {
+    "trade": [
+     "sold (?:\\S+ ){0,4}(?:shares|stock|holdings|options)",
+     "sold \\$?[\\d,.]+ (?:million|thousand|shares)",
+     "(?:stock|share|insider) sales",
+     "sales? of (?:\\S+ ){0,3}(?:shares|stock)",
+     "unloaded",
+     "dumped (?:\\S+ ){0,3}(?:shares|stock)",
+     "exercised (?:\\S+ ){0,3}options and sold",
+     "cashed out",
+     "liquidated (?:\\S+ ){0,3}(?:holdings|position|shares)"
+    ],
+    "anchor": [
+     "corrective disclosures?",
+     "disclos(?:ed|ure)",
+     "announc(?:ed|ement)",
+     "restat(?:ed|ement)",
+     "revealed",
+     "(?:stock|share) price (?:fell|dropped|declined|plunged|plummeted|collapsed)",
+     "(?:stock|shares) (?:fell|dropped|declined|plunged|plummeted)",
+     "earnings (?:miss|release|call)",
+     "(?:lowered|cut|withdrew) (?:its )?guidance",
+     "short[- ]seller report",
+     "subpoena"
+    ],
+    "proximity": [
+     "(?:\\d+|a|one|two|three|four|five|six|seven|eight|nine|ten|several|a few) (?:business )?(?:days?|weeks?|months?) (?:before|prior to|ahead of|after|following)",
+     "shortly (?:before|after|prior to)",
+     "on the eve of",
+     "just (?:before|days before|weeks before)",
+     "days (?:before|after)",
+     "weeks (?:before|after)",
+     "the same (?:day|week)",
+     "immediately (?:before|after|following)",
+     "in the (?:days|weeks) (?:before|leading up to)"
+    ],
+    "amount": [
+     "\\d+(?:\\.\\d+)? ?(?:%|percent) of (?:his|her|their|its)? ?(?:holdings|shares|stake|position)",
+     "(?:unusual|unprecedented|out of line|dramatically) (?:\\S+ ){0,3}(?:sales|trading)"
+    ]
+   },
+   "rule": {
+    "all": [
+     "trade",
+     "anchor",
+     "proximity"
+    ],
+    "scope": 2,
+    "partial": [
+     "trade",
+     "anchor"
+    ],
+    "temporal": {
+     "from": "trade",
+     "to": "anchor",
+     "max_days": 120
+    }
+   },
+   "prototypes": [
+    "The CFO sold 70 percent of his holdings two weeks before the company disclosed the restatement.",
+    "Insiders unloaded millions of dollars of stock shortly before the corrective disclosure.",
+    "The sales were unusual in amount and timing compared with the executive's prior trading."
+   ],
+   "questions": [
+    "What share of holdings was sold, and what was the prior baseline?",
+    "Was there a pre-existing 10b5-1 plan?",
+    "Did other insiders sell or hold?"
+   ],
+   "authorities": [
+    {
+     "label": "In re Silicon Graphics Inc. Sec. Litig., 183 F.3d 970 (9th Cir. 1999)",
+     "point": "amount, percentage, timing, prior trading"
+    },
+    {
+     "label": "Acito v. IMCERA Grp., Inc., 47 F.3d 47 (2d Cir. 1995)",
+     "point": "unusual insider trading"
+    },
+    {
+     "label": "Metzler Inv. GMBH v. Corinthian Colls., Inc., 540 F.3d 1049 (9th Cir. 2008)",
+     "point": "insider sales context"
+    }
+   ]
+  },
+  {
+   "id": "trading_plan_timing",
+   "label": "10b5-1 plan timing",
+   "family": "timing",
+   "description": "A trading plan adopted, changed or cancelled close to bad news or to the trades it covers. Since the 2022 amendments officers face a cooling-off period before trading under a new or modified plan.",
+   "related_factors": [
+    "insider_trading",
+    "temporal_proximity"
+   ],
+   "roles": {
+    "plan": [
+     "10b5-1(?: trading)? plans?",
+     "rule 10b5-1",
+     "trading plans?"
+    ],
+    "change": [
+     "adopted",
+     "entered into",
+     "modified",
+     "amended",
+     "terminated",
+     "cancell?ed",
+     "set up",
+     "established"
+    ],
+    "proximity": [
+     "(?:\\d+|a|one|two|three|four|five|six|seven|eight|nine|ten|several|a few) (?:business )?(?:days?|weeks?|months?) (?:before|prior to|ahead of|after|following)",
+     "shortly (?:before|after|prior to)",
+     "on the eve of",
+     "just (?:before|days before|weeks before)",
+     "days (?:before|after)",
+     "weeks (?:before|after)",
+     "the same (?:day|week)",
+     "immediately (?:before|after|following)",
+     "in the (?:days|weeks) (?:before|leading up to)"
+    ]
+   },
+   "rule": {
+    "all": [
+     "plan",
+     "change",
+     "proximity"
+    ],
+    "scope": 1,
+    "partial": [
+     "plan",
+     "change"
+    ],
+    "temporal": {
+     "from": "change",
+     "to": "trade",
+     "max_days": 90,
+     "note": "plan change to first trade under 90 days, check the cooling-off rules that applied on that date"
+    }
+   },
+   "prototypes": [
+    "The CEO adopted a 10b5-1 plan three weeks before the announcement and began selling under it immediately.",
+    "Executives modified their trading plans days before the company cut guidance."
+   ],
+   "questions": [
+    "Adoption or modification date versus first trade date?",
+    "Was the plan adopted while the insider was aware of the undisclosed problem?"
+   ],
+   "authorities": [
+    {
+     "label": "17 C.F.R. \u00a7 240.10b5-1",
+     "point": "awareness standard and plan defense"
+    },
+    {
+     "label": "SEC Release No. 33-11138 (Dec. 14, 2022)",
+     "point": "plan amendments incl. cooling-off"
+    }
+   ]
+  },
+  {
+   "id": "departure_timing",
+   "label": "Executive departure timing",
+   "family": "timing",
+   "description": "A senior officer leaves around the time the problem comes out. Departures alone are weak; timing plus a link to the misconduct is what counts.",
+   "related_factors": [
+    "executive_departures",
+    "temporal_proximity"
+   ],
+   "roles": {
+    "departure": [
+     "resign(?:ed|ation)",
+     "stepped down",
+     "departed",
+     "(?:was )?terminated",
+     "(?:was )?fired",
+     "left the company",
+     "abrupt(?:ly)? (?:departure|exit|resignation)",
+     "was (?:ousted|forced out|replaced)"
+    ],
+    "actor": [
+     "cfo",
+     "ceo",
+     "coo",
+     "chief (?:executive|financial|operating|accounting) officer",
+     "controller",
+     "general counsel",
+     "president",
+     "directors?",
+     "(?:senior )?executives?",
+     "officers?",
+     "founder"
+    ],
+    "anchor": [
+     "corrective disclosures?",
+     "disclos(?:ed|ure)",
+     "announc(?:ed|ement)",
+     "restat(?:ed|ement)",
+     "revealed",
+     "(?:stock|share) price (?:fell|dropped|declined|plunged|plummeted|collapsed)",
+     "(?:stock|shares) (?:fell|dropped|declined|plunged|plummeted)",
+     "earnings (?:miss|release|call)",
+     "(?:lowered|cut|withdrew) (?:its )?guidance",
+     "short[- ]seller report",
+     "subpoena"
+    ],
+    "proximity": [
+     "(?:\\d+|a|one|two|three|four|five|six|seven|eight|nine|ten|several|a few) (?:business )?(?:days?|weeks?|months?) (?:before|prior to|ahead of|after|following)",
+     "shortly (?:before|after|prior to)",
+     "on the eve of",
+     "just (?:before|days before|weeks before)",
+     "days (?:before|after)",
+     "weeks (?:before|after)",
+     "the same (?:day|week)",
+     "immediately (?:before|after|following)",
+     "in the (?:days|weeks) (?:before|leading up to)"
+    ]
+   },
+   "rule": {
+    "all": [
+     "departure",
+     "actor",
+     "anchor",
+     "proximity"
+    ],
+    "scope": 2,
+    "partial": [
+     "departure",
+     "actor"
+    ],
+    "temporal": {
+     "from": "departure",
+     "to": "anchor",
+     "max_days": 120,
+     "either_order": true
+    }
+   },
+   "prototypes": [
+    "The CFO abruptly resigned two weeks before the company announced the restatement.",
+    "The controller was terminated days after the internal investigation began."
+   ],
+   "questions": [
+    "Stated reason for leaving?",
+    "What sourced fact links the departure to the misconduct?"
+   ],
+   "authorities": [
+    {
+     "label": "Zucco Partners, LLC v. Digimarc Corp., 552 F.3d 981 (9th Cir. 2009)",
+     "point": "resignations need more than timing"
+    }
+   ]
+  },
+  {
+   "id": "gatekeeper_exit",
+   "label": "Auditor / gatekeeper exit",
+   "family": "red flag",
+   "description": "Auditor resignation, withdrawn opinion, disagreement, or a disclosed material weakness.",
+   "related_factors": [
+    "accounting",
+    "regulatory_action"
+   ],
+   "roles": {
+    "gatekeeper": [
+     "auditors?",
+     "accounting firm",
+     "audit committee",
+     "independent accountants?"
+    ],
+    "exit": [
+     "resign(?:ed|ation)",
+     "withdr(?:ew|awn)",
+     "dismissed",
+     "disagreements?",
+     "material weakness(?:es)?",
+     "going concern",
+     "refused to (?:sign|certify|issue)",
+     "could not rely"
+    ]
+   },
+   "rule": {
+    "all": [
+     "gatekeeper",
+     "exit"
+    ],
+    "scope": 1,
+    "partial": []
+   },
+   "prototypes": [
+    "The outside auditor resigned and withdrew its opinion on the prior financial statements.",
+    "The company disclosed a material weakness in internal controls over revenue recognition."
+   ],
+   "questions": [
+    "What did the auditor say on the way out?",
+    "Was the weakness tied to the accounts at issue?"
+   ],
+   "authorities": []
+  },
+  {
+   "id": "concealment",
+   "label": "Concealment / consciousness of guilt",
+   "family": "conduct",
+   "description": "Steps to hide information: deleted records, off-system communications, side letters, misleading auditors.",
+   "related_factors": [
+    "contemporaneous_knowledge",
+    "individual_attribution"
+   ],
+   "roles": {
+    "act": [
+     "(?:deleted|destroyed|shredded|wiped|altered|falsified|backdated) (?:\\S+ ){0,3}(?:emails?|documents?|files?|records?|messages?|data|logs?|contracts?|invoices?|options?)",
+     "backdat(?:ed|ing)",
+     "off[- ]the[- ]books",
+     "side (?:letters?|agreements?|deals?)",
+     "(?:personal|private) (?:email|phone|accounts?|devices?) to (?:avoid|discuss|hide)",
+     "(?:don'?t|do not|never) put (?:this|it|anything) in writing",
+     "(?:keep|kept) (?:this|it) (?:quiet|off the record|between us)",
+     "(?:misled|lied to|withheld (?:\\S+ ){0,3}from) (?:the )?(?:auditors?|board|audit committee|regulators?|sec)",
+     "concealed",
+     "hid (?:the|its|his|her|their)",
+     "ephemeral messag(?:es|ing)"
+    ]
+   },
+   "rule": {
+    "all": [
+     "act"
+    ],
+    "scope": 0,
+    "partial": []
+   },
+   "prototypes": [
+    "The CFO told the controller not to put anything in writing and to use his personal phone.",
+    "Executives deleted the emails discussing the problem after the subpoena arrived.",
+    "Side letters granting return rights were hidden from the auditors."
+   ],
+   "questions": [
+    "Who did it, when, and what was hidden?",
+    "Is there a document or witness for the act itself?"
+   ],
+   "authorities": []
+  },
+  {
+   "id": "concrete_personal_motive",
+   "label": "Concrete personal motive",
+   "family": "motive",
+   "description": "A specific personal benefit tied to the fraud. Generic motives every executive shares (high stock price, bonuses) are usually not enough in the Second Circuit.",
+   "related_factors": [
+    "motive_opportunity"
+   ],
+   "roles": {
+    "incentive": [
+     "bonus(?:es)?",
+     "compensation",
+     "incentive",
+     "options?",
+     "earn-?out",
+     "secondary offering",
+     "(?:acquisition|merger) (?:using|paid (?:for )?(?:with|in)) (?:its )?(?:stock|shares)",
+     "(?:loan|debt|credit) covenants?",
+     "margin calls?",
+     "pledged (?:\\S+ ){0,3}shares"
+    ],
+    "link": [
+     "tied to",
+     "based on",
+     "contingent on",
+     "(?:needed|had) to (?:meet|hit|reach|avoid)",
+     "triggered (?:by|if)",
+     "depended on",
+     "to avoid (?:a )?(?:default|breach|margin call)",
+     "would (?:receive|earn|lose)"
+    ]
+   },
+   "generic": [
+    "(?:keep|maintain|inflate) (?:a |the )?(?:high )?stock price",
+    "appear (?:more )?profitable",
+    "(?:keep|maintain) (?:its )?credit rating"
+   ],
+   "rule": {
+    "all": [
+     "incentive",
+     "link"
+    ],
+    "scope": 1,
+    "partial": [
+     "incentive"
+    ]
+   },
+   "prototypes": [
+    "The CEO's bonus was tied to hitting the quarterly revenue target he announced.",
+    "Defendants needed the inflated stock price to close the acquisition paid for in shares.",
+    "The founder had pledged his shares and faced a margin call if the price fell."
+   ],
+   "questions": [
+    "Is the benefit personal to the defendant and unusual, or shared by all executives?",
+    "Did the defendant actually realize it?"
+   ],
+   "authorities": [
+    {
+     "label": "Kalnit v. Eichler, 264 F.3d 131 (2d Cir. 2001)",
+     "point": "generalized motives insufficient"
+    },
+    {
+     "label": "ECA & Local 134 IBEW Joint Pension Tr. v. JP Morgan Chase Co., 553 F.3d 187 (2d Cir. 2009)",
+     "point": "motive must be concrete and personal"
+    }
+   ]
+  },
+  {
+   "id": "quarter_end_manipulation",
+   "label": "Quarter-end manipulation",
+   "family": "conduct",
+   "description": "Channel stuffing, pull-ins, bill-and-hold, round-trips, or other end-of-period moves to hit a number.",
+   "related_factors": [
+    "accounting",
+    "magnitude_duration"
+   ],
+   "roles": {
+    "act": [
+     "channel stuff(?:ing|ed)",
+     "pull(?:ed|ing)? (?:in|forward) (?:\\S+ ){0,3}(?:orders?|sales|revenue|shipments?)",
+     "bill[- ]and[- ]hold",
+     "round[- ]trip(?:ping)?",
+     "(?:recognized|booked) revenue (?:prematurely|early|before)",
+     "(?:extended|offered) (?:\\S+ ){0,3}(?:payment terms|discounts|return rights)",
+     "shipped (?:\\S+ ){0,3}(?:early|before customers)"
+    ],
+    "period": [
+     "end of (?:the |each )?quarter",
+     "quarter[- ]end",
+     "last (?:days|week|weeks) of (?:the |each )?quarter",
+     "(?:fiscal )?year[- ]end",
+     "to (?:meet|hit|make) (?:the )?(?:numbers?|targets?|guidance|consensus)"
+    ]
+   },
+   "rule": {
+    "all": [
+     "act",
+     "period"
+    ],
+    "scope": 1,
+    "partial": [
+     "act"
+    ]
+   },
+   "prototypes": [
+    "In the last days of each quarter the sales team shipped product early with extended payment terms to hit guidance.",
+    "Revenue was pulled forward from the next quarter through bill-and-hold arrangements."
+   ],
+   "questions": [
+    "Which quarters and how much revenue?",
+    "Who directed it?"
+   ],
+   "authorities": []
+  },
+  {
+   "id": "certification_with_red_flags",
+   "label": "SOX certification with red flags",
+   "family": "knowledge",
+   "description": "An officer signed a SOX 302/906 certification while red flags were present. Certification alone is generally not scienter; it matters when paired with glaring warnings.",
+   "related_factors": [
+    "individual_attribution",
+    "contemporaneous_knowledge"
+   ],
+   "roles": {
+    "cert": [
+     "(?:sox|sarbanes-?oxley) certifications?",
+     "certifications? (?:pursuant to|under) (?:section )?(?:302|906)",
+     "section (?:302|906)",
+     "(?:signed|executed) (?:\\S+ ){0,3}certifications?",
+     "certified (?:the|that)"
+    ],
+    "red_flag": [
+     "warn(?:ed|ing|ings)",
+     "red flags?",
+     "raised (?:concerns?|questions?|issues?)",
+     "complain(?:ed|ts?)",
+     "whistle-?blower",
+     "alerted",
+     "flagged",
+     "internal audit (?:finding|report|memo)s?",
+     "audit committee (?:was|were) (?:told|informed)",
+     "escalated",
+     "(?:was|were) (?:told|informed|notified) (?:that|of|about)",
+     "concerns? (?:about|regarding)"
+    ]
+   },
+   "rule": {
+    "all": [
+     "cert",
+     "red_flag"
+    ],
+    "scope": 3,
+    "partial": [
+     "cert"
+    ]
+   },
+   "prototypes": [
+    "The CFO signed SOX certifications attesting to internal controls weeks after the controller warned him about the reserve manipulation."
+   ],
+   "questions": [
+    "What warning did the signer have before signing?"
+   ],
+   "authorities": [
+    {
+     "label": "Zucco Partners, LLC v. Digimarc Corp., 552 F.3d 981 (9th Cir. 2009)",
+     "point": "certifications need knowledge of the problem"
+    }
+   ]
+  }
+ ],
+ "counter_signals": [
+  {
+   "id": "preplanned_trading",
+   "label": "Pre-planned trading",
+   "counters": [
+    "suspicious_trading_timing",
+    "trading_plan_timing"
+   ],
+   "patterns": [
+    "pursuant to (?:a )?(?:pre-?existing |pre-?arranged )?(?:rule )?10b5-1",
+    "(?:adopted|entered into) (?:\\S+ ){0,4}(?:before|prior to) the class period",
+    "pre-?arranged (?:trading|sales|plan)",
+    "pre-?scheduled"
+   ]
+  },
+  {
+   "id": "consistent_trading",
+   "label": "Consistent with prior trading",
+   "counters": [
+    "suspicious_trading_timing"
+   ],
+   "patterns": [
+    "consistent with (?:his|her|their|prior|historical|past) (?:\\S+ )?(?:trading|sales|pattern)",
+    "(?:similar|comparable) (?:amounts?|sales) in (?:prior|previous|earlier) (?:years|periods|quarters)"
+   ]
+  },
+  {
+   "id": "retained_holdings",
+   "label": "Kept or added shares",
+   "counters": [
+    "suspicious_trading_timing",
+    "concrete_personal_motive"
+   ],
+   "patterns": [
+    "(?:retained|increased|kept) (?:\\S+ ){0,3}(?:holdings|shares|stake|position)",
+    "(?:bought|purchased|acquired) (?:additional )?(?:shares|stock)",
+    "did not sell",
+    "no (?:insider|stock) sales"
+   ]
+  },
+  {
+   "id": "good_faith_response",
+   "label": "Investigated or self-reported",
+   "counters": [
+    "conscious_avoidance",
+    "red_flags_disregarded",
+    "concealment"
+   ],
+   "patterns": [
+    "(?:promptly )?(?:launched|commissioned|opened) an? (?:internal |independent )?investigation",
+    "hired (?:outside|independent) (?:counsel|auditors?|forensic)",
+    "self-?reported",
+    "remediat(?:ed|ion)",
+    "voluntarily disclosed"
+   ]
+  },
+  {
+   "id": "risk_was_disclosed",
+   "label": "Risk was disclosed",
+   "counters": [
+    "contrary_internal_information",
+    "statements_despite_warnings"
+   ],
+   "patterns": [
+    "cautionary (?:language|statements?)",
+    "risk factors?",
+    "warned investors",
+    "disclosed the (?:risk|possibility|uncertainty)"
+   ]
+  },
+  {
+   "id": "innocent_explanation",
+   "label": "Innocent explanation offered",
+   "counters": [
+    "*"
+   ],
+   "patterns": [
+    "innocent explanation",
+    "nonfraudulent",
+    "non-fraudulent",
+    "good[- ]faith",
+    "honest (?:mistake|error)",
+    "without (?:executive|management) awareness",
+    "plausible (?:alternative|competing) (?:inference|explanation)"
+   ]
+  }
+ ],
+ "statutes": [
+  {
+   "id": "10b",
+   "label": "Exchange Act \u00a7 10(b) / Rule 10b-5",
+   "scienter": "element",
+   "standard": "Intent to deceive, manipulate or defraud, or recklessness. PSLRA requires particular facts giving a strong inference, at least as compelling as any opposing inference.",
+   "circuits": {
+    "2": "Motive and opportunity, or strong circumstantial evidence of conscious misbehavior or recklessness.",
+    "9": "Deliberate recklessness; allegations reviewed holistically, core operations inference is narrow."
+   },
+   "emphasis": {},
+   "authorities": [
+    "Ernst & Ernst v. Hochfelder, 425 U.S. 185 (1976)",
+    "Tellabs, Inc. v. Makor Issues & Rights, Ltd., 551 U.S. 308 (2007)",
+    "15 U.S.C. \u00a7 78u-4(b)(2)",
+    "Kalnit v. Eichler, 264 F.3d 131 (2d Cir. 2001)",
+    "In re Silicon Graphics Inc. Sec. Litig., 183 F.3d 970 (9th Cir. 1999)",
+    "South Ferry LP, #2 v. Killinger, 542 F.3d 776 (9th Cir. 2008)"
+   ]
+  },
+  {
+   "id": "10b5_insider",
+   "label": "Insider trading under Rule 10b-5 / 10b5-1",
+   "scienter": "element",
+   "standard": "Trading on the basis of material nonpublic information, meaning aware of it when trading. Qualifying 10b5-1 plans are an affirmative defense; amended plan conditions apply to plans adopted or modified after the 2023 effective date.",
+   "circuits": {},
+   "emphasis": {
+    "suspicious_trading_timing": 2,
+    "trading_plan_timing": 2,
+    "conscious_avoidance": 1.5,
+    "concealment": 1.5
+   },
+   "authorities": [
+    "17 C.F.R. \u00a7 240.10b5-1",
+    "SEC Release No. 33-11138 (Dec. 14, 2022)"
+   ]
+  },
+  {
+   "id": "11",
+   "label": "Securities Act \u00a7 11",
+   "scienter": "not_an_element",
+   "standard": "No scienter needed; issuer strictly liable, others have a due diligence defense. Intent signals matter only if the claim sounds in fraud, which pulls in Rule 9(b) particularity.",
+   "circuits": {
+    "2": "Rule 9(b) applies to \u00a7 11 claims premised on fraud.",
+    "9": "Rule 9(b) applies to \u00a7 11 claims that sound in fraud."
+   },
+   "emphasis": {},
+   "authorities": [
+    "Herman & MacLean v. Huddleston, 459 U.S. 375 (1983)",
+    "Rombach v. Chang, 355 F.3d 164 (2d Cir. 2004)",
+    "Rubke v. Capitol Bancorp Ltd., 551 F.3d 1156 (9th Cir. 2009)"
+   ]
+  },
+  {
+   "id": "12a2",
+   "label": "Securities Act \u00a7 12(a)(2)",
+   "scienter": "not_an_element",
+   "standard": "No scienter; defendant can show it did not know and could not have known with reasonable care. Same 9(b) caveat as \u00a7 11 if pleaded as fraud.",
+   "circuits": {},
+   "emphasis": {},
+   "authorities": [
+    "15 U.S.C. \u00a7 77l(a)(2)"
+   ]
+  },
+  {
+   "id": "14a",
+   "label": "Exchange Act \u00a7 14(a) / Rule 14a-9",
+   "scienter": "not_an_element",
+   "standard": "Negligence is generally enough for proxy claims. Check circuit authority for the defendant type.",
+   "circuits": {
+    "2": "Negligence standard for proxy claims."
+   },
+   "emphasis": {},
+   "authorities": [
+    "Gerstle v. Gamble-Skogmo, Inc., 478 F.2d 1281 (2d Cir. 1973)"
+   ]
+  },
+  {
+   "id": "17a",
+   "label": "Securities Act \u00a7 17(a) (SEC)",
+   "scienter": "split",
+   "standard": "\u00a7 17(a)(1) requires scienter; \u00a7 17(a)(2) and (3) need only negligence. No private right of action.",
+   "circuits": {},
+   "emphasis": {},
+   "authorities": [
+    "Aaron v. SEC, 446 U.S. 680 (1980)"
+   ]
+  },
+  {
+   "id": "20a",
+   "label": "Exchange Act \u00a7 20(a) control person",
+   "scienter": "derivative",
+   "standard": "Needs a primary violation plus control. Second Circuit adds culpable participation; Ninth Circuit does not, but allows a good faith defense.",
+   "circuits": {
+    "2": "Culpable participation required.",
+    "9": "No culpable participation element; good faith defense."
+   },
+   "emphasis": {
+    "conscious_avoidance": 1.5,
+    "red_flags_disregarded": 1.5
+   },
+   "authorities": [
+    "ATSI Commc'ns, Inc. v. Shaar Fund, Ltd., 493 F.3d 87 (2d Cir. 2007)",
+    "Howard v. Everex Sys., Inc., 228 F.3d 1057 (9th Cir. 2000)"
+   ]
+  },
+  {
+   "id": "9",
+   "label": "Exchange Act \u00a7 9 manipulation",
+   "scienter": "element",
+   "standard": "Willful conduct with a manipulative purpose, such as inducing others to trade.",
+   "circuits": {},
+   "emphasis": {
+    "concealment": 1.5,
+    "quarter_end_manipulation": 1.5
+   },
+   "authorities": [
+    "15 U.S.C. \u00a7 78i"
+   ]
+  },
+  {
+   "id": "16b",
+   "label": "Exchange Act \u00a7 16(b) short-swing",
+   "scienter": "not_an_element",
+   "standard": "Strict liability. Intent and timing signals do not matter to liability.",
+   "circuits": {},
+   "emphasis": {},
+   "authorities": [
+    "15 U.S.C. \u00a7 78p(b)"
+   ]
+  },
+  {
+   "id": "sox304",
+   "label": "SOX \u00a7 304 clawback",
+   "scienter": "not_an_element",
+   "standard": "Reimbursement does not require personal misconduct by the CEO or CFO.",
+   "circuits": {
+    "9": "No personal misconduct required."
+   },
+   "emphasis": {},
+   "authorities": [
+    "15 U.S.C. \u00a7 7243",
+    "SEC v. Jensen, 835 F.3d 1100 (9th Cir. 2016)"
+   ]
+  },
+  {
+   "id": "criminal",
+   "label": "Criminal securities fraud (15 U.S.C. \u00a7 78ff)",
+   "scienter": "element",
+   "standard": "Willfully. Conscious avoidance can substitute for actual knowledge under the Global-Tech test.",
+   "circuits": {},
+   "emphasis": {
+    "conscious_avoidance": 2,
+    "concealment": 2
+   },
+   "authorities": [
+    "15 U.S.C. \u00a7 78ff(a)",
+    "Global-Tech Appliances, Inc. v. SEB S.A., 563 U.S. 754 (2011)"
+   ]
+  }
+ ]
+}
