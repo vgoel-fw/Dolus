@@ -2,7 +2,6 @@
 """precision/recall of the signal layer.
 
 real: sentences from checksummed CourtListener opinions (data/signal_eval_real.json), split dev/test by opinion.
-synthetic: hand written smoke tests (data/signal_eval.json).
 """
 import hashlib
 import json
@@ -45,17 +44,15 @@ def run(items):
 
 def evaluate():
     real = json.loads((ROOT / 'data/signal_eval_real.json').read_text()); verify(real)
-    synth = json.loads((ROOT / 'data/signal_eval.json').read_text())
     return {'real_dev': run([i for i in real['items'] if i['split'] == 'dev']),
             'real_test': run([i for i in real['items'] if i['split'] == 'test']),
-            'synthetic': run(synth['items']),
-            'limits': ['one labeler, sentence level only (multi-sentence patterns are undercounted)', 'small n: report the counts, not just the ratios', 'synthetic set was written with the rules and is a smoke test only']}
+            'limits': ['one labeler, sentence level only (multi-sentence patterns are undercounted)', 'small n: report the counts, not just the ratios']}
 
 
 if __name__ == '__main__':
     r = evaluate()
     if '--full' in sys.argv:
         print(json.dumps(r, indent=2)); sys.exit()
-    for k in ('real_dev', 'real_test', 'synthetic'):
+    for k in ('real_dev', 'real_test'):
         x = r[k]
         print(f"{k:10} n={x['n']:3} pos={x['positives']:2}  rules P/R {x['rules_only']['precision']}/{x['rules_only']['recall']}  fused P/R/F1 {x['fused']['precision']}/{x['fused']['recall']}/{x['fused']['f1']}  false alarms on negatives {x['false_alarm_rate_on_negatives']}")

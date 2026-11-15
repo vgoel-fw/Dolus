@@ -2,7 +2,7 @@
 
 ## What ships
 
-`data/taxonomy.json` is a versioned draft schema with twelve factors. `data/cases.json` contains six real opinion **excerpt** records and eighteen wholly fictional training records. `data/examples.json` has fictional input examples. `data/synthetic_ground_truth.json` records stipulated factor statuses for deterministic evaluation; it is not ground truth for real legal outcomes.
+`data/taxonomy.json` is a versioned draft schema with twelve factors. `data/cases.json` contains six real opinion **excerpt** records. There are no fictional records: the validator rejects `synthetic: true`. `data/flp_opinions.json` holds nine full CourtListener opinions with checksums.
 
 Real seed opinions: Zucco (2009), Daou (amended 2005), NVIDIA (2014), Novak (2000), ATSI (2007), and Dynex (2008). All real records are `needs_review`. All retain source URLs and locators. `opinion_text` contains selected passages only, **not the full opinion**; `source_provenance.coverage` says `excerpts_only`. Judicial text was inspected through the linked sources and whitespace normalized. Mirror OCR can drop apostrophes or insert line numbers: before approval, check the linked opinion PDF, exact text, reporter/slip pinpoint, amended version, defendant/claim coverage and later history. Automated substring validation is only one check.
 
@@ -54,7 +54,7 @@ python3 scripts/import_cases.py work/reviewed-extraction.json --server http://12
 
 The first command validates without writes. The second imports into the local server. Imports reset real records to `needs_review`, even if the file claimed reviewed. Review must encompass full source, quote attribution and outcome, not merely matching text. An approved reviewer can then use the server's corpus-review endpoint. Do not treat this starter corpus as already legally reviewed.
 
-To evaluate decomposition, compare extraction to synthetic statuses in `synthetic_ground_truth.json`, report precision/recall per factor and distinguish omission from negation. The examples include vague CWs and opposing explanations; matching keywords does not establish legal sufficiency. Manual adjudication remains essential for real opinions.
+To evaluate decomposition, `scripts/evaluate.py` compares the draft extractor with the factor annotations on the real excerpts (pending review). `scripts/evaluate_signals.py` scores intent signals on labeled sentences from the CourtListener opinions. Matching keywords does not establish legal sufficiency. Manual adjudication remains essential for real opinions.
 
 ## Data still needed
 
@@ -78,7 +78,6 @@ After obtaining source text lawfully, normalize it to a UTF-8 text file. Prepare
 python3 scripts/tag_opinion.py --text work/opinion.txt --metadata work/metadata.json --out work/tagged-opinion.json
 # Optional --llm explicitly sends opinion text to Anthropic.
 python3 scripts/import_cases.py work/tagged-opinion.json --server http://127.0.0.1:8765
-python3 scripts/generate_synthetic.py --count 6 --seed 42 --out work/patterns.json
 ```
 
 Tagging produces local character offsets, not invented paragraph numbers or legal pinpoints. Replace/verify locators in source review. The synthetic generator samples authored templates with their stipulated profiles; it is reproducible but not an independent benchmark or a model of legal outcomes.

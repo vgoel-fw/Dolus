@@ -2,9 +2,9 @@
   "captured_on": "2026-09-26",
   "stored_on": "2026-09-27",
   "provider": "Free Law Project / CourtListener",
-  "document_count": 5,
-  "characters": 284497,
-  "scope": "Five selected Second and Ninth Circuit appellate opinions; not a representative corpus or a bulk API import. Source text may contain OCR or line-wrap artifacts.",
+  "document_count": 9,
+  "characters": 536882,
+  "scope": "Nine selected Second and Ninth Circuit appellate opinions (five captured 2026-09, four via CourtListener API v4 on 2026-11-15); not a representative corpus. Source text may contain OCR or line-wrap artifacts.",
   "outcome_statistics": "These source documents do not add cases to outcome statistics.",
   "documents": [
     {
@@ -96,6 +96,50 @@
       "sha256": "923cdb6c9179ab65f7cc5eb33d55042edb33a51de9f45afce9deecf0aef2c6c2",
       "data_kind": "public_judicial_opinion",
       "annotation_notice": "Source text captured from CourtListener; structural tags are draft heuristics, not attorney review or subsequent-treatment verification."
+    },
+    {
+      "id": "cl-1436780",
+      "name": "South Ferry LP, No. 2 v. Killinger",
+      "circuit": "9",
+      "source_url": "https://www.courtlistener.com/opinion/1436780/south-ferry-lp-no-2-v-killinger/",
+      "citation": "542 F.3d 776 (9th Cir. 2008)",
+      "date": "2008-09-09",
+      "sha256": "e1387a5fa419be4d855420efc2082a531014ee411bd2895c8a7f152ec8ff97bb",
+      "retrieved_on": "2026-11-15",
+      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
+    },
+    {
+      "id": "cl-765192",
+      "name": "In re Silicon Graphics Inc. Securities Litigation",
+      "circuit": "9",
+      "source_url": "https://www.courtlistener.com/opinion/765192/in-re-silicon-graphics-inc-securities-litigation-edmund-j-janas-v/",
+      "citation": "183 F.3d 970 (9th Cir. 1999)",
+      "date": "1999-08-25",
+      "sha256": "eb6aecbefb48ff3f25888c9ada439174312c476094bd11fd7b7fd993f2d97c52",
+      "retrieved_on": "2026-11-15",
+      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
+    },
+    {
+      "id": "cl-1199789",
+      "name": "Metzler Investment GmbH v. Corinthian Colleges, Inc.",
+      "circuit": "9",
+      "source_url": "https://www.courtlistener.com/opinion/1199789/metzler-inv-gmbh-v-corinthian-colleges-inc/",
+      "citation": "534 F.3d 1068 (9th Cir. 2008)",
+      "date": "2008-07-25",
+      "sha256": "6ca6ad9607a0cf9ffb317d57698fdab681cd958c6a2b74d3f4a43ee8b9f22b93",
+      "retrieved_on": "2026-11-15",
+      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
+    },
+    {
+      "id": "cl-774794",
+      "name": "Kalnit v. Eichler",
+      "circuit": "2",
+      "source_url": "https://www.courtlistener.com/opinion/774794/kalnit-v-eichler/",
+      "citation": "264 F.3d 131 (2d Cir. 2001)",
+      "date": "2001-09-05",
+      "sha256": "10e8b3055706d158fcac0591df200dbf04fe16bda76035861f48ba04a5244e6c",
+      "retrieved_on": "2026-11-15",
+      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
     }
   ]
 }

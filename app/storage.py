@@ -19,7 +19,7 @@ def validate_case(c, taxonomy):
     except ValueError:raise ValueError('Case date must be YYYY-MM-DD.')
     for key,choices in {'circuit':{'2','9'},'posture':{'motion_to_dismiss','appeal_of_dismissal','interlocutory_appeal'},'defendant_scope':{'individual','corporate','both'},'outcome':{'survived','dismissed','mixed','unresolved'},'outcome_basis':{'scienter','other','mixed','unknown'},'review_status':{'reviewed','needs_review'}}.items():
         if not isinstance(c[key],str) or c[key] not in choices: raise ValueError('Invalid case '+key)
-    if type(c['synthetic']) is not bool: raise ValueError('synthetic must be a boolean.')
+    if c['synthetic'] is not False: raise ValueError('Only real opinions are accepted; set synthetic to false.')
     if not c['synthetic'] and not c['source_url'].startswith(('https://','http://')): raise ValueError('Real cases require a source URL.')
     validate_profile({'factors':c['factors']},c['opinion_text'],taxonomy)
     validate_evidence(c['outcome_evidence'],c['opinion_text'])

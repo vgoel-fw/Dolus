@@ -34,9 +34,9 @@ python3 scripts/signals.py some_facts.txt --statute 10b
 
 ## Data and present limits
 
-The initial corpus contains **6 public opinion excerpt records** plus **18 fictional fixtures** and 4 synthetic inputs. Review requires checking the original opinion, posture, defendant coverage, ruling, quotation context, and treatment on top.
+The corpus contains **6 public opinion excerpt records** and **9 full CourtListener opinions**. There are no fictional cases. Review requires checking the original opinion, posture, defendant coverage, ruling, quotation context, and treatment on top.
 
-Real comparisons are initially empty by design for lawyer approval, and the synthetic outcomes don't contribute to real rates. Appellate opinions are separate from trial-court motion rulings, and cases with settlement/dismissal metadata don't substitutes for a distinct scienter ruling from the backend.
+Reviewed comparisons are empty until a lawyer approves records; the default view shows real cases pending review, which never count toward rates. Appellate opinions are separate from trial-court motion rulings, and cases with settlement/dismissal metadata don't substitutes for a distinct scienter ruling from the backend.
 
 ## Optional LLM
 
@@ -54,7 +54,7 @@ Set `ANTHROPIC_API_KEY` and an available `ANTHROPIC_MODEL` in the process enviro
 | `app/encoder.py` | Sentence encoder (local hashed-concept default, optional sentence-transformers) |
 | `app/fusion.py` | Neuro-symbolic fusion, statute weighting, counter-signals |
 | `web/` | Complete HTML, CSS, JavaScript, favicon |
-| `data/` | Taxonomy, opinion excerpts, synthetic examples and evaluation |
+| `data/` | Taxonomy, real opinion excerpts and full CourtListener opinions, signal rules, eval sets |
 | `scripts/` | Acquisition, import, evaluation commands |
 | `tests/` | Analytical integrity, security, and data tests |
 | `docs/` | Doctrine, data provenance, architecture, production roadmap |
@@ -69,7 +69,7 @@ See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [
 
 ## CourtListener passage update
 
-Dolus now includes a sample of **5 CourtListener opinions** and **409 source-linked passages** for litigators to search and compare. The Similar passages workspace shows exact quotations, surrounding source text, shared scienter factors and intent signals, and structural differences. **67 tests pass**, covering quote integrity, source links, retrieval behavior, and separation from outcome statistics. These checks do not establish legal citation accuracy or subsequent treatment; structural tags remain pending attorney review.
+Dolus now includes **9 CourtListener opinions** and their source-linked passages for litigators to search and compare. The Similar passages workspace shows exact quotations, surrounding source text, shared scienter factors and intent signals, and structural differences. **67 tests pass**, covering quote integrity, source links, retrieval behavior, and separation from outcome statistics. These checks do not establish legal citation accuracy or subsequent treatment; structural tags remain pending attorney review.
 
 ## Intent signals (neuro-symbolic)
 

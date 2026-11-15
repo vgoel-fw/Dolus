@@ -18,7 +18,7 @@ def tag(text,metadata,taxonomy,use_llm=False):
         raise ValueError('Opinion text must contain 1–100,000 characters; use a documented relevant excerpt if longer.')
     if not isinstance(metadata,dict):raise ValueError('Metadata JSON must be an object.')
     if metadata.get('synthetic') is not False:
-        raise ValueError('Opinion tagging requires explicit synthetic:false metadata; fictional fixtures use the separate generator.')
+        raise ValueError('Opinion tagging requires explicit synthetic:false metadata.')
     profile=extract(text,taxonomy) if use_llm else draft(text,taxonomy)
     profile=validate_profile(profile,text,taxonomy)
     for factor in profile['factors'].values():

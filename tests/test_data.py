@@ -25,19 +25,14 @@ class DataTests(unittest.TestCase):
             self.assertEqual(set(c['factors']),expected)
             for e in [c['outcome_evidence']]+[e for f in c['factors'].values() for e in f['evidence']]:
                 self.assertTrue(e['quote']);self.assertIn(e['quote'],c['opinion_text']);self.assertTrue(e['locator'])
-            if not c['synthetic']:
-                self.assertEqual(c['review_status'],'needs_review');self.assertEqual(c['source_provenance']['coverage'],'excerpts_only')
-                self.assertEqual(c['case_outcome'],'unknown')
-            else:
-                self.assertIn('FICTIONAL',c['name']);self.assertEqual(c['source_url'],'');self.assertIn('no legal citation',c['citation'])
+            self.assertIs(c['synthetic'],False);self.assertTrue(c['source_url'].startswith('https://'))
+            self.assertEqual(c['review_status'],'needs_review');self.assertEqual(c['source_provenance']['coverage'],'excerpts_only')
+            self.assertEqual(c['case_outcome'],'unknown')
 
-    def test_ground_truth_is_separate_from_legal_outcomes(self):
-        fixtures=json.loads((ROOT/'data/synthetic_ground_truth.json').read_text())
-        by_id={c['id']:c for c in self.cases}
-        self.assertGreaterEqual(len(fixtures),16)
-        for f in fixtures:
-            c=by_id[f['id']];self.assertTrue(c['synthetic'])
-            self.assertEqual(f['factors'],{k:v['status'] for k,v in c['factors'].items()})
+    def test_no_fictional_records_anywhere(self):
+        self.assertFalse((ROOT/'data/examples.json').exists());self.assertFalse((ROOT/'data/synthetic_ground_truth.json').exists())
+        from app.storage import validate_case
+        with self.assertRaises(ValueError):validate_case({**self.cases[0],'synthetic':True},self.tax)
 
     def test_pagination_refuses_credential_exfiltration(self):
         for url in ('http://www.courtlistener.com/api/rest/v4/search/', 'https://evil.test/api/rest/v4/', 'https://www.courtlistener.com@evil.test/api/rest/v4/', 'https://www.courtlistener.com/api/rest/v3/'):
@@ -53,7 +48,5 @@ class DataTests(unittest.TestCase):
             self.assertEqual(acquire.crossref(csv,ROOT/'data/cases.json',out),(1,1))
             result=json.loads(out.read_text());self.assertTrue(result['links'][0]['not_a_motion_outcome'])
             self.assertNotIn('outcome',result['links'][0])
-            csv.write_text('case_id,scac_id,case_outcome,source_url\ndemo-case-01,example,settled,https://example.org\n')
-            with self.assertRaises(ValueError):acquire.crossref(csv,ROOT/'data/cases.json',out)
 
 if __name__=='__main__':unittest.main()

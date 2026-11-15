@@ -2,7 +2,6 @@ import json
 from pathlib import Path
 import unittest
 from scripts.tag_opinion import tag
-from scripts.generate_synthetic import generate
 ROOT=Path(__file__).resolve().parents[1]
 class TaggingTests(unittest.TestCase):
     def test_corpus_tagging_never_admits_or_infers_ruling(self):
@@ -15,6 +14,4 @@ class TaggingTests(unittest.TestCase):
             for evidence in factor['evidence']:
                 self.assertIn(evidence['quote'],c['opinion_text'])
                 self.assertEqual(evidence['source_url'],c['source_url'])
-    def test_fixture_generator_deterministic(self):
-        self.assertEqual(generate(4,7),generate(4,7))
-        self.assertTrue(all(x['synthetic'] for x in generate(4,7)))
+

@@ -13,7 +13,7 @@ from app.server import Handler, allowed_host, allowed_origin
 TAX={'version':'test','factors':[{'id':'insider_trading','label':'Insider trading','keywords':['stock sales'],'weight':1},{'id':'accounting','label':'Accounting','keywords':['restatement'],'weight':2}], 'doctrine':{'9':{},'2':{}}}
 TEXT='Stock sales preceded a restatement.'
 def case(i=0,**kwargs):
-    c={'id':str(i),'name':'Fictional case','citation':'fictional','circuit':'9','court':'fictional','date':'2020-01-01','posture':'motion_to_dismiss','case_id':str(i),'defendant_scope':'both','outcome':'survived','outcome_basis':'scienter','source_url':'','opinion_text':TEXT,'summary':TEXT,'synthetic':True,'review_status':'reviewed','factors':{'insider_trading':{'status':'present','strength':'general','evidence':[{'quote':TEXT}]},'accounting':{'status':'unknown','strength':'unknown','evidence':[]}},'outcome_evidence':{'quote':TEXT}}
+    c={'id':str(i),'name':'Test case','citation':'test','circuit':'9','court':'test','date':'2020-01-01','posture':'motion_to_dismiss','case_id':str(i),'defendant_scope':'both','outcome':'survived','outcome_basis':'scienter','source_url':'https://example.com/opinion','opinion_text':TEXT,'summary':TEXT,'synthetic':False,'review_status':'reviewed','factors':{'insider_trading':{'status':'present','strength':'general','evidence':[{'quote':TEXT}]},'accounting':{'status':'unknown','strength':'unknown','evidence':[]}},'outcome_evidence':{'quote':TEXT}}
     c.update(kwargs);return c
 class AnalysisTests(unittest.TestCase):
     def test_unmentioned_and_negation_unknown(self):
@@ -22,32 +22,32 @@ class AnalysisTests(unittest.TestCase):
         self.assertEqual(p['factors']['accounting']['status'],'unknown')
     def test_exact_quotes(self):
         with self.assertRaises(ValueError):validate_profile({'factors':{'accounting':{'status':'present','evidence':[{'quote':'invented'}]}}},TEXT,TAX)
-    def test_separate_demo_and_real(self):
-        results=analyze({'text':'stock sales','mode':'real'},[case()],TAX)
+    def test_unreviewed_excluded_from_real_mode(self):
+        results=analyze({'text':'stock sales','mode':'real'},[case(review_status='needs_review')],TAX)
         self.assertEqual(results['results'],[]);self.assertEqual(results['stats']['n'],0)
     def test_dedup_and_conflicting_outcomes(self):
-        stats=calibrate([case(),case(1,case_id='0',outcome='dismissed')],{'insider_trading'},'demo')
+        stats=calibrate([case(),case(1,case_id='0',outcome='dismissed')],{'insider_trading'},'real')
         self.assertEqual(stats['n'],1);self.assertEqual(stats['mixed'],1);self.assertIsNone(stats['rate'])
     def test_cohort_not_top_k(self):
-        out=analyze({'text':'stock sales'},[case(i) for i in range(30)],TAX)
+        out=analyze({'text':'stock sales','mode':'real'},[case(i) for i in range(30)],TAX)
         self.assertEqual(len(out['results']),12);self.assertEqual(out['stats']['n'],30)
         self.assertEqual(out['stats']['rate'],100);self.assertGreater(out['stats']['interval'][0],80)
     def test_posture_scope_circuit(self):
         data=[case(0,circuit='2'),case(1,posture='appeal_of_dismissal'),case(2,defendant_scope='individual'),case(3)]
-        out=analyze({'text':'stock sales','cross_circuit':True},data,TAX)
+        out=analyze({'text':'stock sales','cross_circuit':True,'mode':'real'},data,TAX)
         self.assertEqual([r['case']['id'] for r in out['results']],['3','0'])
         self.assertEqual(out['stats']['n'],1)
     def test_conjunction(self):
-        out=analyze({'text':TEXT},[case()],TAX)
+        out=analyze({'text':TEXT,'mode':'real'},[case()],TAX)
         self.assertEqual(out['stats']['n'],0)
     def test_non_scienter_excluded(self):
-        self.assertEqual(calibrate([case(outcome_basis='other')],set(),'demo')['n'],0)
+        self.assertEqual(calibrate([case(outcome_basis='other')],set(),'real')['n'],0)
     def test_import_review_gate_and_durable_storage(self):
         with tempfile.TemporaryDirectory() as d:
             path=Path(d)/'db';s=Store(path,TAX)
             s.import_cases([case()]);self.assertEqual(s.case('0')['review_status'],'needs_review')
             with self.assertRaises(ValueError):s.review('0',{'reviewer':'Reviewer','note':''})
-            s.review('0',{'reviewer':'Reviewer','note':'Verified quotes and outcome.'})
+            s.review('0',{'reviewer':'Reviewer','note':'Verified quotes and outcome.','source_verified':True})
             self.assertEqual(Store(path,TAX).case('0')['review_status'],'reviewed')
     def test_graph_and_vector_persistence(self):
         with tempfile.TemporaryDirectory() as d:

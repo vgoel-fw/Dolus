@@ -69,7 +69,7 @@ class Handler(BaseHTTPRequestHandler):
             if method=='GET' and path=='/api/graph':return self.send_json(store.graph())
             if method=='GET' and path=='/api/bootstrap':
                 cases=store.cases()
-                return self.send_json({'taxonomy':taxonomy,'cases':cases,'examples':self.server.examples,'matters':store.matters(),'config':{'llm_enabled':bool(os.getenv('ANTHROPIC_API_KEY')),'corpus_mode':'separate_demo_and_real'},'signals':signal_catalog(),'corpus':{'real':sum(not c['synthetic'] for c in cases),'synthetic':sum(c['synthetic'] for c in cases),'reviewed':sum(c['review_status']=='reviewed' for c in cases)}})
+                return self.send_json({'taxonomy':taxonomy,'cases':cases,'matters':store.matters(),'config':{'llm_enabled':bool(os.getenv('ANTHROPIC_API_KEY')),'corpus_mode':'separate_demo_and_real'},'signals':signal_catalog(),'corpus':{'real':sum(not c['synthetic'] for c in cases),'synthetic':sum(c['synthetic'] for c in cases),'reviewed':sum(c['review_status']=='reviewed' for c in cases)}})
             if method=='POST' and path in {'/api/analyze','/api/compare'}:
                 if 'use_llm' in p and type(p['use_llm']) is not bool:raise ValueError('use_llm must be a boolean.')
                 if p.get('use_llm'):
@@ -111,9 +111,8 @@ class Handler(BaseHTTPRequestHandler):
 
 def create_server(port=8765,db_path=None):
     taxonomy=json.loads((ROOT/'data/taxonomy.json').read_text()); cases=json.loads((ROOT/'data/cases.json').read_text())
-    examples_path=ROOT/'data/examples.json'; examples=json.loads(examples_path.read_text()) if examples_path.exists() else []
     state=ROOT/'var';state.mkdir(exist_ok=True)
-    server=ThreadingHTTPServer(('127.0.0.1',port),Handler);server.taxonomy=taxonomy;server.examples=examples;server.store=Store(db_path or state/'scienter.sqlite3',taxonomy,cases)
+    server=ThreadingHTTPServer(('127.0.0.1',port),Handler);server.taxonomy=taxonomy;server.store=Store(db_path or state/'scienter.sqlite3',taxonomy,cases)
     server.source_catalog=SourceCatalog(ROOT/'data/flp_opinions.json',taxonomy)
     return server
 

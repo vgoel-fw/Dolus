@@ -101,7 +101,7 @@ class SignalTests(unittest.TestCase):
 
     def test_analyze_returns_intent_without_touching_cohort(self):
         cases = json.loads((ROOT / 'data/cases.json').read_text())
-        r = analyze({'text': OSTRICH, 'mode': 'demo', 'circuit': '9'}, cases, TAX)
+        r = analyze({'text': OSTRICH, 'mode': 'preview', 'circuit': '9'}, cases, TAX)
         self.assertIn('conscious_avoidance', [s['id'] for s in r['intent']['signals']])
         self.assertNotIn('intent', r['stats'])
 

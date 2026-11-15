@@ -19,7 +19,7 @@ class PassageTests(unittest.TestCase):
 
     def test_acquired_texts_have_provenance_and_valid_checksums(self):
         docs=self.catalog.documents
-        self.assertEqual(len(docs),5)
+        self.assertEqual(len(docs),9)
         self.assertEqual({d['circuit'] for d in docs},{'2','9'})
         for d in docs:
             self.assertGreater(len(d['text']),10000)

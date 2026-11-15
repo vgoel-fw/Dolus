@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Report extraction performance on authored fixtures; no legal accuracy claim."""
+"""local draft extractor vs the factor annotations on real opinion excerpts in data/cases.json.
+annotations are pending attorney review, so this measures agreement with them, not legal accuracy."""
 import argparse
 from collections import Counter
-import hashlib
 import json
 from pathlib import Path
 import sys
@@ -13,38 +13,20 @@ from app.engine import draft
 
 def evaluate():
     taxonomy=json.loads((ROOT/'data/taxonomy.json').read_text())
-    fixtures=json.loads((ROOT/'data/synthetic_ground_truth.json').read_text())
-    counts={f['id']:Counter() for f in taxonomy['factors']}; errors=[]; exact=0
-    for fixture in fixtures:
-        profile=draft(fixture['text'],taxonomy)['factors']; matches=True
-        for factor,expected in fixture['factors'].items():
-            actual=profile[factor]['status']; c=counts[factor]
-            c['total']+=1;c['correct']+=actual==expected
-            c['tp']+=actual=='present' and expected=='present'
-            c['fp']+=actual=='present' and expected!='present'
-            c['fn']+=actual!='present' and expected=='present'
-            if actual!=expected:
-                matches=False; errors.append({'fixture':fixture['id'],'factor':factor,'expected':expected,'actual':actual})
-        exact+=matches
-    def metrics(c):
-        return {**c,'precision':round(c['tp']/(c['tp']+c['fp']),4) if c['tp']+c['fp'] else None,
-                'recall':round(c['tp']/(c['tp']+c['fn']),4) if c['tp']+c['fn'] else None}
-    totals=Counter()
-    for c in counts.values():totals.update(c)
-    return {'method':'deterministic_draft','taxonomy_version':taxonomy['version'],
-            'engine_sha256':hashlib.sha256((ROOT/'app/engine.py').read_bytes()).hexdigest(),
-            'fixtures':len(fixtures),'exact_profile_matches':exact,'micro':metrics(totals),
-            'per_factor':{k:metrics(v) for k,v in counts.items()},'errors':errors,
-            'limitations':['Authored, repetitive synthetic fixtures share vocabulary with the taxonomy; not an independent real-world benchmark.',
-            'No absent-factor ground truth, legal conclusions, quote-attribution accuracy, retrieval relevance or empirical calibration evaluated.',
-            'Unknown is not counted as present; conservative abstention therefore lowers recall.',
-            'Stipulated factors describe the generating recipe; some sentences imply other factors and require independent relabeling.']}
+    cases=[c for c in json.loads((ROOT/'data/cases.json').read_text()) if not c['synthetic']]
+    c=Counter(); errors=[]
+    for case in cases:
+        got=draft(case['opinion_text'],taxonomy)['factors']
+        for fid,f in case['factors'].items():
+            exp=f['status']=='present'; act=got[fid]['status']=='present'
+            c['tp']+=exp and act; c['fp']+=act and not exp; c['fn']+=exp and not act
+            if exp!=act: errors.append({'case':case['id'],'factor':fid,'expected':f['status'],'draft':got[fid]['status']})
+    p=c['tp']/(c['tp']+c['fp']) if c['tp']+c['fp'] else None; r=c['tp']/(c['tp']+c['fn']) if c['tp']+c['fn'] else None
+    return {'cases':len(cases),**c,'precision':round(p,3) if p is not None else None,'recall':round(r,3) if r is not None else None,'errors':errors,
+            'limits':['6 opinion excerpts, annotations pending review','opinions discuss factors the court rejects, so present-in-text is not present-as-alleged']}
 
 
-def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--out');args=p.parse_args()
-    result=evaluate();content=json.dumps(result,indent=2)+'\n'
-    if args.out:Path(args.out).write_text(content)
-    else:print(content,end='')
-
-if __name__=='__main__':main()
+if __name__=='__main__':
+    a=argparse.ArgumentParser(description=__doc__);a.add_argument('--out');args=a.parse_args()
+    out=json.dumps(evaluate(),indent=2)+'\n'
+    Path(args.out).write_text(out) if args.out else print(out,end='')

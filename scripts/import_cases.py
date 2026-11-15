@@ -23,7 +23,7 @@ def validate(records, taxonomy):
         if c.get('defendant_scope') not in ('individual','corporate','both'): raise ValueError('Invalid defendant scope')
         if c.get('outcome') not in ('survived','dismissed','mixed','unresolved'): raise ValueError('Invalid ruling')
         if c.get('outcome_basis') not in ('scienter','other','mixed','unknown'): raise ValueError('Invalid ruling basis')
-        if not isinstance(c.get('synthetic'),bool): raise ValueError('Explicit synthetic boolean required')
+        if c.get('synthetic') is not False: raise ValueError('Only real opinions are accepted (synthetic must be false)')
         if set(c['factors'])!=factor_ids: raise ValueError('Factor keys differ from taxonomy')
         evidence=[c['outcome_evidence']]
         for f in c['factors'].values():
