@@ -1,6 +1,25 @@
 {
  "version": "0.1.0-draft",
  "notice": "framework pointers for research. verify every authority and its current treatment before citing.",
+ "standard_language": [
+  "\\bmust (?:allege|plead|state|show|provide|be)\\b",
+  "\\bwe have (?:found|held|noted|recognized)\\b",
+  "\\bin (?:\\S+ ){0,3}we (?:noted|held|explained|found)\\b",
+  "\\bat issue in\\b",
+  "\\bour sister circuits\\b",
+  "\\bwe reject\\b",
+  "\\bunder certain circumstances\\b",
+  "\\bwhere (?:the )?(?:defendants?|plaintiffs?) (?:\\S+ ){0,3}(?:must|alleged|have)\\b",
+  "\\bto (?:create|raise|support) (?:a |an )?(?:strong )?inference\\b",
+  "\\bwould (?:have )?needed to\\b",
+  "\\bpursuant to section \\d",
+  "\\b(?:is|are) not (?:enough|sufficient)\\b",
+  "\\bdoes not (?:plead|allege|show|establish)\\b",
+  "\\bno (?:factual )?allegations? (?:that|of)\\b",
+  "\\bnothing in the complaint\\b",
+  "\\bwithout particularized allegations\\b",
+  "\\bfor (?:\\S+ ){0,4}to raise an inference\\b"
+ ],
  "signals": [
   {
    "id": "conscious_avoidance",
@@ -169,6 +188,16 @@
      "(?:sales|pipeline|inventory|backlog) (?:reports?|data|dashboards?)",
      "(?:received|reviewed|was sent|were sent|had access to) (?:\\S+ ){0,4}(?:reports?|data|emails?|memos?)"
     ],
+    "knowing_statement": [
+     "(?:while|when) (?:they|he|she|defendants?|management|executives?) (?:allegedly )?(?:knew|were aware|was aware)",
+     "knew (?:that )?the contrary",
+     "when,? in reality",
+     "(?:stated|said|assured|represented|presented|told) (?:\\S+ ){0,25}(?:while|when|although) (?:\\S+ ){0,3}(?:allegedly )?(?:knew|was aware|were aware|had been told)",
+     "(?:was|were) aware (?:of|that) (?:\\S+ ){0,20}based on"
+    ],
+    "internal_finding": [
+     "(?:internal )?(?:reports?|data|memos?|emails?|studies|study|records?) (?:demonstrated|showed|revealed|reflected|indicated|established)"
+    ],
     "statement": [
      "(?:publicly )?(?:stated|assured|represented|reaffirmed|reiterated|touted|told (?:investors|analysts|the market))",
      "earnings calls?",
@@ -181,6 +210,14 @@
     "all": [
      "internal",
      "statement"
+    ],
+    "alternatives": [
+     [
+      "knowing_statement"
+     ],
+     [
+      "internal_finding"
+     ]
     ],
     "scope": 2,
     "partial": []
@@ -220,7 +257,8 @@
      "even after (?:being|receiving|learning|the)",
      "despite (?:being told|being warned|the warnings?|knowing|receiving|internal)",
      "nonetheless (?:told|assured|reaffirmed|stated|represented)",
-     "(?:days|weeks) after (?:receiving|being (?:told|warned)|the (?:warning|complaint|report))"
+     "(?:days|weeks) after (?:receiving|being (?:told|warned)|the (?:warning|complaint|report))",
+     "despite (?:the |these |those )?(?:issues|problems|reports|complaints|warnings|concerns|red flags)"
     ]
    },
    "rule": {
@@ -265,7 +303,11 @@
      "dumped (?:\\S+ ){0,3}(?:shares|stock)",
      "exercised (?:\\S+ ){0,3}options and sold",
      "cashed out",
-     "liquidated (?:\\S+ ){0,3}(?:holdings|position|shares)"
+     "liquidated (?:\\S+ ){0,3}(?:holdings|position|shares)",
+     "sold (?:a total of )?[\\d,]+ (?:shares|options)",
+     "sold (?:\\S+ ){0,6}(?:percentage|portion) of (?:his|her|their) (?:stock|shares|options|holdings)",
+     "sales (?:by \\S+(?: \\S+){0,10} )?during the class period",
+     "the sales correspond"
     ],
     "anchor": [
      "corrective disclosures?",
@@ -278,7 +320,9 @@
      "earnings (?:miss|release|call)",
      "(?:lowered|cut|withdrew) (?:its )?guidance",
      "short[- ]seller report",
-     "subpoena"
+     "subpoena",
+     "(?:during|throughout|within) the class period",
+     "(?:increase|rise|spike) in (?:the )?(?:price of|share price|stock price)"
     ],
     "proximity": [
      "(?:\\d+|a|one|two|three|four|five|six|seven|eight|nine|ten|several|a few) (?:business )?(?:days?|weeks?|months?) (?:before|prior to|ahead of|after|following)",
@@ -289,7 +333,10 @@
      "weeks (?:before|after)",
      "the same (?:day|week)",
      "immediately (?:before|after|following)",
-     "in the (?:days|weeks) (?:before|leading up to)"
+     "in the (?:days|weeks) (?:before|leading up to)",
+     "during the class period",
+     "immediately (?:followed|after|following)",
+     "correspond(?:s|ed)? perfectly"
     ],
     "amount": [
      "\\d+(?:\\.\\d+)? ?(?:%|percent) of (?:his|her|their|its)? ?(?:holdings|shares|stake|position)",
@@ -617,7 +664,13 @@
      "triggered (?:by|if)",
      "depended on",
      "to avoid (?:a )?(?:default|breach|margin call)",
-     "would (?:receive|earn|lose)"
+     "would (?:receive|earn|lose)",
+     "(?:set|stood|expected) to receive",
+     "rewarded (?:\\S+ ){0,6}(?:for|with)",
+     "motive was to",
+     "lead(?:ing)? to (?:greater|higher|more)",
+     "would maximize",
+     "based (?:in part )?on"
     ]
    },
    "generic": [
@@ -631,9 +684,7 @@
      "link"
     ],
     "scope": 1,
-    "partial": [
-     "incentive"
-    ]
+    "partial": []
    },
    "prototypes": [
     "The CEO's bonus was tied to hitting the quarterly revenue target he announced.",

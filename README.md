@@ -69,7 +69,7 @@ See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [
 
 ## CourtListener passage update
 
-Dolus now includes a sample of **5 CourtListener opinions** and **409 source-linked passages** for litigators to search and compare. The Similar passages workspace shows exact quotations, surrounding source text, shared scienter factors and intent signals, and structural differences. **65 tests pass**, covering quote integrity, source links, retrieval behavior, and separation from outcome statistics. These checks do not establish legal citation accuracy or subsequent treatment; structural tags remain pending attorney review.
+Dolus now includes a sample of **5 CourtListener opinions** and **409 source-linked passages** for litigators to search and compare. The Similar passages workspace shows exact quotations, surrounding source text, shared scienter factors and intent signals, and structural differences. **67 tests pass**, covering quote integrity, source links, retrieval behavior, and separation from outcome statistics. These checks do not establish legal citation accuracy or subsequent treatment; structural tags remain pending attorney review.
 
 ## Intent signals (neuro-symbolic)
 
@@ -79,6 +79,8 @@ The semantic similarity harness now does more than compare wording. It looks for
 - **Reasoning.** A rule engine checks that the required pieces are present and close together. For example, conscious avoidance needs a warning *and* an act of avoidance. It also checks that they are not negated and are not pleading boilerplate ("plaintiffs fail to allege..."). For timing signals it builds a dated timeline and computes the gap in days (trade → disclosure, plan change → trade, departure ↔ disclosure).
 - **Fusion.** Rules decide the status (`supported`, `partial`). The encoder ranks results and can only propose a `semantic_only` signal for sentences no rule explains, always marked for review. Counter-signals (pre-planned 10b5-1 sales, consistent prior trading, kept shares, self-reporting, disclosed risk) sit next to the signal instead of being netted out, since courts weigh competing inferences holistically.
 - **Claim-specific.** Picking a claim changes the read: criminal and insider trading weight avoidance, concealment and timing up; for §§ 11, 12(a)(2), 14(a), 16(b) and SOX 304 every signal is marked "scienter not an element".
+
+- **Evaluated on real opinions.** 110 checksummed sentences from CourtListener opinions, split by opinion into dev and held-out test. On the held-out opinions F1 went from 0.43 to 0.83 and false alarms from 22% to 4%. The hand-written synthetic set had scored near-perfect throughout, which is why it's no longer the headline number.
 
 Details, the rule table and limits are in [docs/SIGNALS.md](docs/SIGNALS.md). Signals are research prompts, not findings.
 

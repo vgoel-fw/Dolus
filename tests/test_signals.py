@@ -114,11 +114,24 @@ class SignalTests(unittest.TestCase):
             self.assertNotIn('_vec', p); self.assertIn('semantic_score', p)
         self.assertNotIn('_vec', cat.context(r[0]['id'])['passage'])
 
-    def test_eval_floor(self):
+    def test_eval_floor_on_real_held_out_opinions(self):
         from scripts.evaluate_signals import evaluate
         e = evaluate()
-        self.assertGreaterEqual(e['fused']['recall'], 0.9)
-        self.assertGreaterEqual(e['fused']['precision'], 0.8)
+        # held-out CourtListener opinions, never used to tune rules
+        self.assertGreaterEqual(e['real_test']['fused']['f1'], 0.75)
+        self.assertLessEqual(e['real_test']['false_alarm_rate_on_negatives'], 0.1)
+        self.assertGreaterEqual(e['real_dev']['fused']['f1'], 0.8)
+
+    def test_real_eval_items_match_checksummed_source(self):
+        from scripts.evaluate_signals import verify
+        data = json.loads((ROOT / 'data/signal_eval_real.json').read_text())
+        verify(data)
+        bad = copy.deepcopy(data); bad['items'][0]['text'] += 'x'
+        with self.assertRaises(ValueError):verify(bad)
+
+    def test_legal_standard_is_not_a_fact(self):
+        got = ids('Under certain circumstances, we have found recklessness where defendants ignored obvious signs of fraud.')
+        self.assertEqual(got, {})
 
 
 if __name__ == '__main__':

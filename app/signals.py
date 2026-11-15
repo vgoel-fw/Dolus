@@ -21,6 +21,7 @@ def load_rules(path=None):
         s['_roles'] = {k: [re.compile(r'(?<![\w-])(?:' + p + r')(?![\w])', re.I) for p in v] for k, v in s['roles'].items()}
         s['_exclude'] = [re.compile(p, re.I) for p in s.get('exclude', [])]
         s['_generic'] = [re.compile(p, re.I) for p in s.get('generic', [])]
+    rules['_standard'] = [re.compile(p, re.I) for p in rules.get('standard_language', [])]
     for c in rules['counter_signals']:
         c['_patterns'] = [re.compile(r'(?<![\w-])(?:' + p + r')(?![\w])', re.I) for p in c['patterns']]
     return rules
@@ -35,7 +36,7 @@ def validate_rules(rules):
         if s['id'] in ids:
             raise ValueError('duplicate signal ' + s['id'])
         ids.add(s['id'])
-        needed = set(s['rule']['all']) | set(s['rule'].get('partial', []))
+        needed = set(s['rule']['all']) | set(s['rule'].get('partial', [])) | {r for alt in s['rule'].get('alternatives', []) for r in alt}
         if needed - set(s['roles']):
             raise ValueError(f"{s['id']} rule uses unknown role")
         for patterns in s['roles'].values():
@@ -81,7 +82,15 @@ def flat(text):
     return re.sub(r'\s+', ' ', re.sub(r'(?<=\w)-\s*\n\s*(?=\w)', '', text))
 
 
+def is_standard(text, rules):
+    # law, other cases, rejected theories. these describe doctrine, not facts about the parties
+    t = flat(text)
+    return any(p.search(t) for p in rules.get('_standard', []))
+
+
 def _role_hits(signal, sent):
+    if sent.get('standard'):
+        return {}
     text = flat(sent['text'])
     if any(x.search(text) for x in signal['_exclude']):
         return {}
@@ -188,17 +197,28 @@ def _window_ok(per_sentence, i, roles, scope):
 def symbolic(text, rules, sents=None):
     """per signal: which rule roles were satisfied and where"""
     sents = sents if sents is not None else sentences(text)
-    events = timeline(text, sents, rules)
+    for x in sents:
+        x['standard'] = is_standard(x['text'], rules)
+    events = timeline(text, [x for x in sents if not x['standard']], rules)
     results = {}
     for s in rules['signals']:
         per = [_role_hits(s, x) for x in sents]
         need = s['rule']['all']; partial = s['rule'].get('partial', []); scope = s['rule'].get('scope', 1)
         best = None
+        alts = s['rule'].get('alternatives', [])
         for i, hits in enumerate(per):
             if not hits:
                 continue
-            got = _window_ok(per, i, set(need), scope)
-            covered = [r for r in need if r in got]
+            for alt in alts:
+                ag = _window_ok(per, i, set(alt), scope)
+                if all(r in ag for r in alt):
+                    need_i = alt; got = ag; break
+            else:
+                need_i = need; got = _window_ok(per, i, set(need), scope)
+            covered = [r for r in need_i if r in got]
+            if need_i is not need and len(covered) == len(need_i):
+                best = {'covered': covered, 'alt': True, 'bindings': {r: {'quote': sents[j]['text'], 'start': sents[j]['start'], 'end': sents[j]['end'], 'match': q} for r, (j, q) in got.items()}}
+                break
             if best is None or len(covered) > len(best['covered']):
                 best = {'covered': covered, 'bindings': {r: {'quote': sents[j]['text'], 'start': sents[j]['start'], 'end': sents[j]['end'], 'match': q} for r, (j, q) in got.items()}}
             if len(covered) == len(need):
@@ -209,7 +229,7 @@ def symbolic(text, rules, sents=None):
             temporal = intervals(events, t['from'], t['to'], t['max_days'], t.get('either_order', False))
         status = None
         if best:
-            if len(best['covered']) == len(need):
+            if best.get('alt') or len(best['covered']) == len(need):
                 status = 'supported'
             elif t and temporal and all(r in best['covered'] for r in partial):
                 # dated events close together stand in for proximity language
@@ -220,8 +240,8 @@ def symbolic(text, rules, sents=None):
         if status is None:
             continue
         generic = [p.pattern for p in s['_generic'] if p.search(text)]
-        results[s['id']] = {'status': status, 'coverage': round(len(best['covered']) / len(need), 3),
-                            'covered_roles': best['covered'], 'missing_roles': [r for r in need if r not in best['covered']],
+        results[s['id']] = {'status': status, 'coverage': 1.0 if best.get('alt') else round(len(best['covered']) / len(need), 3),
+                            'covered_roles': best['covered'], 'missing_roles': [] if best.get('alt') else [r for r in need if r not in best['covered']],
                             'bindings': best['bindings'], 'intervals': temporal, 'generic_only': bool(generic) and status != 'supported'}
     return results, events
 

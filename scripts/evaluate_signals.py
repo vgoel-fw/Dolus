@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""precision/recall of the signal layer on data/signal_eval.json, split by rules only vs fused"""
+"""precision/recall of the signal layer.
+
+real: sentences from checksummed CourtListener opinions (data/signal_eval_real.json), split dev/test by opinion.
+synthetic: hand written smoke tests (data/signal_eval.json).
+"""
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -10,23 +15,47 @@ from app.fusion import analyze_intent
 
 def score(pairs):
     tp = sum(len(e & g) for e, g in pairs); fp = sum(len(g - e) for e, g in pairs); fn = sum(len(e - g) for e, g in pairs)
-    return {'tp': tp, 'fp': fp, 'fn': fn, 'precision': round(tp / (tp + fp), 3) if tp + fp else None, 'recall': round(tp / (tp + fn), 3) if tp + fn else None}
+    p = tp / (tp + fp) if tp + fp else None; r = tp / (tp + fn) if tp + fn else None
+    return {'tp': tp, 'fp': fp, 'fn': fn, 'precision': round(p, 3) if p is not None else None, 'recall': round(r, 3) if r is not None else None,
+            'f1': round(2 * p * r / (p + r), 3) if p and r else 0.0}
 
 
-def evaluate():
-    items = json.loads((ROOT / 'data/signal_eval.json').read_text())['items']
+def verify(data):
+    docs = {d['id']: d for d in json.loads((ROOT / 'data/flp_opinions.json').read_text())}
+    for it in data['items']:
+        d = docs[it['document_id']]
+        if hashlib.sha256(d['text'].encode()).hexdigest() != it['source_sha256'] or d['text'][it['start']:it['end']] != it['text']:
+            raise ValueError('eval item does not match its checksummed source: ' + it['id'])
+
+
+def run(items):
     rules_only, fused, misses = [], [], []
     for it in items:
         got = analyze_intent(it['text'])['signals']
         exp = set(it['expected'])
-        r = {s['id'] for s in got if s['status'] in ('supported', 'partial')}
+        r = {s['id'] for s in got if s['status'] != 'semantic_only'}
         f = {s['id'] for s in got}
         rules_only.append((exp, r)); fused.append((exp, f))
         if exp != f:
-            misses.append({'id': it['id'], 'expected': sorted(exp), 'got': sorted(f)})
-    return {'items': len(items), 'rules_only': score(rules_only), 'fused': score(fused), 'misses': misses,
-            'limits': ['tiny hand written set, same author as the rules, so treat as a smoke test not a benchmark']}
+            misses.append({'id': it['id'], 'expected': sorted(exp), 'got': sorted(f), 'text': it['text'][:160]})
+    neg = [(set(), f) for (e, f) in fused if not e]
+    return {'n': len(items), 'positives': sum(bool(i['expected']) for i in items), 'rules_only': score(rules_only), 'fused': score(fused),
+            'false_alarm_rate_on_negatives': round(sum(bool(f) for _, f in neg) / len(neg), 3) if neg else None, 'misses': misses}
+
+
+def evaluate():
+    real = json.loads((ROOT / 'data/signal_eval_real.json').read_text()); verify(real)
+    synth = json.loads((ROOT / 'data/signal_eval.json').read_text())
+    return {'real_dev': run([i for i in real['items'] if i['split'] == 'dev']),
+            'real_test': run([i for i in real['items'] if i['split'] == 'test']),
+            'synthetic': run(synth['items']),
+            'limits': ['one labeler, sentence level only (multi-sentence patterns are undercounted)', 'small n: report the counts, not just the ratios', 'synthetic set was written with the rules and is a smoke test only']}
 
 
 if __name__ == '__main__':
-    print(json.dumps(evaluate(), indent=2))
+    r = evaluate()
+    if '--full' in sys.argv:
+        print(json.dumps(r, indent=2)); sys.exit()
+    for k in ('real_dev', 'real_test', 'synthetic'):
+        x = r[k]
+        print(f"{k:10} n={x['n']:3} pos={x['positives']:2}  rules P/R {x['rules_only']['precision']}/{x['rules_only']['recall']}  fused P/R/F1 {x['fused']['precision']}/{x['fused']['recall']}/{x['fused']['f1']}  false alarms on negatives {x['false_alarm_rate_on_negatives']}")

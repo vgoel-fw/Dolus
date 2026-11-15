@@ -91,9 +91,30 @@ CLI, rules only:
 python3 scripts/signals.py facts.txt --statute 10b --circuit 2
 ```
 
+## evaluation
+
+```bash
+python3 scripts/evaluate_signals.py
+```
+
+`data/signal_eval_real.json` holds 110 real sentences from the 5 CourtListener opinions in `data/flp_opinions.json`. every item stores its offsets and the source sha256, and the evaluator refuses to run if the text doesn't match the checksummed opinion. sentences were picked by keyword/detector hits, so they over-sample hard negatives: legal standards, other cases, "the SAC does not plead...".
+
+label rule: positive only when the sentence asserts an alleged or found fact about these parties. split by opinion: dev = Zucco, Daou, Novak (rules may be tuned here); test = Nguyen, Prodanova (never tuned on).
+
+| set | n / positives | before | after tuning on dev |
+| --- | --- | --- | --- |
+| real test (held out) | 29 / 6 | P 0.38 R 0.50 F1 0.43, false alarms 22% | P 0.83 R 0.83 F1 0.83, false alarms 4% |
+| real dev | 81 / 9 | P 0.29 R 0.40 F1 0.33, false alarms 13% | P 0.83 R 1.0 F1 0.91, false alarms 3% |
+| synthetic | 22 / 16 | P 0.94 R 1.0 | P 1.0 R 1.0 |
+
+what it showed: the synthetic set scored near-perfect while real opinions came in around 0.3–0.5. most errors were sentences stating law ("where defendants must have known...") read as facts, plus missed "sold N shares during the class period" and "stated X while they knew the contrary" phrasing. the fix was a `standard_language` filter, class-period anchors, and alternative rules for contrary information. CI enforces held-out F1 ≥ 0.75 and false alarms ≤ 10%.
+
 ## limits
 
-- the eval set (`data/signal_eval.json`) is 22 fictional snippets written by the same person as the rules. rules-only scores 1.0 on it, which mostly shows overfitting. fused precision is 0.94 because the local encoder can't read negation. use it as a regression check, not a benchmark
+- one labeler (not an attorney review), and only 6 held-out positives, so one sentence moves recall by ~17 points. read the counts, not just the ratios
+- the test sentences were seen while labeling, though no rule was changed based on them
+- sentence level only, so patterns spread across sentences are undercounted
+- more filings would help most. CourtListener's API needs a free token (`COURTLISTENER_TOKEN`, see `scripts/acquire.py`); with one, new opinions can be added to `data/flp_opinions.json` and labeled into the test split
 - patterns are english and US-style dates only
 - timing windows (120 days for trades and departures, 90 for plan changes) are research defaults, not legal thresholds
 - authorities are framework pointers, check current treatment before citing

@@ -71,7 +71,8 @@ def analyze_intent(text, statute='10b', circuit='9', encoder=None, rs=None):
     sem = semantic_scores(sents, encoder, rs)
     # sentences a rule already explains don't get to propose extra semantic-only signals
     explained = {b['start'] for h in sym.values() for b in h['bindings'].values()}
-    explained |= {c['start'] for c in counters}  # a counter-signal sentence isn't evidence for the signal it counters
+    explained |= {c['start'] for c in counters}
+    explained |= {x['start'] for x in sents if x.get('standard')}  # a counter-signal sentence isn't evidence for the signal it counters
     out = []
     for sig in rs['signals']:
         hit = sym.get(sig['id'])
