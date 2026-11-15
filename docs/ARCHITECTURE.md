@@ -9,7 +9,8 @@ The dependency-free local application uses Python's HTTP server and SQLite, with
 3. Attorney reviews unknown/present/absent statuses, specificity, and anchored passages.
 4. Eligible reviewed cases are filtered by mode, posture and defendant scope. Other-circuit retrieval is optional; same-circuit results come first.
 5. Ranking combines 80% weighted factor agreement and 20% TF-IDF narrative cosine similarity. Unknowns earn no agreement credit.
-6. A separate whole-corpus cohort requires every present factor in the same circuit/posture/scope. Repeated opinions share case_id; contradictory outcomes collapse to mixed. Only scienter-basis records enter counts; rates require 20 binary outcomes.
+6. Intent signals run on the same text (`app/fusion.py`): sentence encoder + symbolic rules + temporal gaps, weighted by the selected claim. They are returned under `intent` and never enter cohort statistics or case ranking. See docs/SIGNALS.md.
+7. A separate whole-corpus cohort requires every present factor in the same circuit/posture/scope. Repeated opinions share case_id; contradictory outcomes collapse to mixed. Only scienter-basis records enter counts; rates require 20 binary outcomes.
 
 ## Storage and provenance
 
@@ -23,4 +24,4 @@ The HTTP server binds to 127.0.0.1, restricts Host headers and cross-origin writ
 
 ## API
 
-See CONTRACT.md. Additional `GET /api/graph` returns nodes/edges. Real review needs `{reviewer, note, source_verified: true}`. Known user factors require a supporting exact source quote. Errors use `{error}`. Matters are local snapshots; saving again creates another record. JSON/Markdown exports contain the submitted input and should be handled as matter material when using real client inputs.
+See CONTRACT.md. `POST /api/signals {text, statute, circuit}` runs signals alone. Additional `GET /api/graph` returns nodes/edges. Real review needs `{reviewer, note, source_verified: true}`. Known user factors require a supporting exact source quote. Errors use `{error}`. Matters are local snapshots; saving again creates another record. JSON/Markdown exports contain the submitted input and should be handled as matter material when using real client inputs.

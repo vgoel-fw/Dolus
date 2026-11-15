@@ -1,7 +1,15 @@
 # Interface direction
 
-References requested by the project owner: Mike (https://app.mikeoss.com/assistant), Vercel (https://vercel.com/), Notion (https://www.notion.com/), Ramp (https://ramp.com/), and Crosby (https://crosby.ai/). Mike's assistant was gated; only its public login was visible. No proprietary assets or application layouts were copied.
+References: Mike (https://app.mikeoss.com/assistant), Vercel, Notion, Ramp, Crosby and Figma. No proprietary assets or layouts were copied.
 
-The design uses a light utility sidebar, monochrome controls, thin neutral dividers, a generous writing surface, limited serif typography, and a single muted accent. The input editor is the main surface; doctrine is secondary and expandable. Avoid decorative dashboards, marketing slogans, excessive badges, and big numeric similarity gauges. Evidence text, source links and exact scope stay prominent in results.
+What we took from them:
 
-System fonts keep the app entirely local without webfont requests. UI source lives in web/app.js and web/styles.css. All files are editable without a build tool.
+- neutral grays with one accent (blue, used for focus, the user's column and semantic-only signals). status colors only where they carry meaning
+- thin 1px borders, 8–10px radius, almost no shadow. near-black primary button
+- system sans for UI, a serif only for quoted source text so quotes read differently from interface copy, mono for offsets, gaps and rationale lines
+- line icons instead of unicode glyphs. no all-caps eyebrows, no arrows on every button, no marketing lines
+- 48px sticky top bar, light sidebar, content capped at 1180px
+- dark mode follows the OS (`prefers-color-scheme`), with `data-theme` overrides available
+- phone width: sidebar becomes an icon row, grids collapse to one column, no horizontal scroll
+
+Everything is plain CSS variables in `web/styles.css`, no build step and no webfont requests. CSP still forbids inline styles, so widths are set from JS via `data-width`.
