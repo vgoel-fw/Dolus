@@ -69,7 +69,7 @@ class Handler(BaseHTTPRequestHandler):
             if method=='GET' and path=='/api/graph':return self.send_json(store.graph())
             if method=='GET' and path=='/api/bootstrap':
                 cases=store.cases()
-                return self.send_json({'taxonomy':taxonomy,'cases':cases,'matters':store.matters(),'config':{'llm_enabled':bool(os.getenv('ANTHROPIC_API_KEY')),'corpus_mode':'separate_demo_and_real'},'signals':signal_catalog(),'corpus':{'real':sum(not c['synthetic'] for c in cases),'synthetic':sum(c['synthetic'] for c in cases),'reviewed':sum(c['review_status']=='reviewed' for c in cases)}})
+                return self.send_json({'taxonomy':taxonomy,'cases':cases,'matters':store.matters(),'config':{'llm_enabled':bool(os.getenv('ANTHROPIC_API_KEY')),'corpus_mode':'separate_demo_and_real'},'signals':signal_catalog(),'sources':{'opinions':[{k:d.get(k,'') for k in ('id','name','circuit','citation','date','source_url')} for d in self.server.source_catalog.documents],'passages':len(self.server.source_catalog.passages)},'corpus':{'real':sum(not c['synthetic'] for c in cases),'synthetic':sum(c['synthetic'] for c in cases),'reviewed':sum(c['review_status']=='reviewed' for c in cases)}})
             if method=='POST' and path in {'/api/analyze','/api/compare'}:
                 if 'use_llm' in p and type(p['use_llm']) is not bool:raise ValueError('use_llm must be a boolean.')
                 if p.get('use_llm'):

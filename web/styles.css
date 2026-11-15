@@ -342,3 +342,59 @@ dialog::backdrop{background:rgba(10,10,8,.32)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .library-card p.section-gap,.case-summary{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .card-pad>.check-label{margin-top:14px}
+
+/* logo */
+svg.logo{width:26px;height:26px;flex-shrink:0;border-radius:8px;box-shadow:0 1px 2px rgba(76,29,149,.25)}
+.brand{gap:10px}
+.canvas-empty-art svg.logo{width:44px;height:44px;border-radius:12px}
+
+/* research: builder panel + results canvas (amplitude-style) */
+main[data-page="analysis"]{max-width:1480px}
+.builder{display:grid;grid-template-columns:380px minmax(0,1fr);gap:20px;align-items:start}
+.builder-panel{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow:auto;padding-bottom:4px}
+.builder-panel .input-grid{grid-template-columns:1fr;gap:12px}
+.builder-panel .form-row{grid-template-columns:1fr;gap:10px;margin-top:12px}
+.builder-panel textarea{min-height:260px;font-size:13.5px}
+.builder-panel .form-footer small{display:none}
+.builder-panel .form-footer .primary{flex:1}
+.canvas{min-width:0}
+.canvas .steps{margin-top:-4px}
+.canvas-empty{padding:48px 32px;text-align:center}
+.canvas-empty h2{font-size:18px;margin-top:14px}
+.canvas-empty>p{color:var(--text-2);margin:0 auto 24px;max-width:460px}
+.canvas-empty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:left}
+.canvas-empty-grid div{padding:14px;border:1px solid var(--border);border-radius:var(--r);background:var(--subtle)}
+.canvas-empty-grid strong{display:block;font-size:13px;margin-bottom:4px}
+.canvas-empty-grid span{font-size:12.5px;color:var(--text-2)}
+
+/* home (ramp/figma-style overview) */
+.stats-grid.four{grid-template-columns:repeat(4,1fr)}
+.home-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 20px}
+.action-card{height:auto;justify-content:flex-start;align-items:flex-start;gap:12px;padding:16px;border-radius:10px;border:1px solid var(--border);background:var(--surface);text-align:left;white-space:normal}
+.action-card:hover:not(:disabled){border-color:var(--border-strong);background:var(--surface);box-shadow:var(--shadow-lg)}
+.action-card strong{display:block;font-size:13.5px;font-weight:600}
+.action-card small{display:block;color:var(--text-3);font-weight:400;margin-top:2px}
+.action-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--accent-soft);color:var(--accent);flex-shrink:0}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.table-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--border)}
+.table-head h2{margin:0;font-size:14px}
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table td{padding:10px 16px;border-top:1px solid var(--border)}
+.data-table tr:first-child td{border-top:0}
+.data-table tr:hover td{background:var(--subtle)}
+.data-table td.muted{color:var(--text-3);text-align:right;font-feature-settings:"tnum"}
+.data-table a{text-decoration:none}
+.data-table a:hover{text-decoration:underline}
+button.link{height:auto;padding:0;border:0;background:none;box-shadow:none;font-weight:500;text-align:left;white-space:normal}
+button.link:hover:not(:disabled){background:none;text-decoration:underline}
+.table-empty{padding:20px 16px;margin:0;color:var(--text-3);font-size:13px}
+
+/* detail view as a right-side drawer (ramp/figma inspector) */
+dialog{margin:0 0 0 auto;width:min(620px,100%);height:100vh;max-height:100vh;border-radius:0;border-width:0 0 0 1px}
+dialog[open]{animation:drawer .18s ease-out}
+@keyframes drawer{from{transform:translateX(24px);opacity:.6}to{transform:none;opacity:1}}
+
+@media (max-width:1100px){.builder{grid-template-columns:1fr}.builder-panel{position:static;max-height:none}.stats-grid.four,.home-actions{grid-template-columns:1fr 1fr}.home-grid{grid-template-columns:1fr}}
+@media (max-width:720px){.stats-grid.four,.home-actions,.canvas-empty-grid{grid-template-columns:1fr}svg.logo{width:24px;height:24px}}
+.builder-panel .card{overflow:visible}
+.builder-panel .form-footer{position:sticky;bottom:0;z-index:1;border-radius:0 0 10px 10px}
