@@ -29,7 +29,7 @@ python3 scripts/signals.py some_facts.txt --statute 10b
 - Posture filtering and case-deduplicated outcome metrics.
 - SQLite case/evidence graph, narrative vectors, saved matters, and reviewer audit records.
 - CourtListener CLI, and Stanford Clearinghouse CSV cross-reference queue.
-- JSON and Markdown research exports, responsive interface with dark mode, text/Markdown uploads, and source inspection.
+- JSON and Markdown research exports, responsive interface, text/Markdown uploads, and source inspection.
 - Intent signals: 12 scienter patterns, 6 counter-signals, 11 claim profiles (§ 10(b), insider trading / 10b5-1, §§ 11, 12(a)(2), 14(a), 17(a), 20(a), 9, 16(b), SOX 304, criminal). See [docs/SIGNALS.md](docs/SIGNALS.md).
 
 ## Data and present limits

@@ -8,7 +8,7 @@ Structure:
 - **Research** (Amplitude chart builder): inputs in a sticky left panel, results canvas on the right with tabs for signals & factors, precedent and outcomes. Empty canvas explains what comes back
 - **Detail drawer** (Ramp detail sheet / Figma inspector): case and evidence views slide in from the right instead of a centered modal
 - **Sidebar** grouped into Workspace, Sources and Insights
-- **Logo**: an eye inside a violet-to-magenta tile, for reading intent. `web/favicon.svg` and the inline sidebar mark share it
+- **Logo**: a forest green tile with an eye that glances around and blinks every few seconds, for reading intent. `web/favicon.svg` and the inline sidebar mark share it
 
 What we took from them:
 
@@ -17,7 +17,6 @@ What we took from them:
 - system sans for UI, a serif only for quoted source text so quotes read differently from interface copy, mono for offsets, gaps and rationale lines
 - line icons instead of unicode glyphs. no all-caps eyebrows, no arrows on every button, no marketing lines
 - 48px sticky top bar, light sidebar, content capped at 1180px
-- dark mode follows the OS (`prefers-color-scheme`), with `data-theme` overrides available
 - phone width: sidebar becomes an icon row, grids collapse to one column, no horizontal scroll
 
 Everything is plain CSS variables in `web/styles.css`, no build step and no webfont requests. CSP still forbids inline styles, so widths are set from JS via `data-width`.
