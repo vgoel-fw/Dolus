@@ -2,9 +2,9 @@
   "captured_on": "2026-09-26",
   "stored_on": "2026-09-27",
   "provider": "Free Law Project / CourtListener",
-  "document_count": 100,
-  "characters": 4741000,
-  "scope": "100 Second and Ninth Circuit appellate opinions from CourtListener (earliest five captured 2026-09, the rest via API v4 harvest); not a representative corpus. Source text may contain OCR or line-wrap artifacts.",
+  "document_count": 94,
+  "characters": 4532300,
+  "scope": "94 Second and Ninth Circuit appellate opinions from CourtListener (earliest five captured 2026-09, the rest via API v4 harvest); not a representative corpus. Source text may contain OCR or line-wrap artifacts.",
   "outcome_statistics": "These source documents do not add cases to outcome statistics.",
   "documents": [
     {
@@ -514,17 +514,6 @@
       "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
     },
     {
-      "id": "cl-9487918",
-      "name": "Andrew Zenoff v. Sorrento Therapeutics, Inc.",
-      "circuit": "9",
-      "source_url": "https://www.courtlistener.com/opinion/9487918/andrew-zenoff-v-sorrento-therapeutics-inc/",
-      "citation": "22-55641",
-      "date": "2024-03-25",
-      "sha256": "8d980dc6c65c1b2a47147a2efd6a9b7dde5cf77e0680214c584f89a98d70e725",
-      "retrieved_on": "2026-11-26",
-      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
-    },
-    {
       "id": "cl-9495090",
       "name": "Jonathan Espy v. J2 Global, Inc.",
       "circuit": "9",
@@ -734,17 +723,6 @@
       "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
     },
     {
-      "id": "cl-3054317",
-      "name": "Rubke v. Capitol Bancorp Ltd",
-      "circuit": "9",
-      "source_url": "https://www.courtlistener.com/opinion/3054317/rubke-v-capitol-bancorp-ltd/",
-      "citation": "07-15083",
-      "date": "2009-01-13",
-      "sha256": "b5746928b065bbaa62a1d23b14445b05216219689f7aac64aecd55632f2c8487",
-      "retrieved_on": "2026-11-26",
-      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
-    },
-    {
       "id": "cl-3066145",
       "name": "Claude Reese v. Robert Malone",
       "circuit": "9",
@@ -899,17 +877,6 @@
       "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
     },
     {
-      "id": "cl-777054",
-      "name": "Lipton v. Pathogenesis Corp.",
-      "circuit": "9",
-      "source_url": "https://www.courtlistener.com/opinion/777054/lipton-v-pathogenesis-corp/",
-      "citation": "284 F.3d 1027",
-      "date": "2002-03-20",
-      "sha256": "888e17f1e527ee3c6599275f7a28c4669c6b12802a2fd6af8891f12dccdf4264",
-      "retrieved_on": "2026-11-26",
-      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
-    },
-    {
       "id": "cl-787485",
       "name": "No. 03-15883",
       "circuit": "9",
@@ -928,17 +895,6 @@
       "citation": "397 F.3d 704",
       "date": "2005-02-02",
       "sha256": "37e66cfff39657c6ab2bbfe3cf2d76801c77d7d494a7cb701d287b37735050c4",
-      "retrieved_on": "2026-11-26",
-      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
-    },
-    {
-      "id": "cl-789865",
-      "name": "Livid Holdings Ltd. v. Salomon Smith Barney, Inc.",
-      "circuit": "9",
-      "source_url": "https://www.courtlistener.com/opinion/789865/livid-holdings-ltd-v-salomon-smith-barney-inc/",
-      "citation": "403 F.3d 1050",
-      "date": "2005-04-06",
-      "sha256": "098b4ebdd66be54ebd8f1fed5d834e8d4f6231aee16c69a4b6f2d2c5cddb5b96",
       "retrieved_on": "2026-11-26",
       "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
     },
@@ -972,17 +928,6 @@
       "citation": "411 F.3d 1006",
       "date": "2005-02-02",
       "sha256": "a53f9dba060e77ed7d8adb55e192be79c37f21f8810bacc07131a2f8f93dda81",
-      "retrieved_on": "2026-11-26",
-      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
-    },
-    {
-      "id": "cl-8438952",
-      "name": "Livid Holdings Ltd. v. Salomon Smith Barney, Inc.",
-      "circuit": "9",
-      "source_url": "https://www.courtlistener.com/opinion/8438952/livid-holdings-ltd-v-salomon-smith-barney-inc/",
-      "citation": "416 F.3d 940",
-      "date": "2005-04-06",
-      "sha256": "d8a9d4d77b3092ce179391758f12d3f483adcbce4c7af2f81becd9cc6c40f76f",
       "retrieved_on": "2026-11-26",
       "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
     },
@@ -1082,17 +1027,6 @@
       "citation": "80 F.4th 158",
       "date": "2023-08-23",
       "sha256": "d977bcdb341e9efdc80feee12fd5730d1bdb4ad624565535c5bcef19a0b48c59",
-      "retrieved_on": "2026-11-26",
-      "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
-    },
-    {
-      "id": "cl-769157",
-      "name": "Novak v. Kasaks",
-      "circuit": "2",
-      "source_url": "https://www.courtlistener.com/opinion/769157/novak-v-kasaks/",
-      "citation": "216 F.3d 300",
-      "date": "2000-06-21",
-      "sha256": "11cf3a83a964ffc3701f054fc3239f0da38c560e926582850d46526386f855ef",
       "retrieved_on": "2026-11-26",
       "capture_method": "courtlistener_api_v4_html_with_citations_to_text"
     },

@@ -97,7 +97,7 @@ python3 scripts/signals.py facts.txt --statute 10b --circuit 2
 python3 scripts/evaluate_signals.py
 ```
 
-`data/signal_eval_real.json` holds 190 real sentences from the 9 CourtListener opinions in `data/flp_opinions.json`. every item stores its offsets and the source sha256, and the evaluator refuses to run if the text doesn't match the checksummed opinion. sentences were picked by keyword/detector hits, so they over-sample hard negatives: legal standards, other cases, "the SAC does not plead...".
+`data/signal_eval_real.json` holds 190 real sentences from 9 of the CourtListener opinions in `data/flp_opinions.json` (the eval has not yet been extended to the 85 harvested ones). every item stores its offsets and the source sha256, and the evaluator refuses to run if the text doesn't match the checksummed opinion. sentences were picked by keyword/detector hits, so they over-sample hard negatives: legal standards, other cases, "the SAC does not plead...".
 
 label rule: positive only when the sentence asserts an alleged or found fact about these parties. split by opinion: dev = Zucco, Daou, Novak (rules may be tuned here); test = Nguyen, Prodanova, South Ferry, Silicon Graphics, Metzler, Kalnit (never tuned on).
 

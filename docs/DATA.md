@@ -2,7 +2,7 @@
 
 ## What ships
 
-`data/taxonomy.json` is a versioned draft schema with twelve factors. `data/cases.json` contains six real opinion **excerpt** records. There are no fictional records: the validator rejects `synthetic: true`. `data/flp_opinions.json` holds nine full CourtListener opinions with checksums.
+`data/taxonomy.json` is a versioned draft schema with twelve factors. `data/cases.json` contains six real opinion **excerpt** records. There are no fictional records: the validator rejects `synthetic: true`. `data/flp_opinions.json` holds 94 full CourtListener opinions with checksums (`scripts/harvest.py` adds more).
 
 Real seed opinions: Zucco (2009), Daou (amended 2005), NVIDIA (2014), Novak (2000), ATSI (2007), and Dynex (2008). All real records are `needs_review`. All retain source URLs and locators. `opinion_text` contains selected passages only, **not the full opinion**; `source_provenance.coverage` says `excerpts_only`. Judicial text was inspected through the linked sources and whitespace normalized. Mirror OCR can drop apostrophes or insert line numbers: before approval, check the linked opinion PDF, exact text, reporter/slip pinpoint, amended version, defendant/claim coverage and later history. Automated substring validation is only one check.
 

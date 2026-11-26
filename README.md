@@ -34,7 +34,7 @@ python3 scripts/signals.py some_facts.txt --statute 10b
 
 ## Data and present limits
 
-The corpus contains **6 public opinion excerpt records** and **9 full CourtListener opinions**. There are no fictional cases. Review requires checking the original opinion, posture, defendant coverage, ruling, quotation context, and treatment on top.
+The corpus contains **6 public opinion excerpt records** and **94 full CourtListener opinions**. There are no fictional cases. Review requires checking the original opinion, posture, defendant coverage, ruling, quotation context, and treatment on top.
 
 Reviewed comparisons are empty until a lawyer approves records; the default view shows real cases pending review, which never count toward rates. Appellate opinions are separate from trial-court motion rulings, and cases with settlement/dismissal metadata don't substitutes for a distinct scienter ruling from the backend.
 
@@ -71,16 +71,21 @@ See [data acquisition](docs/DATA.md), [doctrinal notes](docs/DOCTRINE.md), and [
 
 All fictional cases, examples and the demo mode are gone. Every record is a real opinion, and the validator rejects `synthetic: true`.
 
-| Opinion | Circuit | How it got here |
-| --- | --- | --- |
-| Zucco Partners v. Digimarc, In re Daou Systems, Nguyen v. Endologix, Prodanova v. H.C. Wainwright | 9th | captured earlier |
-| Novak v. Kasaks | 2d | captured earlier |
-| South Ferry LP #2 v. Killinger, 542 F.3d 776 | 9th | CourtListener API v4 |
-| In re Silicon Graphics Sec. Litig., 183 F.3d 970 | 9th | CourtListener API v4 |
-| Metzler Inv. GmbH v. Corinthian Colleges, 534 F.3d 1068 | 9th | CourtListener API v4 |
-| Kalnit v. Eichler, 264 F.3d 131 | 2d | CourtListener API v4 |
+The database holds **94 distinct published opinions** (33 Second Circuit, 61 Ninth Circuit, 1999 to 2026) with 6,930 searchable passages. Nine were picked by hand (Zucco v. Digimarc, In re Daou Systems, Novak v. Kasaks, Nguyen v. Endologix, Prodanova v. H.C. Wainwright, South Ferry v. Killinger, In re Silicon Graphics, Metzler v. Corinthian Colleges, Kalnit v. Eichler). The other 85 came from `scripts/harvest.py`, which searches CourtListener for published Second and Ninth Circuit opinions on scienter and keeps only ones that discuss it.
 
-That is 9 full opinions and 825 searchable passages. Each opinion stores its source URL, retrieval date and a sha256 of the text, and the app refuses to load an opinion whose text no longer matches. `scripts/acquire.py` pulls more opinions with a `COURTLISTENER_TOKEN`. Note the API limit of 5 requests a minute.
+Each opinion stores its source URL, retrieval date and a sha256 of the text, and the app refuses to load an opinion whose text no longer matches. The harvester skips an opinion if the same text or the same case (same name, filed within a day) is already held. Original and amended versions of a case are kept as separate opinions. The passage index is cached in `var/`, so the first start after the corpus changes takes up to a minute and later starts are instant.
+
+CourtListener's API allows 5 requests a minute and 125 a day. The harvester waits about 13 seconds between requests and saves progress after each one, so you can stop and restart it:
+
+```bash
+python3 scripts/harvest.py run --target 100
+```
+
+```bash
+python3 scripts/harvest.py merge
+```
+
+The target of 100 was not reached in the first session: the daily cap was hit at 94, and the last six can be added once it resets. Outside this environment, set `COURTLISTENER_TOKEN` first.
 
 ## Neuro-symbolic intent signals
 
@@ -119,7 +124,7 @@ python3 scripts/signals.py facts.txt --statute 10b --circuit 9
 
 ## Eval set
 
-`data/signal_eval_real.json` holds 190 real sentences from the 9 CourtListener opinions, labeled by signal. A sentence counts as positive only when it states a fact about the parties. Legal standards, other cases and "the complaint does not plead..." count as negative, and those make up most of the hard cases. Each item stores its offsets and the opinion's sha256, so the eval won't run if the source text changes.
+`data/signal_eval_real.json` holds 190 real sentences from 9 of the CourtListener opinions, labeled by signal. A sentence counts as positive only when it states a fact about the parties. Legal standards, other cases and "the complaint does not plead..." count as negative, and those make up most of the hard cases. Each item stores its offsets and the opinion's sha256, so the eval won't run if the source text changes.
 
 It is split by opinion. Zucco, Daou and Novak are **dev**, which the rules may be tuned on. The other six opinions are the **held-out test**, never used for tuning.
 
