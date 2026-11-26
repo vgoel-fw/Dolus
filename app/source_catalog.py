@@ -48,7 +48,7 @@ class SourceCatalog:
                     for p in blob['passages']:
                         v = p.get('_vec')
                         if isinstance(v, dict) and 'd' in v:
-                            p['_vec'] = {int(k): x for k, x in v['d'].items()}
+                            p['_vec'] = dict(v['d'])
                         elif isinstance(v, dict) and 'l' in v:
                             p['_vec'] = v['l']
                     return blob['passages']

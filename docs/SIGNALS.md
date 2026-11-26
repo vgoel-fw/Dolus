@@ -36,7 +36,7 @@ why split it this way: rules are auditable and give exact quotes, but they miss 
 
 ### the encoder
 
-default is `local-hashed-concepts`: stems, a small legal concept lexicon (avoid, warn, sell, disclose, hide, leave...) and bigrams hashed into 4096 dims. it runs offline with no dependencies, and it is **not a neural network**. it fills the neural slot. to use a real sentence model:
+default is `local-concepts`: stems, a small legal concept lexicon (avoid, warn, sell, disclose, hide, leave...) and bigrams as exact sparse features. it runs offline with no dependencies, and it is **not a neural network**. it fills the neural slot. to use a real sentence model:
 
 ```bash
 pip install sentence-transformers
@@ -105,7 +105,8 @@ label rule: positive only when the sentence asserts an alleged or found fact abo
 | --- | --- | --- |
 | before any real-data tuning (test = Nguyen, Prodanova) | F1 0.43, false alarms 22% | F1 0.33 |
 | after tuning on dev | F1 0.83, false alarms 4% | F1 0.91 |
-| + 4 opinions from the CourtListener API in test (n=109, 17 pos) | **P 0.38 R 0.44 F1 0.41, false alarms 14%** | F1 0.91 |
+| + 4 opinions from the CourtListener API in test (n=109, 17 pos) | P 0.38 R 0.44 F1 0.41, false alarms 14% | F1 0.91 |
+| exact-feature encoder + semantic cutoff retuned on dev (0.45 → 0.55) | **P 0.55 R 0.33 F1 0.41, false alarms 5%** | F1 0.95 |
 
 what it shows: the old synthetic set scored near-perfect, while real opinions came in around 0.3–0.5. tuning on dev fixed legal-standard false alarms. but new opinions phrase insider sales differently ("sold a vast quantity", "sold large blocks", case parentheticals), so held-out F1 fell back to 0.41. that is the real generalization number. CI holds it as a regression floor (F1 ≥ 0.40, false alarms ≤ 15%). to improve it, move opinions into dev and keep a fresh test split.
 

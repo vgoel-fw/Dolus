@@ -1,16 +1,14 @@
 """sentence encoders for the semantic half of the signal detector.
 
-default is a local hashed concept encoder: stems + legal concept clusters + bigrams
-hashed into a fixed space. no network, no deps, deterministic. it's a stand-in for a
+default is a local concept encoder: stems + legal concept clusters + bigrams
+as exact sparse features. no network, no deps, deterministic. it's a stand-in for a
 neural encoder, not one. set DOLUS_ENCODER=sbert:<model name> to use a real
 sentence-transformers model if that package is installed.
 """
 import math
 import os
 import re
-import zlib
 
-DIM = 4096
 _WORD = re.compile(r"[a-z0-9]+(?:['-][a-z0-9]+)*")
 _STOP = set('a an the and or of to in for on at by with from as is are was were be been being that this these those it its he she they them his her their him not no but which who whom has have had would could should may might must can will shall do does did so than then there here into about over under such any each all some very also only'.split())
 _SUFFIX = ('ingly', 'edly', 'ation', 'ments', 'ment', 'ings', 'ing', 'ied', 'ies', 'ed', 'es', 'ly', 's')
@@ -51,22 +49,18 @@ def concepts(word):
     return [c for p, c in _CONCEPT_OF if word.startswith(p)][:2]
 
 
-def _bucket(feature):
-    h = zlib.crc32(feature.encode())
-    return h % DIM, (1.0 if (h >> 31) & 1 else -1.0)
-
-
 class HashingEncoder:
-    name = 'local-hashed-concepts'
-    threshold = 0.45  # semantic_only cutoff. 98th pct of real opinion sentences sits ~0.2
+    name = 'local-concepts'
+    threshold = 0.55  # semantic_only cutoff, picked on the dev split only (flat plateau from 0.55 up)
 
     def encode_one(self, text):
         words = [w for w in _WORD.findall(text.lower()) if w not in _STOP]
         stems = [stem(w) for w in words]
         feats = {}
         def add(f, w):
-            i, sign = _bucket(f)
-            feats[i] = feats.get(i, 0.0) + sign * w
+            # exact string features: a hashed bucket space gave gibberish queries a nonzero
+            # score against large corpora through collisions
+            feats[f] = feats.get(f, 0.0) + w
         for w, s in zip(words, stems):
             add('w:' + s, 1.0)
             for c in concepts(w):

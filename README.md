@@ -51,7 +51,7 @@ Set `ANTHROPIC_API_KEY` and an available `ANTHROPIC_MODEL` in the process enviro
 | `app/storage.py` | SQLite persistence, graph, imports, reviews |
 | `app/llm.py` | Optional validated LLM extraction |
 | `app/signals.py` | Symbolic signal rules, negation, timeline and day gaps |
-| `app/encoder.py` | Sentence encoder (local hashed-concept default, optional sentence-transformers) |
+| `app/encoder.py` | Sentence encoder (local concept-lexicon default, optional sentence-transformers) |
 | `app/fusion.py` | Neuro-symbolic fusion, statute weighting, counter-signals |
 | `web/` | Complete HTML, CSS, JavaScript, favicon |
 | `data/` | Taxonomy, real opinion excerpts and full CourtListener opinions, signal rules, eval sets |
@@ -91,7 +91,7 @@ sentence ──► encoder ──► "sounds like" score per signal ─┐
          └─► rule engine: roles, negation, dates ────────┴─► fusion ──► signal + quotes + gaps + counter-evidence
 ```
 
-- **Encoder (neural slot).** `app/encoder.py` turns each sentence into a vector and compares it with example phrasings of every signal. The default runs offline with no dependencies: hashed word stems plus a legal concept lexicon, so "unloaded" sits near "sold" and "overlooked" near "ignored". It is a stand-in, not a trained network. Set `DOLUS_ENCODER=sbert:all-MiniLM-L6-v2` to use a real sentence-transformers model. If that model can't load, Dolus falls back to the local encoder.
+- **Encoder (neural slot).** `app/encoder.py` turns each sentence into a vector and compares it with example phrasings of every signal. The default runs offline with no dependencies: word stems plus a legal concept lexicon, so "unloaded" sits near "sold" and "overlooked" near "ignored". It is a stand-in, not a trained network. Set `DOLUS_ENCODER=sbert:all-MiniLM-L6-v2` to use a real sentence-transformers model. If that model can't load, Dolus falls back to the local encoder.
 - **Rules (symbolic).** `data/scienter_signals.json` defines 12 signals as named roles. Ostrich behavior, for example, needs a *warning* and an *act of avoidance* within two sentences. Each role is checked for negation, and sentences that state law, describe other cases or reject a theory are filtered out. Timing signals get a dated timeline and a gap in days.
 - **Fusion.** Rules decide whether a signal is present. The encoder only ranks, or flags a "semantic match" for a sentence no rule explains, and those always need review. Counter-evidence (a pre-existing 10b5-1 plan, sales consistent with prior trading, kept shares, self-reporting) is listed next to the signal rather than subtracted, since courts weigh competing inferences together.
 - **By claim.** 11 claim profiles adjust the read. Criminal and insider-trading claims rank avoidance, concealment and timing higher. For §§ 11, 12(a)(2), 14(a), 16(b) and SOX 304, each signal is marked "scienter is not an element".
@@ -125,10 +125,10 @@ It is split by opinion. Zucco, Daou and Novak are **dev**, which the rules may b
 
 | | n / positives | Precision | Recall | F1 | False alarms on negatives |
 | --- | --- | --- | --- | --- | --- |
-| dev | 81 / 9 | 0.83 | 1.00 | 0.91 | 3% |
-| held-out test | 109 / 17 | 0.38 | 0.44 | 0.41 | 14% |
+| dev | 81 / 9 | 0.91 | 1.00 | 0.95 | 1% |
+| held-out test | 109 / 17 | 0.55 | 0.33 | 0.41 | 5% |
 
-**Why this matters:** the hand-written synthetic set used to score near-perfect. Real opinions showed what it hid. Tuning on dev lifted the first two held-out opinions from F1 0.43 to 0.83. The four opinions added from the API then dropped held-out F1 to 0.41. Silicon Graphics and Metzler describe sales as "sold a vast quantity" or "sold large blocks", and cite other cases in parentheticals. The dev-tuned rules hadn't seen either. The eval measures how well the rules generalize, and right now they don't generalize well. CI keeps this baseline as a regression floor, and the next round of rule work should move opinions into dev rather than tune on the test set.
+**Why this matters:** the hand-written synthetic set used to score near-perfect. Real opinions showed what it hid. Tuning on dev lifted the first two held-out opinions from F1 0.43 to 0.83. The four opinions added from the API then dropped held-out F1 to 0.41, with recall the weak spot (it misses a third of the real instances). Silicon Graphics and Metzler describe sales as "sold a vast quantity" or "sold large blocks", and cite other cases in parentheticals. The dev-tuned rules hadn't seen either. The eval measures how well the rules generalize, and right now they don't generalize well. CI keeps this baseline as a regression floor, and the next round of rule work should move opinions into dev rather than tune on the test set.
 
 ```bash
 python3 scripts/evaluate_signals.py
