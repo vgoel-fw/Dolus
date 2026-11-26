@@ -2,11 +2,12 @@
 import hashlib
 import json
 from pathlib import Path
+from .encoder import get_encoder
 from urllib.parse import urlsplit
 from .passages import build_passages, search_passages, public
 
 class SourceCatalog:
-    def __init__(self, path, taxonomy):
+    def __init__(self, path, taxonomy, cache_dir=None):
         self.documents = json.loads(Path(path).read_text()) if Path(path).exists() else []
         if not isinstance(self.documents, list):
             raise ValueError('Source catalog must be a list.')
@@ -24,8 +25,48 @@ class SourceCatalog:
             if hashlib.sha256(document['text'].encode()).hexdigest()!=document['sha256']:
                 raise ValueError('Source text checksum mismatch.')
         self.by_document = {d['id']: d for d in self.documents}
-        self.passages = build_passages(self.documents, taxonomy)
+        self.passages = self._load_or_build(taxonomy, cache_dir)
         self.by_passage = {p['id']: p for p in self.passages}
+
+    def _load_or_build(self, taxonomy, cache_dir):
+        # building tags + vectors costs ~6ms per passage, so a 100 opinion corpus would add a
+        # minute to every start. cache keyed on corpus, rules, taxonomy, encoder and code.
+        root = Path(__file__).resolve().parent
+        h = hashlib.sha256()
+        for d in self.documents:
+            h.update(d['sha256'].encode())
+        h.update(json.dumps(taxonomy, sort_keys=True).encode())
+        h.update(get_encoder().name.encode())
+        for f in ('passages.py', 'signals.py', 'fusion.py', 'encoder.py', '../data/scienter_signals.json'):
+            h.update((root / f).read_bytes())
+        key = h.hexdigest()
+        path = Path(cache_dir) / 'passages-cache.json' if cache_dir else None
+        if path and path.exists():
+            try:
+                blob = json.loads(path.read_text())
+                if blob.get('key') == key:
+                    for p in blob['passages']:
+                        v = p.get('_vec')
+                        if isinstance(v, dict) and 'd' in v:
+                            p['_vec'] = {int(k): x for k, x in v['d'].items()}
+                        elif isinstance(v, dict) and 'l' in v:
+                            p['_vec'] = v['l']
+                    return blob['passages']
+            except (ValueError, KeyError, OSError):
+                pass
+        passages = build_passages(self.documents, taxonomy)
+        if path:
+            try:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                out = []
+                for p in passages:
+                    q = dict(p); v = q.get('_vec')
+                    q['_vec'] = {'d': {str(k): x for k, x in v.items()}} if isinstance(v, dict) else {'l': list(v)} if v is not None else None
+                    out.append(q)
+                tmp = path.with_suffix('.tmp'); tmp.write_text(json.dumps({'key': key, 'passages': out})); tmp.replace(path)
+            except OSError:
+                pass
+        return passages
 
     def search(self, payload):
         query = payload.get('query')

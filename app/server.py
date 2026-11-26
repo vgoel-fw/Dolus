@@ -113,7 +113,7 @@ def create_server(port=8765,db_path=None):
     taxonomy=json.loads((ROOT/'data/taxonomy.json').read_text()); cases=json.loads((ROOT/'data/cases.json').read_text())
     state=ROOT/'var';state.mkdir(exist_ok=True)
     server=ThreadingHTTPServer(('127.0.0.1',port),Handler);server.taxonomy=taxonomy;server.store=Store(db_path or state/'scienter.sqlite3',taxonomy,cases)
-    server.source_catalog=SourceCatalog(ROOT/'data/flp_opinions.json',taxonomy)
+    server.source_catalog=SourceCatalog(ROOT/'data/flp_opinions.json',taxonomy,cache_dir=state)
     return server
 
 def main():
