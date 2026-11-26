@@ -117,6 +117,45 @@ def known_cluster_ids():
     return ids
 
 
+def _norm(name):
+    return re.sub(r'[^a-z]', '', name.lower())[:30]
+
+
+def known_cases():
+    """(normalized name, date) of everything we hold, to catch one opinion filed under two clusters"""
+    from datetime import date
+    out = []
+    recs = []
+    corpus = ROOT / 'data/flp_opinions.json'
+    if corpus.exists():
+        recs += json.loads(corpus.read_text())
+    recs += [json.loads(p.read_text()) for p in (STATE / 'docs').glob('*.json')]
+    for d in recs:
+        try:
+            out.append((_norm(d['name']), date.fromisoformat(d['date'][:10])))
+        except ValueError:
+            pass
+    return out
+
+
+def same_case(cases, name, day):
+    from datetime import date
+    try:
+        dt = date.fromisoformat(day[:10])
+    except ValueError:
+        return False
+    return any(n == _norm(name) and abs((dt - d).days) <= 1 for n, d in cases)
+
+
+def known_shas():
+    out = set()
+    corpus = ROOT / 'data/flp_opinions.json'
+    if corpus.exists():
+        out |= {d['sha256'] for d in json.loads(corpus.read_text())}
+    out |= {json.loads(p.read_text())['sha256'] for p in (STATE / 'docs').glob('*.json')}
+    return out
+
+
 def search_more(state, want):
     """advance the search cursor until enough candidates are queued"""
     while len(state['queue']) < want and state['query_i'] < len(QUERIES):
@@ -150,19 +189,27 @@ def run(target):
     state = load('state.json', {'queue': [], 'done': [], 'rejected': [], 'next': None, 'query_i': 0})
     state['known'] = known_cluster_ids()
     docs_dir = STATE / 'docs'; docs_dir.mkdir(parents=True, exist_ok=True)
-    have_total = len(state['known']) + len(state['done'])
+    # known covers merged opinions and done covers harvested ones, they overlap after a merge
+    have_total = len(state['known'] | set(state['done']))
+    shas = known_shas(); cases = known_cases()
     print(f"corpus {len(state['known'])} + harvested {len(state['done'])}; target {target}", flush=True)
     while have_total < target:
         search_more(state, want=3)
         if not state['queue']:
             print('no more candidates'); break
         cand = state['queue'].pop(0)
+        if same_case(cases, cand['name'], cand['date']):
+            state['rejected'].append(cand['cluster_id']); print('same case already held', cand['name'], flush=True); save_state(state); continue
         try:
             d, src, text = fetch_one(cand)
         except Exception as exc:
             print('skip', cand['name'], exc, flush=True); state['rejected'].append(cand['cluster_id']); save_state(state); continue
         if len(text) < 8000 or len(re.findall(r'scienter', text, re.I)) < 3:
             state['rejected'].append(cand['cluster_id']); print('reject', cand['name'], len(text), flush=True); save_state(state); continue
+        sha = hashlib.sha256(text.encode()).hexdigest()
+        if sha in shas:  # same opinion filed under a second cluster
+            state['rejected'].append(cand['cluster_id']); print('duplicate text', cand['name'], flush=True); save_state(state); continue
+        shas.add(sha); cases.append((_norm(cand['name']), __import__('datetime').date.fromisoformat(cand['date'][:10])))
         rec = {'id': 'cl-' + cand['cluster_id'], 'name': cand['name'], 'circuit': cand['circuit'],
                'source_url': 'https://www.courtlistener.com' + d['absolute_url'], 'citation': cand['citation'] or cand['docket'],
                'date': cand['date'][:10], 'posture': 'unknown', 'text': text, 'provider': 'Free Law Project / CourtListener',
